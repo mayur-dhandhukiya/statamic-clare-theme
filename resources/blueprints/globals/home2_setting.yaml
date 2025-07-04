@@ -1,0 +1,209 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Hero Section'
+        fields:
+          -
+            handle: hero_sliders
+            field:
+              type: grid
+              display: 'Hero Sliders'
+              fields:
+                -
+                  handle: hero_keyword
+                  field:
+                    type: text
+                    display: 'Hero Keyword'
+                -
+                  handle: hero_title
+                  field:
+                    type: text
+                    display: 'Hero Title'
+                -
+                  handle: hero_description
+                  field:
+                    type: text
+                    display: 'Hero description'
+                -
+                  handle: hero_button_name
+                  field:
+                    type: text
+                    display: 'Hero Button Name'
+                -
+                  handle: hero_button_link
+                  field:
+                    type: text
+                    display: 'Hero Button Link'
+                -
+                  handle: hero_banner
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Hero Banner'
+      -
+        display: 'Best Sellers Section'
+        fields:
+          -
+            handle: best_sellers_heading
+            field:
+              type: text
+              display: 'Best Sellers Heading'
+          -
+            handle: best_sellers_categories
+            field:
+              type: grid
+              display: 'Best Sellers Categories'
+              fields:
+                -
+                  handle: best_sellers_category_title
+                  field:
+                    type: text
+                    display: 'Best Sellers Category Title'
+                -
+                  handle: best_sellers_category_slug
+                  field:
+                    type: text
+                    display: 'Best Sellers Category Slug'
+          -
+            handle: best_sellers_button_text
+            field:
+              type: text
+              display: 'Best Sellers Button Text'
+          -
+            handle: best_sellers_button_url
+            field:
+              type: text
+              display: 'Best Sellers Button Url'
+      -
+        display: 'Offer Section'
+        fields:
+          -
+            handle: offer_image
+            field:
+              container: assets
+              type: assets
+              display: 'Offer Image'
+          -
+            handle: offer_sub_title
+            field:
+              type: text
+              display: 'Offer Sub Title'
+          -
+            handle: offer_title
+            field:
+              type: text
+              display: 'Offer Title'
+          -
+            handle: offer_description
+            field:
+              type: textarea
+              display: 'Offer Description'
+          -
+            handle: offer_button_text
+            field:
+              type: text
+              display: 'Offer Button Text'
+          -
+            handle: offer_button_url
+            field:
+              type: text
+              display: 'Offer Button Url'
+      -
+        display: 'New arrival Section'
+        fields:
+          -
+            handle: new_arrival_heading
+            field:
+              type: text
+              display: 'New Arrival Heading'
+          -
+            handle: new_arrival_button_text
+            field:
+              type: text
+              display: 'New Arrival Button Text'
+          -
+            handle: new_arrival_button_url
+            field:
+              type: text
+              display: 'New Arrival Button Url'
+      -
+        display: 'Customers review Section'
+        fields:
+          -
+            handle: customer_reviews
+            field:
+              type: grid
+              display: 'Customer Reviews'
+              fields:
+                -
+                  handle: customer_review_title
+                  field:
+                    type: text
+                    display: 'Customer Review Title'
+                -
+                  handle: customer_review_description
+                  field:
+                    type: textarea
+                    display: 'Customer Review Description'
+                -
+                  handle: customer_review_name
+                  field:
+                    type: text
+                    display: 'Customer Review Name'
+                -
+                  handle: customer_review_image
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Customer Review Image'
+          -
+            handle: customer_review_banners
+            field:
+              container: assets
+              type: assets
+              display: 'Customer Review Banners'
+      -
+        display: 'Milestone Section'
+        fields:
+          -
+            handle: milestones
+            field:
+              type: grid
+              display: Milestones
+              fields:
+                -
+                  handle: milestone_icon
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Milestone Icon'
+                -
+                  handle: milestone_title
+                  field:
+                    type: text
+                    display: 'Milestone Title'
+                -
+                  handle: milestone_sub_title
+                  field:
+                    type: text
+                    display: 'Milestone Sub Title'
+      -
+        display: 'Blogs and News Section'
+        fields:
+          -
+            handle: blogs_and_news_heading
+            field:
+              type: text
+              display: 'Blogs and News Heading'
+          -
+            handle: blogs_and_news_button_text
+            field:
+              type: text
+              display: 'Blogs and News Button Text'
+          -
+            handle: blogs_and_news_url
+            field:
+              type: text
+              display: 'Blogs and News Url'

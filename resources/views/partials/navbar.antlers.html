@@ -1,0 +1,40 @@
+
+
+<!-- container -->
+<div class="container">
+    <!-- header-wrapper -->
+    <div class="header-wrapper">
+        <!-- column -->
+        <div class="column left">
+            <!-- site-all-categories -->
+            <div class="all-categories">
+                <!-- dropdown-menu -->
+                <a href="javascript:;" class="dropdown-toggle">
+                    <div class="departments-toggle"><i class="ti-menu-alt"></i></div>
+                    <div class="departments-text">All Categories</div>                                  
+                    <div class="departments-arrow"><i class="ti-angle-down"></i></div>
+                </a>
+                <!-- dropdown-menu -->
+                <div class="departments-menu dropdown-menu collapse">
+                    <ul class="menu ">
+                        {{ shop_setting:global_filters }}
+                            <li><a href="{{ site_url }}{{ global_filter_link }}">{{ global_filter_name }}</a></li>
+                        {{ /shop_setting:global_filters }}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- site-nav -->
+            <nav class="site-nav horizontal primary-nav">
+                {{ partial:navmenu }}
+            </nav>
+        </div>
+        <!-- column -->
+        <div class="column right">
+            <!-- Shop now button -->
+            <div class="shop-now-btn">
+                <a href="{{ site_url }}/shop" class="btn btn-light">Shop now</a>
+            </div>
+        </div>
+    </div>
+</div>

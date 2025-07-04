@@ -1,0 +1,59 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: full_name
+            field:
+              type: text
+              display: 'Full Name'
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              input_type: email
+              type: text
+              display: Email
+              validate:
+                - required
+                - email
+          -
+            handle: comment
+            field:
+              type: textarea
+              display: Comment
+              validate:
+                - required
+          -
+            handle: blog_entry
+            field:
+              type: entries
+              display: 'Blog Entry'
+              collections:
+                - blogs
+              max_items: 1
+              mode: hidden
+              validate:
+                - required
+          -
+            handle: customer_entry
+            field:
+              type: entries
+              display: 'Customer Entry'
+              collections:
+                - customers
+              max_items: 1
+              mode: hidden
+              validate:
+                - required
+          -
+            handle: comment_date
+            field:
+              type: date
+              display: 'Comment Date'
+              format: Y-m-d
+              validate:
+                - required

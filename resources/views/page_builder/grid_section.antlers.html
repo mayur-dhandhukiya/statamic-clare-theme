@@ -1,0 +1,39 @@
+
+			<!-- Our Team section -->
+			<section class="our-team-section section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+
+						<!-- column -->
+						<div class="col-12">
+							<h2>{{ section_title }}</h2>
+						</div>
+
+						<!-- column -->
+						{{ grid_items }}
+						<div class="col-12 col-md-6 col-lg-3">
+							<!-- Our Team grid-->
+							<div class="our-team-grid">
+								<!-- Our Team thumbnail-->
+								<div class="team-thumbnail">
+									<a href="#" class="thumbnail">
+										{{ grid_item_image }}
+										<img src="{{ url }}" alt="{{ alt }}">
+										{{ /grid_item_image }}
+									</a>
+								</div>
+								<!-- Our Team info -->
+								<div class="our-team-info">
+									<h6><a href="#">{{ grid_item_name }}</a> <span>{{ grid_item_tag }}</span></h6>
+									<p>{{ grid_item_short_description }}</p>
+								</div>
+							</div>
+						</div>
+						{{ /grid_items }}
+
+					</div>
+				</div>
+			</section>
+			<!--/ End Our Team section -->

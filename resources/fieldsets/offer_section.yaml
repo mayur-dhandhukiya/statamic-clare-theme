@@ -1,0 +1,93 @@
+title: 'Offer Section'
+fields:
+  -
+    handle: offer_type
+    field:
+      options:
+        -
+          key: offer_card_bg
+          value: 'Card Background'
+        -
+          key: offer_full_bg
+          value: 'Full Background'
+        -
+          key: offer_left_image
+          value: 'Offer Left Image'
+        -
+          key: offer_only_banner
+          value: 'Only Banner'
+      type: select
+      display: 'Offer Type'
+      width: 50
+      validate:
+        - required
+  -
+    handle: offer_tag
+    field:
+      type: text
+      display: 'Offer Tag'
+      width: 50
+  -
+    handle: offer_title
+    field:
+      type: text
+      display: 'Offer Title'
+      validate:
+        - required
+  -
+    handle: offer_background_image_1
+    field:
+      container: assets
+      type: assets
+      display: 'Offer Background Image 1'
+      width: 50
+      validate:
+        - required
+  -
+    handle: offer_background_image_2
+    field:
+      container: assets
+      type: assets
+      display: 'Offer Background Image 2'
+      width: 50
+      if:
+        offer_type: 'equals offer_full_bg'
+  -
+    handle: offer_description
+    field:
+      type: textarea
+      display: 'Offer Description'
+  -
+    handle: sale_price
+    field:
+      input_type: number
+      type: text
+      display: 'Sale Price'
+      width: 50
+      if:
+        offer_type: 'equals offer_card_bg'
+  -
+    handle: offer_price
+    field:
+      input_type: number
+      type: text
+      display: 'Offer Price'
+      width: 50
+      if:
+        offer_type: 'equals offer_card_bg'
+  -
+    handle: offer_buttons
+    field:
+      type: grid
+      display: 'Offer Buttons'
+      fields:
+        -
+          handle: offer_button_name
+          field:
+            type: text
+            display: 'Offer Button Name'
+        -
+          handle: offer_button_link
+          field:
+            type: text
+            display: 'Offer Button Link'

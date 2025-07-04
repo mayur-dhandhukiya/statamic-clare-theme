@@ -1,0 +1,157 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Hero Section'
+        fields:
+          -
+            handle: hero_title
+            field:
+              type: text
+              display: 'Hero Title'
+          -
+            handle: hero_description
+            field:
+              type: textarea
+              display: 'Hero description'
+          -
+            handle: hero_button_name
+            field:
+              type: text
+              display: 'Hero Button Name'
+          -
+            handle: hero_button_link
+            field:
+              type: text
+              display: 'Hero Button Link'
+          -
+            handle: hero_banner
+            field:
+              container: assets
+              type: assets
+              display: 'Hero Banner'
+      -
+        display: 'Hero Milestone Section'
+        fields:
+          -
+            handle: hero_milestones
+            field:
+              type: grid
+              display: 'Hero Milestones'
+              fields:
+                -
+                  handle: hero_milestone_icon
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Hero Milestone icon'
+                -
+                  handle: hero_milestone_title
+                  field:
+                    type: text
+                    display: 'Hero Milestone Title'
+                -
+                  handle: hero_milestone_sub_title
+                  field:
+                    type: text
+                    display: 'Hero Milestone Sub Title'
+      -
+        display: 'Season Section'
+        fields:
+          -
+            handle: seasons
+            field:
+              type: grid
+              display: Seasons
+              fields:
+                -
+                  handle: season_title
+                  field:
+                    type: text
+                    display: 'Season Title'
+                -
+                  handle: season_sub_title
+                  field:
+                    type: text
+                    display: 'Season Sub Title'
+                -
+                  handle: season_button_text
+                  field:
+                    type: text
+                    display: 'Season Button Text'
+                -
+                  handle: season_button_url
+                  field:
+                    type: text
+                    display: 'Season Button Url'
+                -
+                  handle: season_image
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Season Image'
+      -
+        display: 'Offer Section'
+        fields:
+          -
+            handle: offer_back_image
+            field:
+              container: assets
+              type: assets
+              display: 'Offer Back Image'
+          -
+            handle: offer_title
+            field:
+              type: text
+              display: 'Offer Title'
+          -
+            handle: offer_description
+            field:
+              type: textarea
+              display: 'Offer Description'
+          -
+            handle: actual_price
+            field:
+              type: text
+              display: 'Actual Price'
+          -
+            handle: offer_price
+            field:
+              type: text
+              display: 'Offer Price'
+          -
+            handle: offer_button_text
+            field:
+              type: text
+              display: 'Offer Button Text'
+          -
+            handle: offer_button_url
+            field:
+              type: text
+              display: 'Offer Button Url'
+      -
+        display: 'Subscribe Section'
+        fields:
+          -
+            handle: subscribe_left_image
+            field:
+              container: assets
+              type: assets
+              display: 'Subscribe Left Image'
+          -
+            handle: subscribe_right_image
+            field:
+              container: assets
+              type: assets
+              display: 'Subscribe Right Image'
+          -
+            handle: subscribe_title
+            field:
+              type: text
+              display: 'Subscribe Title'
+          -
+            handle: subscribe_sub_title
+            field:
+              type: text
+              display: 'Subscribe Sub Title'

@@ -1,0 +1,111 @@
+title: Address
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          - 
+            handle: customer
+            field:
+              type: entries
+              display: Customer
+              validate:
+                - required
+              collections:
+                - customers
+          - 
+            handle: address_type
+            field:
+              type: select
+              display: Address Type
+              instructions: Choose if this is a billing or shipping address.
+              validate:
+                - required
+              options:
+                billing: Billing
+                shipping: Shipping
+              default: billing
+          - 
+            handle: first_name
+            field:
+              type: text
+              display: First Name
+              validate:
+                - required
+          - 
+            handle: last_name
+            field:
+              type: text
+              display: Last Name
+              validate:
+                - required
+          - 
+            handle: email
+            field:
+              type: text
+              input_type: email
+              display: Email
+              validate:
+                - required
+                - email
+          - 
+            handle: phone_number
+            field:
+              type: text
+              display: Phone Number
+              validate:
+                - required
+          - 
+            handle: address
+            field:
+              type: textarea
+              display: Address
+              validate:
+                - required
+          - 
+            handle: city
+            field:
+              type: text
+              display: City
+              validate:
+                - required
+          - 
+            handle: state
+            field:
+              type: text
+              display: State
+              validate:
+                - required
+          - 
+            handle: pin_code
+            field:
+              type: text
+              display: Pin Code
+              validate:
+                - required
+          - 
+            handle: country
+            field:
+              type: text
+              display: Country
+              validate:
+                - required
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

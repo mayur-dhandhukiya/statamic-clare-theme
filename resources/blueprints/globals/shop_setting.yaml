@@ -1,0 +1,64 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: filter_type
+            field:
+              options:
+                -
+                  key: left
+                  value: 'Left Sidebar'
+                -
+                  key: right
+                  value: 'Right Sidebar'
+              type: select
+              display: 'Filter Type'
+          -
+            handle: shop_price_filters
+            field:
+              type: grid
+              display: 'Shop Price Filters'
+              fields:
+                -
+                  handle: price_min
+                  field:
+                    type: integer
+                    display: 'Price Min'
+                    width: 50
+                    validate:
+                      - required
+                -
+                  handle: price_max
+                  field:
+                    type: integer
+                    display: 'Price Max'
+                    width: 50
+          -
+            handle: searchbar_categories
+            field:
+              taxonomies:
+                - categories
+              type: terms
+              display: 'Searchbar Categories'
+              mode: select
+          -
+            handle: global_filters
+            field:
+              type: grid
+              display: 'Global Filters'
+              fields:
+                -
+                  handle: global_filter_name
+                  field:
+                    type: text
+                    display: 'Global Filter Name'
+                    width: 50
+                -
+                  handle: global_filter_link
+                  field:
+                    type: text
+                    display: 'Global Filter Link'
+                    width: 50

@@ -1,0 +1,50 @@
+
+            <!-- Popular Categories section -->
+            <section class="popular-categories-section section-all">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- column -->
+                        <div class="col-12">
+                            <!-- popular categories wrap-->
+                            <div class="popular-categories-wrap">
+                                <!-- module header -->
+                                <div class="module-header">
+                                    <h2 class="entry-title">{{ section_title }}</h2>
+                                    <div class="entry-header-right">
+                                        {{ section_buttons }}
+                                        <a href="{{ site_url }}{{ section_button_link }}" class="btn link">{{ section_button_name }} <span class="ti-arrow-right"></span></a>
+                                        {{ /section_buttons }}
+                                    </div>
+                                </div>
+
+                                <!-- Popular Categories grid -->
+                                <div class="popular-categories-grid">
+
+                                    <!-- Popular Categories -->
+                                    {{ categories }}
+                                        <div class="popular-categories">
+                                            <!-- Popular Categories img -->
+                                            <div class="popular-categories-img">
+                                                <a href="{{ site_url }}/category/{{ slug }}">
+                                                    {{ thumb_image }}
+                                                    <img src="{{ url }}" alt="categories img">
+                                                    {{ /thumb_image }}
+                                                </a>
+                                            </div>
+                                            <!-- Popular Categories title -->
+                                            <div class="popular-categories-title">
+                                                <h6><a href="{{ site_url }}/category/{{ slug }}">{{ title }}</a></h6>
+                                            </div>
+                                        </div>
+                                    {{ /categories }}
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ End Popular Categories section -->

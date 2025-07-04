@@ -1,0 +1,146 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'About Content'
+        fields:
+          -
+            handle: full_image
+            field:
+              type: assets
+              display: 'Full Width Image'
+              max_files: 1
+              folder: assets/images
+          -
+            handle: about_title
+            field:
+              type: text
+              display: 'About Title'
+          -
+            handle: about_description
+            field:
+              type: textarea
+              display: 'About Description'
+          -
+            handle: additional_paragraph
+            field:
+              type: textarea
+              display: 'Additional Paragraph'
+      -
+        display: 'Service Features'
+        fields:
+          -
+            handle: features
+            field:
+              type: replicator
+              display: Features
+              sets:
+                main:
+                  display: Main
+                  sets:
+                    feature:
+                      display: Feature
+                      fields:
+                        -
+                          handle: icon
+                          field:
+                            type: assets
+                            max_files: 1
+                            folder: assets/images
+                            display: Icon
+                            width: 33
+                        -
+                          handle: title
+                          field:
+                            type: text
+                            display: Title
+                            width: 33
+                        -
+                          handle: description
+                          field:
+                            type: textarea
+                            display: Description
+                            width: 33
+          -
+            handle: features_left_image
+            field:
+              container: assets
+              type: assets
+              display: 'Features Left Image'
+          -
+            handle: features_title
+            field:
+              type: text
+              display: 'Features Title'
+          -
+            handle: features_above_title
+            field:
+              type: text
+              display: 'Features Above Title'
+          -
+            handle: features_above_description
+            field:
+              type: textarea
+              display: 'Features Above Description'
+      -
+        display: 'Video Section'
+        fields:
+          -
+            handle: video_thumbnail
+            field:
+              type: assets
+              display: 'Video Background Image'
+              max_files: 1
+              folder: assets/images
+          -
+            handle: video_url
+            field:
+              type: text
+              display: 'YouTube Video URL'
+          -
+            handle: video_play_image
+            field:
+              container: assets
+              type: assets
+              display: 'Video Play Image'
+      -
+        display: 'Team Members'
+        fields:
+          -
+            handle: team
+            field:
+              type: replicator
+              display: 'Team Members'
+              sets:
+                main:
+                  display: Main
+                  sets:
+                    member:
+                      display: 'Team Member'
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            type: assets
+                            max_files: 1
+                            folder: assets/images
+                            display: Image
+                            width: 33
+                        -
+                          handle: name
+                          field:
+                            type: text
+                            display: Name
+                            width: 33
+                        -
+                          handle: role
+                          field:
+                            type: text
+                            display: Role
+                            width: 33
+                        -
+                          handle: bio
+                          field:
+                            type: textarea
+                            display: Bio

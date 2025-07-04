@@ -1,0 +1,106 @@
+title: 'Home2 Setting'
+data:
+  hero_sliders:
+    -
+      id: m9bbs5nh
+      hero_keyword: 'New arrival'
+      hero_title: 'Elegant designs for elegance'
+      hero_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing'
+      hero_button_name: 'View collection'
+      hero_button_link: /shop
+      hero_banner:
+        - images/hero-slider-img1.png
+    -
+      id: m9bbstws
+      hero_keyword: 'New arrival'
+      hero_title: 'Where does it come from'
+      hero_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing'
+      hero_button_name: 'View collection'
+      hero_button_link: /shop
+      hero_banner:
+        - images/hero-banner-img.png
+    -
+      id: m9bbtgnw
+      hero_keyword: 'Lorem Ipsum'
+      hero_title: 'Where can I get some'
+      hero_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing'
+      hero_button_name: 'View collection'
+      hero_button_link: /shop
+      hero_banner:
+        - images/hero-banner-img.png
+  best_sellers_heading: 'Best Sellers'
+  best_sellers_categories:
+    -
+      id: m9cf1vks
+      best_sellers_category_title: Men
+      best_sellers_category_slug: men
+    -
+      id: m9cf1w3x
+      best_sellers_category_title: Women
+      best_sellers_category_slug: women
+    -
+      id: m9cf1wnp
+      best_sellers_category_title: 'Blouses & shirts'
+      best_sellers_category_slug: blouses-shirts
+    -
+      id: m9cf1x3g
+      best_sellers_category_title: Outerwear
+      best_sellers_category_slug: outerwear
+  best_sellers_button_text: 'Explore more'
+  best_sellers_button_url: /shop
+  offer_image:
+    - images/sale-event-img.jpg
+  offer_sub_title: 'SALE EVENT'
+  offer_title: 'Summer Shirt Limited Offer – $20'
+  offer_description: 'Until 12/27/21. Use code FESTIVE at checkout'
+  offer_button_text: 'Shop now'
+  offer_button_url: /shop
+  new_arrival_heading: 'New arrival'
+  new_arrival_button_text: 'Shop all'
+  new_arrival_button_url: /shop
+  customer_reviews:
+    -
+      id: m9bcz307
+      customer_review_title: 'Customer’s review'
+      customer_review_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc pulvinar sapien et ligula ullamcorper. Lectus nulla at volutpat diam ut.'
+      customer_review_name: 'Raymon worime'
+      customer_review_image:
+        - images/products-img4.jpg
+    -
+      id: m9bcz3pr
+      customer_review_title: 'Customer’s review'
+      customer_review_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc pulvinar sapien et ligula ullamcorper. Lectus nulla at volutpat diam ut.'
+      customer_review_name: 'Raymon worime'
+      customer_review_image:
+        - images/products-img4.jpg
+  customer_review_banners:
+    - images/testimonial-right-image.jpg
+    - images/sale-event-img.jpg
+  milestones:
+    -
+      id: m9bdaoq8
+      milestone_icon:
+        - images/free-shipping-icon.svg
+      milestone_title: 'Free Shipping'
+      milestone_sub_title: 'Orders $50 or more'
+    -
+      id: m9bdaqww
+      milestone_icon:
+        - images/easy-return-icon.svg
+      milestone_title: 'Free Returns'
+      milestone_sub_title: 'Within 30 days'
+    -
+      id: m9bdarkf
+      milestone_icon:
+        - images/secure-payment-icon.svg
+      milestone_title: 'Get 20% Off 1 Item'
+      milestone_sub_title: 'When you sign up'
+    -
+      id: m9bdas0f
+      milestone_icon:
+        - images/secure-payment-icon.svg
+      milestone_title: 'We Support'
+      milestone_sub_title: '24/7 amazing services'
+  blogs_and_news_heading: 'Blogs and News'
+  blogs_and_news_button_text: 'View all'
+  blogs_and_news_url: /blogs

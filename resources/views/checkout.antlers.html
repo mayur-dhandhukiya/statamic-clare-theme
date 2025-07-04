@@ -1,0 +1,330 @@
+{{ has_cart_items = false }}
+{{ cart }}
+    {{ if is_cart_items > 0 }}
+        {{ has_cart_items = true }}
+    {{ /if }}
+{{ /cart }}
+
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="{{ site:url }}">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Checkout</li>
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>Checkout</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!--/ End Hero slider section -->
+
+			<!-- Checkout page section -->
+			<section class="checkout-page section-two checkout-content-section">
+				<input type="hidden" name="total_cart_item" class="total_cart_item" value="{{ cart:is_cart_items ?? 0 }}">
+				<!-- container -->
+				<div class="container">
+					<form id="checkout-form">
+						<!-- row -->
+						<div class="row">
+							<!-- column -->
+							<div class="col-12 col-md-7 col-lg-8 pe-lg-5">
+								<!-- Order details form-->
+								<div class="account-address-form">
+									<h3 class="account-title">Billing details</h3>
+									<!-- <form id="checkout-form" class="all-form"> -->
+									<div class="all-form">
+										<div class="form-row">
+											<div class="col-12 col-sm-6">
+												<div class="form-group">
+													<label>First Name*</label>
+													<input type="text" name="billing_first_name" id="billing_first_name" class="form-control" placeholder="First name">
+													<small class="text-danger error-msg" data-error-for="billing_first_name"></small>
+												</div>
+											</div>
+											<div class="col-12 col-sm-6">
+												<div class="form-group">
+													<label>Last Name*</label>
+													<input type="text" name="billing_last_name" id="billing_last_name" class="form-control" placeholder="Last name">
+													<small class="text-danger error-msg" data-error-for="billing_last_name"></small>
+												</div>
+											</div>
+										</div>
+										<div class="form-row">
+											<div class="col-12 col-sm-6">
+												<div class="form-group">
+													<label>Email*</label>
+													<input type="email" name="billing_email" id="billing_email" class="form-control" placeholder="Email address">
+													<small class="text-danger error-msg" data-error-for="billing_email"></small>
+												</div>
+											</div>
+											<div class="col-12 col-sm-6">
+												<div class="form-group">
+													<label>Phone Number*</label>
+													<input type="text" name="billing_phone" id="billing_phone" class="form-control" placeholder="Phone number">
+													<small class="text-danger error-msg" data-error-for="billing_phone"></small>
+												</div>
+											</div>
+										</div>
+										<div class="form-row">
+											<div class="col-12 col-sm-6">
+												<div class="form-group">
+													<label>Street address*</label>
+													<input type="text" name="billing_address" id="billing_address" class="form-control" placeholder="Street address">
+													<small class="text-danger error-msg" data-error-for="billing_address"></small>
+												</div>
+											</div>
+											<div class="col-12 col-sm-6">
+												<div class="form-group">
+													<label>Town/city*</label>
+													<input type="text" name="billing_city" id="billing_city" class="form-control" placeholder="City">
+													<small class="text-danger error-msg" data-error-for="billing_city"></small>
+												</div>
+											</div>
+										</div>
+										<div class="form-row">
+											<div class="col-12 col-sm-6">
+												<div class="form-group">
+													<label>State*</label>
+													<input type="text" name="billing_state" id="billing_state" class="form-control" placeholder="State">
+													<small class="text-danger error-msg" data-error-for="billing_state"></small>
+												</div>
+											</div>
+											<div class="col-12 col-sm-6">
+												<div class="form-group">
+													<label>ZIP code*</label>
+													<input type="text" name="billing_zip" id="billing_zip" class="form-control" placeholder="ZIP code">
+													<small class="text-danger error-msg" data-error-for="billing_zip"></small>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>Country*</label>
+											<input type="text" name="billing_country" id="billing_country" class="form-control" placeholder="Country">
+											<small class="text-danger error-msg" data-error-for="billing_country"></small>
+										</div>
+										<div class="form-group form-check">
+											<input type="checkbox" name="shipping_enabled" id="ship_to_different_address" class="form-check-input">
+											<label class="form-check-label" for="ship_to_different_address">Ship to different address?</label>
+										</div>
+										<div id="shipping-fields" style="display: none; border-bottom: 1px solid var(--color-extra04); margin-bottom: 20px;">
+											<h3 class="account-title">Shipping details</h3>
+											<div class="form-row">
+												<div class="col-12 col-sm-6">
+													<div class="form-group">
+														<label>First Name*</label>
+														<input type="text" name="shipping_first_name" id="shipping_first_name" class="form-control" placeholder="First name">
+														<small class="text-danger error-msg" data-error-for="shipping_first_name"></small>
+													</div>
+												</div>
+												<div class="col-12 col-sm-6">
+													<div class="form-group">
+														<label>Last Name*</label>
+														<input type="text" name="shipping_last_name" id="shipping_last_name" class="form-control" placeholder="Last name">
+														<small class="text-danger error-msg" data-error-for="shipping_last_name"></small>
+													</div>
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="col-12 col-sm-6">
+													<div class="form-group">
+														<label>Email*</label>
+														<input type="email" name="shipping_email" id="shipping_email" class="form-control" placeholder="Email address">
+														<small class="text-danger error-msg" data-error-for="shipping_email"></small>
+													</div>
+												</div>
+												<div class="col-12 col-sm-6">
+													<div class="form-group">
+														<label>Phone*</label>
+														<input type="text" name="shipping_phone" id="shipping_phone" class="form-control" placeholder="Phone number">
+														<small class="text-danger error-msg" data-error-for="shipping_phone"></small>
+													</div>
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="col-12 col-sm-6">
+													<div class="form-group">
+														<label>Street Address*</label>
+														<input type="text" name="shipping_address" id="shipping_address" class="form-control" placeholder="Street address">
+														<small class="text-danger error-msg" data-error-for="shipping_address"></small>
+													</div>
+												</div>
+												<div class="col-12 col-sm-6">
+													<div class="form-group">
+														<label>City*</label>
+														<input type="text" name="shipping_city" id="shipping_city" class="form-control" placeholder="City">
+														<small class="text-danger error-msg" data-error-for="shipping_city"></small>
+													</div>
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="col-12 col-sm-6">
+													<div class="form-group">
+														<label>State*</label>
+														<input type="text" name="shipping_state" id="shipping_state" class="form-control" placeholder="State">
+														<small class="text-danger error-msg" data-error-for="shipping_state"></small>
+													</div>
+												</div>
+												<div class="col-12 col-sm-6">
+													<div class="form-group">
+														<label>ZIP code*</label>
+														<input type="text" name="shipping_zip" id="shipping_zip" class="form-control" placeholder="ZIP code">
+														<small class="text-danger error-msg" data-error-for="shipping_zip"></small>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label>Country*</label>
+												<input type="text" name="shipping_country" id="shipping_country" class="form-control" placeholder="Country">
+												<small class="text-danger error-msg" data-error-for="shipping_country"></small>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>Order notes*</label>
+											<textarea name="order_notes" class="form-control" placeholder="Order notes"></textarea>
+											<small class="text-danger error-msg" data-error-for="order_notes"></small>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- column -->
+							<div class="col-12 col-md-5 col-lg-4">
+								<!-- Order summary -->
+								<div class="order-summary">
+									<h3 class="account-title">Order summary</h3>
+									<!-- summary product list-->
+									<div class="summary-product-list" style="overflow-y: auto;max-height: 500px;">
+										
+							            {{ if has_cart_items }}
+										{{ cart:cart_items }}
+										<div class="cart-product cart-summary-product">
+											<div class="cart-thumb">
+												<a href="{{ site_url }}/products/{{ product:slug }}">
+						                            {{ if product:thumb_image }}
+						                                {{ product:thumb_image }}
+						                                <img src="{{ url }}" alt="{{ alt }}">
+						                                {{ /product:thumb_image }}
+						                            {{ else }}
+						                                <img src="{{ theme:asset src='assets/images/placeholder-product.jpeg' }}" alt="blog img 1">
+						                            {{ /if }}
+												</a>
+											</div>
+											<div class="cart-product-title">
+												<h6>{{ product:title }}</h6>
+												<div class="product-qty">
+													<p>Qty : {{ qty }}</p>
+													<div class="price">${{ price }}</div>
+												</div>
+											</div>
+										</div>
+										{{ /cart:cart_items }}
+										{{ else }}
+											<!-- Empty Cart content -->
+											<div class="empty-cart-content">
+												<p>Your cart is currently empty. <a href="/shop" class="link">Return to shop</a></p>
+											</div>
+						                {{ /if }}
+									</div>
+
+									<div class="cart-total-body">
+										<div class="cart-list">
+											<h6>Subtotal</h6>
+											<span>${{ cart:cart_total }}</span>
+										</div>
+										<div class="cart-list">
+											<h6>Shipping</h6>
+											<span>Free Shipping</span>
+										</div>
+										<div class="cart-list cart-total">
+											<h6>Total</h6>
+											<span>${{ cart:cart_total }}</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- Choose payment method -->
+								<div class="choose-payment-method">
+									<h6>Choose payment method</h6>
+									<div class="cart-list shipping-cart-list">
+
+										{{ if payment_setting:cash_on_delivery_enabled }}
+										<!-- Cash on Delivery -->
+										<div class="shipping-total-list d-inline-flex align-items-center justify-content-between">
+											<label class="checkcontainer">
+												<input type="radio" name="payment_method" value="cod">
+												<span class="checkmark">Cash on Delivery</span>
+											</label>
+											<div class="credit-card-icon ms-2">
+												<img src="{{ theme:asset src='assets/images/cod-logo.png' }}" alt="Stripe" style="height: 28px; width: 110px;">
+											</div>
+										</div>
+										{{ /if }}
+
+										{{ if payment_setting:stripe_enabled }}
+										<!-- Stripe (Credit Card) -->
+										<div class="shipping-total-list d-inline-flex align-items-center justify-content-between">
+											<label class="checkcontainer">
+												<input type="radio" name="payment_method" value="stripe">
+												<span class="checkmark">Credit / Debit Card (via Stripe)</span>
+											</label>
+											<div class="credit-card-icon ms-2">
+												<img src="{{ theme:asset src='assets/images/stripe-logo.png' }}" alt="Stripe" style="height: 28px; width: 110px;">
+											</div>
+										</div>
+										{{ /if }}
+
+										{{ if payment_setting:razorpay_enabled }}
+										<!-- Razorpay -->
+										<div class="shipping-total-list d-inline-flex align-items-center justify-content-between">
+											<label class="checkcontainer">
+												<input type="radio" name="payment_method" value="razorpay">
+												<span class="checkmark">UPI / Wallet / Netbanking (via Razorpay)</span>
+											</label>
+											<div class="ms-2">
+												<img src="{{ theme:asset src='assets/images/razorpay-icon.svg' }}" alt="Razorpay" style="height: 28px;">
+											</div>
+										</div>
+										{{ /if }}
+
+										<small class="text-danger error-msg" data-error-for="payment_method"></small>
+									</div>
+
+									<small class="text-danger error-msg" data-error-for="agree_terms"></small>
+									<div class="form-group form-check">
+										<input type="checkbox" name="agree_terms" id="agree_terms" class="form-check-input">
+										<label class="form-check-label" for="agree_terms">
+											With your order you agree to our <a href="/terms" target="_blank">terms and conditions</a>, 
+											<a href="/privacy-policy" target="_blank">privacy policy</a>, and cancellation policy.
+										</label>
+									</div>
+								</div>
+
+								<!-- Proceed to payment button -->
+								<div class="cart-checkout-button">
+									<button type="submit" class="btn btn-dark">Proceed to payment</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+			<!--/ End Checkout page section -->

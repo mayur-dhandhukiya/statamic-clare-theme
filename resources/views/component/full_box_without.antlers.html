@@ -1,0 +1,49 @@
+
+			<!-- Popular Categories section -->
+			<section class="popular-categories-section style-3 section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- module header -->
+							<div class="module-header style-3">
+								<div class="module-header-left">
+									<h2 class="entry-title">{{ section_title }}</h2>
+									<p>{{ section_description }}</p>
+								</div>
+								<div class="module-header-right">
+									{{ section_buttons }}
+									<a href="{{ site_url }}{{ section_button_link }}" class="btn btn-dark btn-style-2">{{ section_button_name }}</a>
+									{{ /section_buttons }}
+								</div>
+							</div>
+
+							<!-- Popular Categories grid -->
+							<div class="popular-categories-grid">
+
+								{{ categories }}
+								<!-- Popular Categories -->
+								<div class="popular-categories">
+									<!-- Popular Categories img -->
+									<div class="popular-categories-img">
+										<a href="{{ site_url }}/category/{{ slug }}">
+											{{ thumb_image }}
+											<img src="{{ url }}" alt="categories img">
+											{{ /thumb_image }}
+										</a>
+									</div>
+									<!-- Popular Categories title -->
+									<div class="popular-categories-title">
+										<h6><a href="{{ site_url }}/category/{{ slug }}">{{ title }}</a></h6>
+									</div>
+								</div>
+								{{ /categories }}
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Popular Categories section -->

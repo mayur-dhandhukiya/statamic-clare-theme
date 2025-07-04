@@ -1,0 +1,25 @@
+
+{{ if products_total > 0 }}
+
+	<!-- column -->
+	<div id="product-list" class="col-12 row {{ $view_type ?? 'grid-four' }}">
+		{{ products:data }}
+			{{ partial:product-card }}
+		{{ /products:data }}
+	</div>
+
+	{{ products }}
+		{{ if next_page_url }}
+			<div class="col-12">
+				<div class="section-full-btn">
+					<a href="{{ next_page_url }}" class="btn btn-dark btn-style-2 load-more-products">Load more</a>
+				</div>
+			</div>
+		{{ /if }}
+	{{ /products }}
+
+{{ else }}
+	<div class="text-center py-5">
+		<h2>No Products Found</h2>
+</div>
+{{ /if }}

@@ -1,0 +1,27 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: newsletter_title
+            field:
+              type: text
+              display: 'Newsletter Title'
+          -
+            handle: newsletter_subtitle
+            field:
+              type: text
+              display: 'Newsletter Subtitle'
+          -
+            handle: newsletter_description
+            field:
+              type: textarea
+              display: 'Newsletter Description'
+          -
+            handle: newsletter_background_image
+            field:
+              container: assets
+              type: assets
+              display: 'Newsletter Background Image'

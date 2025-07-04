@@ -1,0 +1,10 @@
+{
+    "name": "mayur-dhandhukiya/statamic-clare-theme",
+    "description": "E-Commerce starter kit for Statamic",
+    "extra": {
+        "statamic": {
+            "name": "E-Commerce Starter Kit",
+            "description": "E-Commerce starter kit for Statamic"
+        }
+    }
+}

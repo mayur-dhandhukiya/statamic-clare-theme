@@ -1,0 +1,227 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: header_layout
+            field:
+              options:
+                -
+                  key: header_v1
+                  value: 'Header V1'
+                -
+                  key: header_v2
+                  value: 'Header V2'
+                -
+                  key: header_v3
+                  value: 'Header V3'
+              default: home_v1
+              type: select
+              display: 'Header Layout'
+              instructions: 'Choose which header layout variant to use for this page.'
+              instructions_position: below
+          -
+            handle: footer_layout
+            field:
+              options:
+                -
+                  key: footer_v1
+                  value: 'Footer V1'
+                -
+                  key: footer_v2
+                  value: 'Footer V2'
+                -
+                  key: footer_v3
+                  value: 'Footer V3'
+              default: home_v1
+              type: select
+              display: 'Footer Layout'
+              instructions: 'Choose which footer layout variant to use for this page.'
+              instructions_position: below
+          -
+            handle: main_logo_image
+            field:
+              container: assets
+              type: assets
+              display: 'Main Logo Image'
+          -
+            handle: white_logo
+            field:
+              container: assets
+              type: assets
+              display: 'White Logo'
+          -
+            handle: breadcrumb_background_image
+            field:
+              container: assets
+              type: assets
+              display: 'Breadcrumb Background Image'
+          -
+            handle: offer_text
+            field:
+              type: text
+              display: 'Offer text'
+          -
+            handle: home_2_offer_text
+            field:
+              type: text
+              display: 'Home 2 Offer text'
+      -
+        display: 'Contact Section'
+        fields:
+          -
+            handle: contact_no
+            field:
+              type: text
+              display: 'Contact No'
+          -
+            handle: contact_email
+            field:
+              type: text
+              display: 'Contact Email'
+      -
+        display: 'Footer Section'
+        fields:
+          -
+            handle: footer_logo_image
+            field:
+              container: assets
+              type: assets
+              display: 'Footer Logo Image'
+          -
+            handle: footer_title
+            field:
+              type: text
+              display: 'Footer Title'
+          -
+            handle: footer_description
+            field:
+              type: textarea
+              display: 'Footer Description'
+          -
+            handle: feature_title
+            field:
+              type: text
+              display: 'Feature Title'
+          -
+            handle: footer_feature_menu
+            field:
+              type: grid
+              display: 'Footer Feature Menu'
+              fields:
+                -
+                  handle: feature_menu_title
+                  field:
+                    type: text
+                    display: 'Feature Menu Title'
+                -
+                  handle: feature_menu_url
+                  field:
+                    type: text
+                    display: 'Feature Menu Url'
+          -
+            handle: general_links
+            field:
+              type: text
+              display: 'General Links'
+          -
+            handle: footer_general_links
+            field:
+              type: grid
+              display: 'Footer General Links'
+              fields:
+                -
+                  handle: footer_general_link_title
+                  field:
+                    type: text
+                    display: 'Footer General Link Title'
+                -
+                  handle: footer_general_link_url
+                  field:
+                    type: text
+                    display: 'Footer General Link Url'
+          -
+            handle: helpful_title
+            field:
+              type: text
+              display: 'Helpful Title'
+          -
+            handle: footer_helpful_links
+            field:
+              type: grid
+              display: 'Footer Helpful Links'
+              fields:
+                -
+                  handle: footer_helpful_link_title
+                  field:
+                    type: text
+                    display: 'Footer Helpful Link Title'
+                -
+                  handle: footer_helpful_link_url
+                  field:
+                    type: text
+                    display: 'Footer Helpful Link Url'
+          -
+            handle: footer_socials
+            field:
+              type: grid
+              display: 'Footer Socials'
+              fields:
+                -
+                  handle: footer_social_icon
+                  field:
+                    type: text
+                    display: 'Footer Social Icon'
+                -
+                  handle: footer_social_url
+                  field:
+                    type: text
+                    display: 'Footer Social Url'
+          -
+            handle: footer_copyrights
+            field:
+              type: text
+              display: 'Footer Copyrights'
+          -
+            handle: footer_payments_icon
+            field:
+              container: assets
+              type: assets
+              display: 'Footer Payments Icon'
+      -
+        display: 'Footer3 Section'
+        fields:
+          -
+            handle: footer3_menu
+            field:
+              type: grid
+              display: 'Footer3 Menu'
+              fields:
+                -
+                  handle: footer3_menu_title
+                  field:
+                    type: text
+                    display: 'Footer3 Menu Title'
+                -
+                  handle: footer3_menu_url
+                  field:
+                    type: text
+                    display: 'Footer3 Menu Url'
+          -
+            handle: footer3_second_menu
+            field:
+              type: grid
+              display: 'Footer3 Second Menu'
+              fields:
+                -
+                  handle: footer3_second_menu_title
+                  field:
+                    type: text
+                    display: 'Footer3 Second Menu Title'
+                -
+                  handle: footer3_second_menu_url
+                  field:
+                    type: text
+                    display: 'Footer3 Second Menu Url'

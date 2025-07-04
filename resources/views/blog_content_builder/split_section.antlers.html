@@ -1,0 +1,41 @@
+
+<!-- row -->
+<div class="row mt-md-5 mb-md-5">
+	<!-- column -->
+	{{ if is_split_image }}
+
+		{{ if split_image_position == 'left' }}
+
+			<div class="col-12 col-md-6">
+				{{ split_image }}
+					<img src="{{ url }}" alt="{{ alt }}">
+				{{ /split_image }}
+			</div>
+			<!-- column -->
+			<div class="col-12 col-md-6 mt-3">
+				{{ partial src="blog_content_builder/split_contents" }}
+			</div>
+
+		{{ else }}
+
+			<!-- column -->
+			<div class="col-12 col-md-6 mt-3">
+				{{ partial src="blog_content_builder/split_contents" }}
+			</div>
+			<div class="col-12 col-md-6">
+				{{ split_image }}
+					<img src="{{ url }}" alt="{{ alt }}">
+				{{ /split_image }}
+			</div>
+
+		{{ /if }}
+
+	{{ else }}
+
+		<!-- column -->
+		<div class="col-12 col-md-12 mt-3">
+			{{ partial src="blog_content_builder/split_contents" }}
+		</div>
+		
+	{{ /if }}
+</div>

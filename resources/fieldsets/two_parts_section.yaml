@@ -1,0 +1,38 @@
+title: 'Two Parts Section'
+fields:
+  -
+    handle: part_1_title
+    field:
+      type: text
+      display: 'Part 1 Title'
+  -
+    handle: part_1_description
+    field:
+      type: textarea
+      display: 'Part 1 Description'
+  -
+    handle: part_2_title
+    field:
+      type: text
+      display: 'Part 2 Title'
+  -
+    handle: part_2_description
+    field:
+      type: textarea
+      display: 'Part 2 Description'
+  -
+    handle: part_socials
+    field:
+      type: grid
+      display: 'Part Socials'
+      fields:
+        -
+          handle: part_social_class
+          field:
+            type: text
+            display: 'Part Social Class'
+        -
+          handle: part_social_link
+          field:
+            type: text
+            display: 'Part Social Link'

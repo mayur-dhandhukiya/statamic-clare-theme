@@ -1,0 +1,90 @@
+title: 'Contact us Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: section_description
+    field:
+      type: textarea
+      display: 'Section Description'
+  -
+    handle: informations
+    field:
+      collapse: true
+      type: replicator
+      display: Informations
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            information_half_box:
+              display: 'Information Half Box'
+              fields:
+                -
+                  handle: information_icon
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: 'Information Icon'
+                    width: 50
+                -
+                  handle: information_title
+                  field:
+                    type: text
+                    display: 'Information Title'
+                    width: 50
+                -
+                  handle: information_records
+                  field:
+                    type: grid
+                    display: 'Information Records'
+                    fields:
+                      -
+                        handle: information_type
+                        field:
+                          options:
+                            -
+                              key: phone
+                              value: Phone
+                            -
+                              key: email
+                              value: Email
+                          type: select
+                          display: 'Information Type'
+                      -
+                        handle: information_data
+                        field:
+                          type: text
+                          display: 'Information Data'
+            information_full_box:
+              display: 'Information Full Box'
+              fields:
+                -
+                  handle: information_icon
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: 'Information Icon'
+                    width: 50
+                -
+                  handle: information_title
+                  field:
+                    type: text
+                    display: 'Information Title'
+                    width: 50
+                -
+                  handle: information_description
+                  field:
+                    type: textarea
+                    display: 'Information Description'
+                -
+                  handle: information_embed
+                  field:
+                    type: textarea
+                    display: 'Information Embed'
+                    instructions: 'like a "Map"'

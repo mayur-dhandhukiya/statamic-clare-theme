@@ -1,0 +1,47 @@
+
+            <!-- Hero slider section -->
+            <section class="hero-slider-section">
+                <!-- swiper -->
+                <div class="swiper mySwiper">
+                    <!-- swiper wrapper -->
+                    <div class="swiper-wrapper">
+
+                        {{ hero_sliders }}
+                        <!-- swiper slide -->
+                        <div class="swiper-slide">
+                            <!-- container -->
+                            <div class="container">
+                                <!-- row -->
+                                <div class="row align-items-center">
+                                    <!-- column -->
+                                    <div class="col-12 col-md-6">
+                                        <!-- hero banner content -->
+                                        <div class="hero-banner-content">
+                                            <h4 class="entry-subtitle">{{ hero_slider_tag }}</h4>
+                                            <h1>{{ hero_slider_title }}</h1>
+                                            <p>{{ hero_slider_description }} </p>
+                                            {{ hero_slider_button }}
+                                            <a href="{{ site_url }}{{ hero_slider_button_link }}" class="btn btn-dark btn-style-2">{{ hero_slider_button_name }}</a>
+                                            {{ /hero_slider_button }}
+                                        </div>
+                                    </div>
+                                    <!-- column -->
+                                    <div class="col-12 col-md-6">
+                                        <!-- Hero banner img -->
+                                        <div class="hero-banner-img">
+                                            {{ hero_slider_banner }}
+                                            <img src="{{ url }}" alt="hero-slider-img">
+                                            {{ /hero_slider_banner }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{ /hero_sliders }}
+
+                    </div>
+                    <!-- slider pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <!--/ End Hero slider section -->

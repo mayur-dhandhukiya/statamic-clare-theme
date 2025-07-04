@@ -1,0 +1,124 @@
+title: 'Hero Section'
+fields:
+  -
+    handle: hero_section_type
+    field:
+      options:
+        -
+          key: hero_section_normal
+          value: Normal
+        -
+          key: hero_section_slider
+          value: Slider
+        -
+          key: hero_section_partition
+          value: Partition
+      type: select
+      display: 'Hero Section Type'
+      width: 50
+  -
+    handle: hero_tag
+    field:
+      type: text
+      display: 'Hero Tag'
+      width: 50
+      unless:
+        hero_section_type: 'equals hero_section_slider'
+  -
+    handle: hero_title
+    field:
+      type: text
+      display: 'Hero Title'
+      width: 66
+      unless:
+        hero_section_type: 'equals hero_section_slider'
+  -
+    handle: hero_banner
+    field:
+      container: assets
+      type: assets
+      display: 'Hero Banner'
+      width: 33
+      unless:
+        hero_section_type: 'equals hero_section_slider'
+  -
+    handle: hero_description
+    field:
+      type: textarea
+      display: 'Hero Description'
+      unless:
+        hero_section_type: 'equals hero_section_slider'
+  -
+    handle: hero_button
+    field:
+      type: grid
+      display: 'Hero Button'
+      unless:
+        hero_section_type: 'equals hero_section_slider'
+      fields:
+        -
+          handle: hero_button_name
+          field:
+            type: text
+            display: 'Hero Button Name'
+        -
+          handle: hero_button_link
+          field:
+            type: text
+            display: 'Hero Button Link'
+            instructions: 'start with "/". e.g. /about'
+  -
+    handle: hero_sliders
+    field:
+      type: replicator
+      display: 'Hero Sliders'
+      if:
+        hero_section_type: 'equals hero_section_slider'
+      collapse: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            hero_sliders:
+              display: 'Hero Sliders'
+              fields:
+                -
+                  handle: hero_slider_tag
+                  field:
+                    type: text
+                    display: 'Hero Slider Tag'
+                    width: 33
+                -
+                  handle: hero_slider_title
+                  field:
+                    type: text
+                    display: 'Hero Slider Title'
+                    width: 33
+                -
+                  handle: hero_slider_banner
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Hero Slider Banner'
+                    width: 33
+                -
+                  handle: hero_slider_description
+                  field:
+                    type: textarea
+                    display: 'Hero Slider Description'
+                -
+                  handle: hero_slider_button
+                  field:
+                    type: grid
+                    display: 'Hero Slider Button'
+                    fields:
+                      -
+                        handle: hero_slider_button_name
+                        field:
+                          type: text
+                          display: 'Hero Slider Button Name'
+                      -
+                        handle: hero_slider_button_link
+                        field:
+                          type: text
+                          display: 'Hero Slider Button Link'

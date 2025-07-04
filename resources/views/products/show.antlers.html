@@ -1,0 +1,491 @@
+
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="{{ site_url }}">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Product detail</li>
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>Product detail</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!--/ End Hero slider section -->
+
+			<!-- Product detail page section -->
+			<section class="product-detail-page section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12 col-lg-6">
+							<!-- product gallery column -->
+							<div class="product-gallery-column">
+								<div class="product-gallery-vertical">
+									<div class="swiper mySwiper2 big-gallery">
+										<div class="swiper-wrapper">
+											{{ if banner_images }}
+												{{ banner_images }}
+													<div class="swiper-slide">
+														<div class="full-product-img"><img src="{{ url }}"  alt="{{ alt }}"></div>
+													</div>
+												{{ /banner_images }}
+											{{ else }}
+												<div class="swiper-slide">
+													<div class="full-product-img"><img src="{{ theme:asset src='assets/images/placeholder-product.jpeg' }}"  alt="product img"></div>
+												</div>
+											{{ /if }}
+										</div>
+										<div class="swiper-button-next"><span class="ti-arrow-right"></span></div>
+										<div class="swiper-button-prev"><span class="ti-arrow-left"></span></div>
+									</div>
+
+									<div class="swiper mySwiper thumbs-gallery">
+										<div class="swiper-wrapper">
+											{{ if banner_images }}
+												{{ banner_images }}
+													<div class="swiper-slide">
+														<div class="thumbs"><img src="{{ url }}" alt="{{ alt }}"></div>
+													</div>
+												{{ /banner_images }}
+											{{ else }}
+												<div class="swiper-slide">
+													<div class="thumbs"><img src="{{ theme:asset src='assets/images/placeholder-product.jpeg' }}"  alt="product img"></div>
+												</div>
+											{{ /if }}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-lg-6">
+							<!-- product info -->
+							<div class="product-info">
+								<h2 class="product_title">{{ title }}</h2>
+								<div class="price">${{ price }}</div>
+								<p class="people-viewing"><i class="fa-solid fa-eye"></i> 13 people are viewing this right now</p>
+
+								<!-- product meta -->
+								<div class="product-meta">
+									<div class="product-meta-list">
+										<span>SKU: </span>
+										<span class="meta">{{ sku }}</span>
+									</div>
+									<div class="product-meta-list">
+										<span>Category:</span>
+										{{ if categories }}
+											<span class="meta">{{ categories | pluck:title | implode:",&nbsp;" }}</span>
+										{{ /else }}
+											<span class="meta">-</span>
+										{{ /if }}
+									</div>
+									<div class="product-meta-list">
+										<span>Tags:</span>
+										{{ if tags }}
+											<span class="meta">{{ tags | pluck:title | implode:",&nbsp;" }}</span>
+										{{ /else }}
+											<span class="meta">-</span>
+										{{ /if }}
+									</div>
+								</div>
+
+								<form class="variations_form ">
+									<!-- Color variations-->
+									<div class="color-variations">
+										<label class="label-title">Color</label>
+										<ul class="checkbox-color-list">
+											<li>
+												<label class="checkcontainer" style="background-color: #231F20;">
+													<input type="radio" name="shipping_method[0]">
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label class="checkcontainer" style="background-color: #CCCCCC;">
+													<input type="radio" name="shipping_method[0]">
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label class="checkcontainer" style="background-color: #C2E2C4;">
+													<input type="radio" name="shipping_method[0]">
+													<span class="checkmark"></span>
+												</label>
+											</li>
+										</ul>
+									</div>
+
+									<!-- variation add to cart -->
+									<div class="variation-add-to-cart">
+										<!-- Quantity -->
+										<div class="variation-quantity">
+											<label class="label-title">Quantity:</label>
+											<!-- Quantity -->
+											<div class="quantity">
+												<div class="single-quantity-click quantity-button minus">-</div>
+												<input type="text" class="input-text input-qty single-input-qty text" name="cart[d395771085aab05244a4fb8fd91bf4ee][qty]" value="1" title="Qty" size="4" placeholder="" autocomplete="off">
+												<div class="single-quantity-click quantity-button plus">+</div>
+											</div>
+										</div>
+										<div class="single-add-to-cart">
+											<button type="button" class="single_add_to_cart_button btn btn-dark btn-outline-dark add-to-cart-btn" data-product-id="{{ id }}">Add to cart</button>
+										</div>
+									</div>
+									<div class="buy-product-button">
+										<button type="button" class="buy-product-btn btn btn-dark">Buy product</button>
+									</div>
+
+									<!-- product extra buttons-->
+									<div class="product-extra-buttons">
+										<a href="javascript:;" class="add-to-compare-btn" data-product-id="{{ id }}"><img src="{{ theme:asset src='assets/images/compare-icon.svg' }}"  alt="compare-icon"> Compare</a>
+										<a href="#"><img src="{{ theme:asset src='assets/images/question-icon.svg' }}"  alt="question-icon"> Ask a question</a>
+										<a href="#"><img src="{{ theme:asset src='assets/images/share-outline-icon.svg' }}"  alt="share-outline-icon"> Share</a>
+									</div>
+
+									<!-- product meta -->
+									<div class="product-meta">
+										<div class="product-meta-list">
+											<span>Estimated Delivery: </span>
+											<span class="meta">Jan 31 - 07 Feb, 2023</span>
+										</div>
+										<div class="product-meta-list">
+											<span>Free Shipping & Returns:</span>
+											<span class="meta">On all orders over $200.00</span>
+										</div>
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+
+					{{ single_product_id = id }}
+					{{ single_product_review_count = 0 }}
+
+					{{ collection:reviews sort="created_at:desc" }}
+					{{ if product:id == single_product_id }}
+					{{ single_product_review_count = single_product_review_count + 1 }}
+					{{ /if }}
+					{{ /collection:reviews }}
+
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<div class="wc-tabs-wrapper">
+								<!-- Product tabs -->
+								<ul class="tabs wc-tabs">
+									<li class="active" data-tab="tab-description">Description</li>
+									<li data-tab="tab-information">Additional Information</li>
+									<li data-tab="tab-reviews">Reviews ({{ single_product_review_count }})</li>
+									<li data-tab="tab-questions">Questions</li>
+								</ul>
+
+								<!-- tabs entry content -->
+								<div id="tab-description" class="tabs-entry-content active">
+									{{ description }}
+								</div>
+								<!-- tabs entry content -->
+								<div id="tab-information" class="tabs-entry-content">
+									<ul class="product_features">
+	                                    <li><b>Size Available:</b> M, L, Xl, XXL</li>
+	                                    <li><b>Color:</b> Blue</li>
+	                                    <li><b>Brand:</b> Gucci</li>
+	                                    <li><b>Quality:</b> 100% Cotton</li>
+	                                </ul>
+								</div>
+								<!-- tabs entry content -->
+								<div id="tab-reviews" class="tabs-entry-content">
+                                    <div class="row client-review-header align-items-center gx-0">
+                                        <div class="col-md-8">
+                                            <h2>Customer Reviews</h2>
+                                            <ul class="ratings list-style average-ratings">
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                                <li><i class="fa-solid fa-star"></i></li>
+                                            </ul>
+                                            <p>Based on {{ single_product_review_count }} Reviews</p>
+                                        </div>
+                                        <div class="col-md-4 text-md-end">
+                                            <a href="#cmt-form" class="btn btn-primary">Write A Review</a>
+                                        </div>
+                                    </div>
+                                    <div class="client-review">
+                                        <div class="comment-item-wrap">
+                                        	
+                                        	{{ collection:reviews sort="created_at:desc" }}
+	                                        	{{ if product:id == single_product_id }}
+		                                            <div class="comment-item d-flex flex-wrap">
+		                                                <div class="comment-author-img">
+		                                                	{{ if customer:profile }}
+			                                                    <img src="{{ customer:profile }}" alt="Image">
+		                                                	{{ else }}
+			                                                    <img src="{{ theme:asset src='assets/images/user-placeholder.png' }}" alt="Image">
+		                                                	{{ /if }}
+		                                                </div>
+		                                                <div class="comment-author-wrap">
+		                                                    <div class="comment-author-info">
+		                                                        <div class="row align-items-start">
+		                                                            <div class="col-md-7 col-sm-12 col-12 order-md-1 order-sm-1 order-1">
+		                                                                <div class="comment-author-name">
+		                                                                    <h5>{{ customer:title }}</h5>
+		                                                                    <span class="comment-date">{{ created_at format="M d, Y | g:i A" }}</span>
+		                                                                </div>
+		                                                            </div>
+		                                                            <div class="col-md-5 col-sm-12 col-12 text-md-end order-md-2 order-sm-3 order-3">
+		                                                            	<!-- <ul class="ratings list-style d-inline-flex mb-0"> -->
+
+		                                                            		<ul class="ratings list-style d-inline-flex mb-0 review-ratings" data-rating="{{ rating }}">
+		                                                            			{{ range i from="1" to="5" }}
+		                                                            			<li><i class="fa-regular fa-star text-muted"></i></li>
+		                                                            			{{ /range }}
+		                                                            		</ul>
+		                                                            </div>
+		                                                        </div>
+		                                                    </div>
+		                                                </div>
+		                                                <div class="comment-text">
+		                                                    <p>{{ message }}
+		                                                    </p>
+		                                                </div>
+		                                            </div>
+	                                            {{ /if }}
+                                            {{ /collection:reviews }}
+                                        </div>
+
+                                        <div id="cmt-form" class="client-form">
+                                            <div class="comment-box-title mb-25">
+                                                <h4>Write Your Review</h4>
+                                            </div>
+                                            {{ if {session:has key="customer_logged_in"} == true }}
+	                                            <div id="review-message" class="mb-3"></div>
+	                                            <form action="#" class="comment-form" id="review-form">
+	                                            	<input type="hidden" name="product" value="{{ id }}">
+	                                            	<input type="hidden" name="customer" value="{{ session:customer_id }}">
+	                                                <div class="row">
+	                                                    <div class="col-md-6">
+	                                                        <div class="form-group">
+	                                                            <input type="text" name="name" id="name" required="" placeholder="Your Name*" value="{{ session:customer_full_name }}">
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="col-md-6">
+	                                                        <div class="form-group">
+	                                                            <input type="email" name="email" id="email" required="" placeholder="Email Address*" value="{{ session:customer_email }}">
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="col-lg-12">
+	                                                        <div class="form-group">
+	                                                        	<select name="rating" required>
+	                                                        		<option value="">Rating</option>
+	                                                        		<option value="5">★★★★★</option>
+	                                                        		<option value="4">★★★★☆</option>
+	                                                        		<option value="3">★★★☆☆</option>
+	                                                        		<option value="2">★★☆☆☆</option>
+	                                                        		<option value="1">★☆☆☆☆</option>
+	                                                        	</select>
+	                                                        </div>
+	                                                    </div>
+	                                                    <div class="col-lg-12">
+	                                                        <div class="form-group">
+	                                                            <textarea name="message" id="messages" cols="30" rows="10" placeholder="Please Enter Your Comment Here"></textarea>
+	                                                        </div>
+	                                                    </div>
+	                                                </div>
+	                                                <div class="row align-items-center">
+	                                                    <div class="col-md-12">
+	                                                        <button class="btn btn-dark btn-style-2">Post A Review</button>
+	                                                    </div>
+	                                                </div>
+	                                            </form>
+											{{ else }}
+												<div class="note-message">
+													<strong>Note:</strong> If you want to review, please <a href="{{ site_url }}/sign-in">sign in</a>.
+												</div>
+											{{ /if }}
+                                        </div>
+                                    </div>
+								</div>
+								<!-- tabs entry content -->
+								<div id="tab-questions" class="tabs-entry-content">
+									{{ if questions }}
+										<div class="accordion">
+											<!-- accordion list -->
+											{{ questions }}
+											<div class="accordion-list">
+												<!-- accordion title -->
+												<h4 class="accordion-title">{{ question_title }}</h4>
+												<!-- accordion content -->
+												<div class="accordion-content">
+													<p>{{ question_description }}</p>
+												</div>
+											</div>
+											{{ /questions }}
+										</div>
+									{{ else }}
+										<p>There are no questions available at the moment.</p>
+									{{ /if }}
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Product detail page section -->
+
+			<!-- related products section -->
+			<section class="related-products-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<h2 class="entry-title">Related products</h2>
+						</div>
+
+						<!-- column -->
+						{{ collection:products
+							id:not="{id}"
+							categories:contains="{{ categories | pluck:slug | join:'|' }}"
+							limit="4"
+						}}
+						{{ partial:product-card }}
+						{{ /collection:products }}
+
+					</div>
+				</div>
+			</section>
+
+			<!-- Product Quick view Popup -->
+			<div id="product-quick-popup" class="mfp-hide product-quick-popup"></div>
+			<div id="product-quick-popup-content" class="mfp-hide product-quick-popup">
+				<div class="product-quick-body">
+					<!-- Product Quick view img -->
+					<div class="quick-view-left">
+						{{ if thumb_image }}
+							{{ thumb_image }}
+								<img src="{{ url }}" alt="{{ alt }}">
+							{{ /thumb_image }}
+						{{ else }}
+							<img src="{{ theme:asset src='assets/images/placeholder-product.jpeg' }}" alt="Product Quick view img">
+						{{ /if }}
+					</div>
+					<!-- Product Quick view content -->
+					<div class="quick-view-content">
+						<div class="product-buttons-icon">
+							<a href="javascript:;" class="icon add-to-wishlist-btn" data-product-id="{{ id }}"><span class="ti-heart"></span></a>
+						</div>
+						<!-- product info -->
+						<div class="product-info product-info-style-2">
+							<h2 class="product_title">{{ title }}</h2>
+							<div class="price">${{ price }}</div>
+
+							<div class="short-des">
+								<p>{{ short_description }}</p>
+							</div>
+							<p class="people-viewing"><i class="fa-solid fa-eye"></i> <strong>25</strong> people are viewing this right now</p>
+
+							<form class="variations_form ">
+								<!-- Color variations-->
+								<div class="color-variations">
+									<label class="label-title">Color</label>
+									<ul class="checkbox-color-list">
+										<li>
+											<label class="checkcontainer" style="background-color: #231F20;">
+												<input type="radio" name="shipping_method[0]">
+												<span class="checkmark"></span>
+											</label>
+										</li>
+										<li>
+											<label class="checkcontainer" style="background-color: #CCCCCC;">
+												<input type="radio" name="shipping_method[0]">
+												<span class="checkmark"></span>
+											</label>
+										</li>
+										<li>
+											<label class="checkcontainer" style="background-color: #C2E2C4;">
+												<input type="radio" name="shipping_method[0]">
+												<span class="checkmark"></span>
+											</label>
+										</li>
+									</ul>
+								</div>
+
+								<!-- variation add to cart -->
+								<div class="variation-add-to-cart">
+									<!-- Quantity -->
+									<div class="variation-quantity">
+										<label class="label-title">Quantity:</label>
+										<!-- Quantity -->
+										<div class="quantity">
+											<div class="quantity-button minus">-</div>
+											<input type="text" class="input-text input-qty text" name="cart[d395771085aab05244a4fb8fd91bf4ee][qty]" value="1" title="Qty" size="4" placeholder="" autocomplete="off">
+											<div class="quantity-button plus">+</div>
+										</div>
+									</div>
+									<div class="single-add-to-cart">
+										<button type="submit" class="single_add_to_cart_button btn btn-dark btn-style-2">Add to cart</button>
+									</div>
+								</div>
+
+								<!-- product extra buttons-->
+								<div class="product-extra-buttons">
+									<a href="#" class="add-to-compare-btn" data-product-id="{{ id }}"><img src="{{ theme:asset src='assets/images/compare-icon.svg' }}"  alt="compare-icon"> Compare</a>
+									<a href="#"><img src="{{ theme:asset src='assets/images/question-icon.svg' }}"  alt="question-icon"> Ask a question</a>
+									<a href="#"><img src="{{ theme:asset src='assets/images/share-outline-icon.svg' }}"  alt="share-outline-icon"> Share</a>
+								</div>
+
+								<!-- product meta -->
+								<div class="product-meta">
+									<div class="product-meta-list">
+										<span>SKU: </span>
+										<span class="meta">{{ sku }}</span>
+									</div>
+									<div class="product-meta-list">
+										<span>Category:</span>
+										{{ if categories }}
+											<span class="meta">{{ categories | pluck:title | implode:",&nbsp;" }}</span>
+										{{ /else }}
+											<span class="meta">-</span>
+										{{ /if }}
+									</div>
+									<div class="product-meta-list">
+										<span>Tags:</span>
+										{{ if tags }}
+											<span class="meta">{{ tags | pluck:title | implode:",&nbsp;" }}</span>
+										{{ /else }}
+											<span class="meta">-</span>
+										{{ /if }}
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Product Quick view Popup -->

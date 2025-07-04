@@ -1,0 +1,103 @@
+title: Review
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: name
+            field:
+              type: text
+              display: 'Name'
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              input_type: email
+              type: text
+              display: Email
+              validate:
+                - required
+                - email
+          -
+            handle: product
+            field:
+              type: entries
+              display: Product
+              collections:
+                - products
+              max_items: 1
+              listable: true
+              instructions: 'Select the product this review is for.'
+          -
+            handle: customer
+            field:
+              type: entries
+              display: Customer
+              collections:
+                - customers
+              max_items: 1
+              listable: true
+              instructions: 'Select the customer who submitted this review.'
+          -
+            handle: rating
+            field:
+              type: select
+              display: Rating
+              options:
+                -
+                  key: 1
+                  value: ★☆☆☆☆
+                -
+                  key: 2
+                  value: ★★☆☆☆
+                -
+                  key: 3
+                  value: ★★★☆☆
+                -
+                  key: 4
+                  value: ★★★★☆
+                -
+                  key: 5
+                  value: ★★★★★
+              default: 5
+              validate:
+                - required
+          -
+            handle: message
+            field:
+              type: textarea
+              display: Message
+              instructions: 'Write the review content here.'
+              validate:
+                - required
+          -
+            handle: created_at
+            field:
+              type: date
+              display: 'Created At'
+              instructions: 'When this review was submitted.'
+              validate:
+                - required
+              default: now
+              listable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

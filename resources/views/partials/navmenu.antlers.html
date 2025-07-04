@@ -1,0 +1,78 @@
+
+<ul class="menu ">
+    {{ nav:main }}
+        {{ if children }}
+            {{ if url == '/mega-menu' }}
+                <li class="menu-item mega-menu menu-item-has-children {{ if is_current }} active {{ /if }}">
+                    <a href="javascript:;">{{ title }}</a>
+
+                    <!-- Sub mega menu -->
+                    <ul class="sub-mega-menu">
+                        {{ children }}
+                            <li class="{{ if url == '/mega-section-right' }}image-sub-menu{{ /if }}">
+                                {{ if url == '/mega-section' }}
+                                    <ul class="sub-menu">
+                                    {{ if children }}
+                                        {{ children }}
+                                            {{ if url == '/mega-sub-section' }}
+                                                <li>
+                                                    {{ if children }}
+                                                        {{ children }}
+                                                        <a href="javascript:;">{{ title }}</a>
+                                                        <ul>
+                                                            {{ children }}
+                                                            <li><a href="{{ url }}">{{ title }}</a></li>
+                                                            {{ /children }}
+                                                        </ul>
+                                                        {{ /children }}
+                                                    {{ else }}
+                                                        <a href="{{ url }}">{{ title }}</a>
+                                                    {{ /if }}
+                                                </li>
+                                            {{ else }}
+                                                <li><a href="{{ url }}">{{ title }}</a></li>
+                                            {{ /if }}
+                                        {{ /children }}
+                                    {{ /if }}
+                                    </ul>
+                                {{ elseif url == '/mega-section-right' }}
+                                    {{ if children }}
+                                        {{ children }}
+                                            <a href="javascript:;">{{ title }}</a>
+                                            {{ if children }}
+                                                <ul class="featured-gallery">
+                                                    {{ children }}
+                                                        <li>
+                                                            {{ if url == '/img' }}
+                                                            <img src="{{ theme:asset src='{title}' }}" alt="featured gallery img">
+                                                            {{ else }}
+                                                                <a href="{{ url }}">{{ title }}</a>
+                                                            {{ /if }}
+                                                        </li>
+                                                    {{ /children }}
+                                                </ul>
+                                            {{ /if }}
+                                        {{ /children }}
+                                    {{ /if }}
+                                {{ else }}
+                                    <a href="{{ url }}">{{ title }}</a>
+                                {{ /if }}
+                            </li>
+                        {{ /children }}
+                    </ul>
+                </li>
+            {{ else }}
+                <li class="menu-item menu-item-has-children {{ if is_current }} active {{ /if }}">
+                    <a href="{{ if title == 'Home' }}{{ site:url }}{{ else }}javascript:;{{ /if }}">{{ title }}</a>
+                    <ul class="sub-menu">
+                        {{ children }}
+                        <li class="{{ if is_current }} active {{ /if }}"><a href="{{ url }}">{{ title }}</a></li>
+                        {{ /children }}
+                    </ul>
+                </li>
+            {{ /if }}
+        {{ else }}
+            <li class="menu-item {{ if is_current }} active {{ /if }}"><a href="{{ url }}">{{ title }}</a></li>
+        {{ /if }}
+    {{ /nav:main }}
+</ul>

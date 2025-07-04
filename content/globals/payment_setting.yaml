@@ -1,0 +1,13 @@
+title: 'Payment Setting'
+data:
+  payment_methods:
+    cod: 'Cash on Delivery'
+    stripe: Stripe
+    razorpay: Razorpay
+  cash_on_delivery_enabled: true
+  public_key: 
+  secret_key: 
+  stripe_enabled: true
+  razorpay_key: 
+  razorpay_secret: 
+  razorpay_enabled: true

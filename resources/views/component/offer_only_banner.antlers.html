@@ -1,0 +1,33 @@
+
+			<!-- offer banner section -->
+			<section class="offer-banner-section style-3 section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- offer banner -->
+							<div class="offer-banner">
+								<div class="offer-banner-img" style="text-align: -webkit-right !important;">
+									{{ offer_background_image_1 }}
+									<img src="{{ url }}" alt="urban-banner-img">
+									{{ /offer_background_image_1 }}
+								</div>
+								<!-- offer banner content -->
+								<div class="offer-banner-content">
+									<h4 class="entry-subtitle">{{ offer_tag }}</h4>
+									<h2>{{ offer_title }}</h2>
+									{{ offer_buttons }}
+									{{ if offer_button_name }}
+									<a href="{{ site_url }}{{ offer_button_link }}" class="btn btn-dark btn-style-2">{{ offer_button_name }}</a>
+									{{ /if }}
+									{{ /offer_buttons }}
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End  offer banner section -->

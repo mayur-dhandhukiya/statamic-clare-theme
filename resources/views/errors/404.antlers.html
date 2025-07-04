@@ -1,0 +1,55 @@
+
+<!-- heading banner section -->
+<section class="heading-banner-section cms-heading">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+				<!-- heading banner wrap-->
+				<div class="heading-banner-wrap">
+					<!-- breadcrumb -->
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="{{ site:url }}">Home</a></li>
+							<li class="breadcrumb-item active" aria-current="page">404</li>
+						</ol>
+					</nav>
+					<!-- page title -->
+					<h1>404</h1>
+
+					<!-- heading banner img -->
+					<div class="heading-banner-img">
+						{{ common_setting:breadcrumb_background_image }}
+						<img src="{{ url }}" alt="heading banner img">
+						{{ /common_setting:breadcrumb_background_image }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+<!--/ End Hero slider section -->
+
+<!-- not found page section -->
+<section class="not-found-page-section section-two">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+				<!-- not found content -->
+				<div class="not-found-content" style="text-align: -webkit-center;">
+					<img src="{{ theme:asset src='assets/images/404-icon.svg' }}" alt="404 icon img">
+					<h2>404 - Not found!</h2>
+					<p>This page could not be found.<br> Continue to the <a href="{{ site:url }}" class="link">Home Page</a></p>
+					<a href="{{ site:url }}" class="btn btn-dark btn-style-2">Back to home page</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End not found page section -->

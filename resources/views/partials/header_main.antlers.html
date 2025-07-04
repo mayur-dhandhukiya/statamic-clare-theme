@@ -1,0 +1,102 @@
+
+<!-- Search bar -->
+<div class="search-bar">
+    <form action="#">
+        <div class="form-group">
+            <input type="search" value="{{ get:s }}" name="s" class="search-input" placeholder="Search Here..." required="">
+            <button type="button"><img src="{{ theme:asset src='assets/images/search-icon.svg' }}" alt="search icon"></button>
+        </div>
+    </form>
+    <button class="close-search"><span class="ti-close"></span></button>
+</div>
+<!-- End Search bar -->
+<!-- container -->
+<div class="container">
+    <!-- row -->
+    <div class="row align-items-center">
+        <!-- column -->
+        <div class="col-6 col-md-2 col-lg-3">
+            <!-- site-brand -->
+            <div class="site-brand">
+                <a href="{{ site:url }}">
+                    {{ common_setting:main_logo_image }}
+                        <img src="{{ url }}" alt="logo">
+                    {{ /common_setting:main_logo_image }}
+                </a>
+            </div>
+        </div>
+        <!-- column -->
+        <div class="col-6 col-md-8 col-lg-6 d-none d-md-block">
+            <!-- header-search-form -->
+            <div class="header-search-form">
+                <!-- search-form -->
+                <form class="search-form search-item klb-ajax-search" role="search">
+                    <input type="search" value="{{ get:s }}" name="s" class="form-control line search-input" autocomplete="off" placeholder="Search your favorite product...">
+
+                    <div class="drop-down" data-aos="fade-up" data-aos-duration="1100">
+                        <div class="selected">
+                            <span>Select Category</span>
+                        </div>
+                        <!-- filters Tabs navs -->
+                        <ul class="search-categories dropdown-menu" id="filters">
+                            <li class="nav-item dropdown-item search-category search-category-selected" data-cat-slug="">Select Category</li>
+                            {{ shop_setting:searchbar_categories }}
+                                <li class="nav-item dropdown-item search-category" data-cat-slug="{{ slug }}">{{ title }}</li>
+                            {{ /shop_setting:searchbar_categories }}
+                        </ul>
+                    </div>
+                    <button type="button" class="btn">
+                        <span class="ti-search"></span>
+                    </button>
+                    <input type="hidden" name="post_type" value="product">
+                </form>
+            </div>
+        </div>
+        <!-- column -->
+        <div class="col-6 col-md-2 col-lg-3">
+            <!-- Header button right -->
+            <div class="header-button-right">
+                <!-- header-button -->
+                <div class="header-button d-block d-md-none">
+                    <a href="javascript:;" class="toggle-menu"><img src="{{ theme:asset src='assets/images/toggle-menu-icon.svg' }}" alt="toggle menu icon"></a>
+                </div>
+                <div class="header-button d-block d-md-none">
+                    <a href="javascript:;" class="search-icon"><img src="{{ theme:asset src='assets/images/search-icon.svg' }}" alt="search icon"></a>
+                </div>
+                <div class="header-button">
+                    <a class="cart-icon"><img src="{{ theme:asset src='assets/images/cart-icon.svg' }}" alt="cart icon"> 
+                        <span class="count header-cart-item-count">{{ cart:is_cart_items ?? 0 }}</span>
+                    </a>
+                </div>
+                {{ if {session:has key="customer_logged_in"} == true }}
+                    <div class="header-button">
+                        <a href="{{ site_url }}/wishlist" class="wishlist-icon"><img src="{{ theme:asset src='assets/images/wishlist-icon.svg' }}" alt="wishlist icon">
+                            <span class="count header-wishlist-item-count">{{ wishlist:is_wishlist_items ?? 0 }}</span>
+                        </a>
+                    </div>
+                    <div class="header-button">
+                        <a href="{{ site_url }}/compare" class="compare-icon"><img src="{{ theme:asset src='assets/images/compare-icon.svg' }}"  alt="compare-icon">
+                            <span class="count header-compare-item-count">{{ compare:is_compare_items ?? 0 }}</span>
+                        </a>
+                    </div>
+                    <div class="header-button">
+                        <a href="{{ site_url }}/account-dashboard" class="user-icon"><img src="{{ theme:asset src='assets/images/user-icon.svg' }}" alt="user icon"></a>
+                    </div>
+                    <div class="header-button">
+                        <a href="{{ site_url }}/customer/logout" class="user-icon">
+                            <span class="menu-icon">
+                                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1455 2.5245C14.2346 2.05425 15.75 3.84975 15.75 5.625V21.375C15.75 23.1502 14.2346 24.9457 12.1455 24.4755C7.12575 23.346 3.375 18.8617 3.375 13.5C3.375 8.13825 7.12575 3.654 12.1455 2.5245ZM18.3296 9.32962C18.5406 9.11871 18.8267 9.00024 19.125 9.00024C19.4233 9.00024 19.7094 9.11871 19.9204 9.32962L23.2954 12.7046C23.5063 12.9156 23.6248 13.2017 23.6248 13.5C23.6248 13.7983 23.5063 14.0844 23.2954 14.2954L19.9204 17.6704C19.7082 17.8753 19.424 17.9887 19.1291 17.9861C18.8341 17.9836 18.5519 17.8652 18.3433 17.6567C18.1347 17.4481 18.0164 17.1659 18.0139 16.8709C18.0113 16.576 18.1247 16.2918 18.3296 16.0796L19.7843 14.625H10.125C9.82663 14.625 9.54048 14.5065 9.32951 14.2955C9.11853 14.0845 9 13.7984 9 13.5C9 13.2016 9.11853 12.9155 9.32951 12.7045C9.54048 12.4935 9.82663 12.375 10.125 12.375H19.7843L18.3296 10.9204C18.1187 10.7094 18.0002 10.4233 18.0002 10.125C18.0002 9.82668 18.1187 9.54059 18.3296 9.32962Z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                {{ else }}
+                    <div class="header-button">
+                        <a href="{{ site_url }}/sign-in" class="user-icon"><img src="{{ theme:asset src='assets/images/user-icon.svg' }}" alt="user icon"></a>
+                    </div>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</div>

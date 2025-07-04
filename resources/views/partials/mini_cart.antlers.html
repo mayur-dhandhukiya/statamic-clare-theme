@@ -1,0 +1,66 @@
+
+<!-- mini cart close -->
+<div class="mini-cart-close">
+    <a href="javascript:;"><i class="fa-regular fa-xmark"></i></a>
+</div>
+
+<div class="cart-dropdown-wrapper mini-cart-detail-section">
+    <div class="order-summary">
+        <h3 class="account-title">Cart</h3>
+        <div class="summary-product-list">
+
+                {{ has_cart_items = false }}
+                {{ cart }}
+                    {{ if is_cart_items > 0 }}
+                        {{ has_cart_items = true }}
+                    {{ /if }}
+                {{ /cart }}
+            
+                {{ if has_cart_items }}
+                {{ cart:cart_items }}
+                <div class="cart-product cart-summary-product cart-item-row" data-product-id="{{ product:id }}">
+                    <div class="cart-thumb">
+                        <a href="{{ site_url }}/products/{{ product:slug }}">
+                            {{ if product:thumb_image }}
+                                {{ product:thumb_image }}
+                                <img src="{{ url }}" alt="{{ alt }}">
+                                {{ /product:thumb_image }}
+                            {{ else }}
+                                <img src="{{ theme:asset src='assets/images/placeholder-product.jpeg' }}" alt="blog img 1">
+                            {{ /if }}
+                        </a>
+                    </div>
+                    <div class="cart-product-title">
+                        <div class="remove">
+                            <a href="javascript:;" class="remove-icon" data-product-id="{{ product:id }}"><i class="fa-regular fa-xmark"></i></a>
+                        </div>
+                        <h6><a href="{{ site_url }}/products/{{ product:slug }}">{{ product_title }}</a></h6>
+                        <div class="product-qty variation-quantity">
+                            <div class="quantity">
+                                <div class="quantity-click quantity-button minus">-</div>
+                                <input type="text" class="input-text input-qty wc-input-qty text" name="qty" value="{{ qty }}" title="Qty" size="4" placeholder="" autocomplete="off" data-product-id="{{ product:id }}">
+                                <div class="quantity-click quantity-button plus">+</div>
+                            </div>
+                            <div class="price">${{ price }}</div>
+                        </div>
+                    </div>
+                </div>
+                {{ /cart:cart_items }}
+                {{ else }}
+                <!-- Empty Cart content -->
+                <div class="empty-cart-content">
+                    <h3>Your cart is currently  empty.</h3>
+                    <p>Why not return to our amazing shop and start filling it with products. Just click on the button below to instantly get back to the shop page. Oh, and while you’re there, check out all of our mind-blowing discounts.</p>
+                </div>
+                {{ /if }}
+        </div>
+
+        <div class="mini-cart-buttons">
+            {{ if has_cart_items }}
+                <p>Total: ${{ cart:cart_total }}</p>
+            {{ /if }}
+            <a href="{{ site_url }}/cart" class="btn btn-outline-dark">View Cart</a>
+            <a href="{{ site_url }}/shop" class="btn btn-dark">Continue Shopping</a>
+        </div>
+    </div>
+</div>

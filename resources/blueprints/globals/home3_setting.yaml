@@ -1,0 +1,211 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Hero Section'
+        fields:
+          -
+            handle: hero_sub_title
+            field:
+              type: text
+              display: 'Hero Sub Title'
+          -
+            handle: hero_title
+            field:
+              type: text
+              display: 'Hero Title'
+          -
+            handle: hero_description
+            field:
+              type: textarea
+              display: 'Hero Description'
+          -
+            handle: hero_button_name
+            field:
+              type: text
+              display: 'Hero Button Name'
+          -
+            handle: hero_button_link
+            field:
+              type: text
+              display: 'Hero Button Link'
+          -
+            handle: hero_banner
+            field:
+              container: assets
+              type: assets
+              display: 'Hero Banner'
+      -
+        display: 'Last Chance Sale Section'
+        fields:
+          -
+            handle: last_chance_sale_title
+            field:
+              type: text
+              display: 'Last Chance Sale Title'
+          -
+            handle: last_chance_sale_description
+            field:
+              type: textarea
+              display: 'Last Chance Sale Description'
+      -
+        display: 'Popular Categories Section'
+        fields:
+          -
+            handle: popular_categories_heading
+            field:
+              type: text
+              display: 'Popular Categories Heading'
+          -
+            handle: popular_categories_sub_content
+            field:
+              type: text
+              display: 'Popular Categories Sub Content'
+      -
+        display: 'Collection Section'
+        fields:
+          -
+            handle: top_collection
+            field:
+              type: group
+              display: 'Top Collection'
+              fields:
+                -
+                  handle: top_collection_title
+                  field:
+                    type: text
+                    display: 'Top Collection Title'
+                -
+                  handle: top_collection_button_text
+                  field:
+                    type: text
+                    display: 'Top Collection Button Text'
+                -
+                  handle: top_collection_button_url
+                  field:
+                    type: text
+                    display: 'Top Collection Button Url'
+                -
+                  handle: top_collection_banner_image
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Top Collection Banner Image'
+          -
+            handle: new_collection
+            field:
+              type: group
+              display: 'New Collection'
+              fields:
+                -
+                  handle: new_collection_banner_image
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'New Collection Banner Image'
+                -
+                  handle: new_collection_sub_title
+                  field:
+                    type: text
+                    display: 'New Collection Sub Title'
+                -
+                  handle: new_collection_title
+                  field:
+                    type: text
+                    display: 'New Collection Title'
+                -
+                  handle: new_collection_button_text
+                  field:
+                    type: text
+                    display: 'New Collection Button Text'
+                -
+                  handle: new_collection_button_url
+                  field:
+                    type: text
+                    display: 'New Collection Button Url'
+      -
+        display: 'New Arrivals Section'
+        fields:
+          -
+            handle: new_arrivals_heading
+            field:
+              type: text
+              display: 'New Arrivals Heading'
+          -
+            handle: new_arrivals_sub_content
+            field:
+              type: text
+              display: 'New Arrivals Sub Content'
+          -
+            handle: new_arrivals_button_text
+            field:
+              type: text
+              display: 'New Arrivals Button Text'
+          -
+            handle: new_arrivals_button_url
+            field:
+              type: text
+              display: 'New Arrivals Button Url'
+      -
+        display: 'Latest Blogs & News Section'
+        fields:
+          -
+            handle: latest_blogs_heading
+            field:
+              type: text
+              display: 'Latest Blogs Heading'
+          -
+            handle: latest_blogs_sub_content
+            field:
+              type: text
+              display: 'Latest Blogs Sub Content'
+          -
+            handle: latest_blogs_button_text
+            field:
+              type: text
+              display: 'Latest Blogs Button Text'
+          -
+            handle: latest_blogs_button_url
+            field:
+              type: text
+              display: 'Latest Blogs Button Url'
+      -
+        display: 'Social & Deals Section'
+        fields:
+          -
+            handle: social_title
+            field:
+              type: text
+              display: 'Social Title'
+          -
+            handle: social_description
+            field:
+              type: textarea
+              display: 'Social Description'
+          -
+            handle: shop_socials
+            field:
+              type: grid
+              display: 'Shop Socials'
+              fields:
+                -
+                  handle: shop_social_icon
+                  field:
+                    type: text
+                    display: 'Shop Social Icon'
+                -
+                  handle: shop_social_url
+                  field:
+                    type: text
+                    display: 'Shop Social Url'
+          -
+            handle: deal_title
+            field:
+              type: text
+              display: 'Deal Title'
+          -
+            handle: deal_description
+            field:
+              type: textarea
+              display: 'Deal Description'

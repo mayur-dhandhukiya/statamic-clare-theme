@@ -1,0 +1,72 @@
+title: 'Full Box Section'
+fields:
+  -
+    handle: section_type
+    field:
+      options:
+        -
+          key: full_box
+          value: Box
+        -
+          key: full_box_without
+          value: 'Box Without'
+      type: select
+      display: 'Section type'
+      width: 50
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+      width: 50
+  -
+    handle: section_description
+    field:
+      type: textarea
+      display: 'Section Description'
+  -
+    handle: section_buttons
+    field:
+      type: grid
+      display: 'Section Buttons'
+      fields:
+        -
+          handle: section_button_name
+          field:
+            type: text
+            display: 'Section Button Name'
+        -
+          handle: section_button_link
+          field:
+            type: text
+            display: 'Section Button Link'
+  -
+    handle: boxes
+    field:
+      type: grid
+      display: Boxes
+      fields:
+        -
+          handle: box_image
+          field:
+            container: assets
+            type: assets
+            display: 'Box Image'
+        -
+          handle: box_name
+          field:
+            type: text
+            display: 'Box Name'
+        -
+          handle: box_link
+          field:
+            type: text
+            display: 'Box Link'
+  -
+    handle: categories
+    field:
+      mode: select
+      taxonomies:
+        - categories
+      type: terms
+      display: Categories

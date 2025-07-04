@@ -1,0 +1,155 @@
+{{ if {session:has key="customer_logged_in"} != true }}
+	{{ redirect to="/sign-in" }}
+{{ /if }}
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="{{ site:url }}">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">My Account</li>
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>My Account</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+			<!--/ End Hero slider section -->
+
+			<!-- Account dashboard page section -->
+			<section class="account-dashboard-page section-two">
+				<!-- container -->
+				<div class="container">
+
+					{{ partial:customer-info-box }}
+
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12 col-md-4 col-lg-3">
+							
+							{{ partial:account-sidebar }}
+
+						</div>
+						
+						{{ session_customer_id = '' }}
+						{{ customer_session }}
+							{{ session_customer_id = customer_id }}
+						{{ /customer_session }}
+
+						<!-- column -->
+						<div class="col-12 col-md-8 col-lg-9">
+							<!-- My Account right wrap -->
+							<div class="account-right-wrap">
+								<!-- Account order -->
+								<div class="account-order account-order-list-section">
+									<div class="order-table table-responsive">
+										<table class="table">
+											<thead>
+												<tr>
+													<th scope="col">Order</th>
+													<th scope="col">Date</th>
+													<th scope="col">Status</th>
+													<th scope="col">Payment Method</th>
+													<th scope="col">Total</th>
+													<th scope="col">Actions</th>
+												</tr>
+											</thead>
+											<tbody>
+
+												{{ if session_customer_id != '' }}
+
+												    {{ collection:orders sort="order_number:desc" }}
+
+													    {{ order_customer_id = '' }}
+														{{ customer }}
+															{{ order_customer_id = id }}
+														{{ /customer }}
+
+														{{ if order_customer_id == session_customer_id }}
+														    <tr>
+														        <td>
+														            <p>
+														                <a href="{{ site_url }}/account-order/{{ order_number }}">
+														                    #{{ order_number }}
+														                </a>
+														            </p>
+														        </td>
+														        <td>{{ created_at format="F j, Y" }}</td>
+														        <td style="text-transform: capitalize;">{{ order_status ?? '-' }}</td>
+														        <td>{{ payment_method_label:label methodkey='{payment_method}' }}</td>
+														        <td>
+														            ${{ order_total }} for {{ order_items | count }} items
+														        </td>
+														        <td class="d-flex justify-content-between">
+														            {{ if order_status == 'pending' && payment_method != 'cod' }}
+														            <div class="dropdown">
+														            	<button class="btn btn-dark view-btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+														            		Pay Now
+														            	</button>
+														            	<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+														            		<li>
+														            			<a href="#" 
+															            			class="dropdown-item order-payment-link"
+															            			data-select-payment="stripe"
+															            			data-order-id="{{ id }}"
+															            			data-order-number="{{ order_number }}"
+															            			data-customer-id="{{ customer }}">
+															            			Stripe
+															            		</a>
+															            	</li>
+															            	<li>
+															            		<a href="#" 
+																            		class="dropdown-item order-payment-link"
+																            		data-select-payment="razorpay"
+																            		data-order-id="{{ id }}"
+																            		data-order-number="{{ order_number }}"
+																            		data-customer-id="{{ customer }}">
+																            		Razorpay
+																            	</a>
+																            </li>
+																        </ul>
+																    </div>
+																    {{ else }}
+														            <a href="{{ site_url }}/account-order/{{ order_number }}" class="btn btn-dark view-btn">
+														                View
+														            </a>
+														            {{ /if }}
+														        </td>
+														    </tr>
+														{{ /if }}
+
+												    {{ /collection:orders }}
+												{{ else }}
+												    <tr>
+												        <td colspan="5">No orders found.</td>
+												    </tr>
+												{{ /if }}
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Account dashboard page section -->

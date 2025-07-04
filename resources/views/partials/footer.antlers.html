@@ -1,0 +1,110 @@
+
+<footer class="footer-style-1">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- column -->
+            <div class="col-12">
+                <!-- footer top -->
+                <div class="footer-top">
+                    <!-- site-brand -->
+                    <div class="site-brand" style="text-align: -webkit-center;">
+                        <a href="{{ site:url }}">
+                            {{ common_setting:footer_logo_image }}
+                                <img src="{{ url }}" alt="logo">
+                            {{ /common_setting:footer_logo_image }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <!-- column -->
+            <div class="col-12 col-sm-6 col-md-3">
+                <!-- footer column -->
+                <div class="footer-column">
+                    <h6 class="widget-title">{{ common_setting:footer_title }}</h6>
+                    <div class="widget_text">
+                        <p>{{ common_setting:footer_description }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- column -->
+            <div class="col-6 col-sm-6 col-md-3 ps-lg-5">
+                <!-- footer column -->
+                <div class="footer-column widget_nav_menu">
+                    <h6 class="widget-title">{{ common_setting:feature_title }}</h6>
+                    <!-- footer menu -->
+                    <div class="footer-menu">
+                        <ul class="menu">
+                            {{ common_setting:footer_feature_menu }}
+                            <li><a href="{{ site_url }}{{ feature_menu_url }}">{{ feature_menu_title }}</a></li>
+                            {{ /common_setting:footer_feature_menu }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- column -->
+            <div class="col-6 col-sm-6 col-md-3 ps-lg-5">
+                <!-- footer column -->
+                <div class="footer-column widget_nav_menu">
+                    <h6 class="widget-title">{{ common_setting:general_links }}</h6>
+                    <!-- footer menu -->
+                    <div class="footer-menu">
+                        <ul class="menu">
+                            {{ common_setting:footer_general_links }}
+                            <li><a href="{{ site_url }}{{ footer_general_link_url }}">{{ footer_general_link_title }}</a></li>
+                            {{ /common_setting:footer_general_links }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- column -->
+            <div class="col-6 col-sm-6 col-md-3 ps-lg-5">
+                <!-- footer column -->
+                <div class="footer-column widget_nav_menu">
+                    <h6 class="widget-title">{{ common_setting:helpful_title }}</h6>
+                    <!-- footer menu -->
+                    <div class="footer-menu">
+                        <ul class="menu">
+                            {{ common_setting:footer_helpful_links }}
+                            <li><a href="{{ site_url }}{{ footer_helpful_link_url }}">{{ footer_helpful_link_title }}</a></li>
+                            {{ /common_setting:footer_helpful_links }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer bottom -->
+        <div class="footer-bottom">
+            <!-- row -->
+            <div class="row">
+                <!-- column -->
+                <div class="col-12 col-md-7">
+                    <!-- site-copyright -->
+                    <div class="site-copyright">
+                        <ul class="social-icon">
+                            {{ common_setting:footer_socials }}
+                            <li><a href="{{ footer_social_url }}"><i class="{{ footer_social_icon }}"></i></a></li>
+                            {{ /common_setting:footer_socials }}
+                        </ul>
+                        <p>{{ common_setting:footer_copyrights }}</p>
+                    </div>
+                </div>
+                <!-- column -->
+                <div class="col-12 col-md-5">
+                    <!-- payments icon -->
+                    <div class="payments-icon">
+                        {{ common_setting:footer_payments_icon }}
+                        <img src="{{ url }}" alt="payments icon">
+                        {{ /common_setting:footer_payments_icon }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>

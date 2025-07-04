@@ -1,0 +1,63 @@
+
+            <!-- Weekly best sell section -->
+            <section class="weekly-products-section section-all">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- column -->
+                        <div class="col-12">
+                            <!-- module header -->
+                            <div class="module-header">
+                                <h2 class="entry-title">{{ section_title }}</h2>
+                                <div class="entry-header-right">
+                                    {{ section_buttons }}
+                                    <a href="{{ site_url }}/{{ section_button_link }}" class="btn link">{{ section_button_name }} <span class="ti-arrow-right"></span></a>
+                                    {{ /section_buttons }}
+                                </div>
+                            </div>
+
+                            <!-- row -->
+                            <div class="row">
+
+                                {{ if collection_type == 'products' }}
+                                {{ products }}
+                                {{ /if }}
+                                <!-- column -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <!-- weekly products -->
+                                    <div class="weekly-products product">
+                                        <!-- weekly products thumbnail -->
+                                        <div class="weekly-products-thumbnail">
+                                            <a href="{{ site_url }}/products/{{ slug }}" class="thumbnail">
+                                                {{ thumb_image }}
+                                                <img src="{{ url }}" alt="weekly products img">
+                                                {{ /thumb_image }}
+                                            </a>
+                                        </div>
+                                        <!-- weekly product content -->
+                                        <div class="product-content">
+                                            <h3 class="product-title">
+                                                <a href="{{ site_url }}/products/{{ slug }}">{{ title }}</a>
+                                            </h3>
+                                            <!-- product price -->
+                                            <span class="price"><ins>${{ price }}</ins></span>
+                                            <!-- product-buttons -->
+                                            <div class="product-buttons">
+                                                <a href="javascript:;" class="btn btn-light add_to_cart_button add-to-cart-btn" data-product-id="{{ id }}">
+                                                    Add to cart
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{ if collection_type == 'products' }}
+                                {{ /products }}
+                                {{ /if }}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ End Weekly best sell section -->

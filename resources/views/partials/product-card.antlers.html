@@ -1,0 +1,118 @@
+
+{{ if view_type === 'list' }}
+
+  <div class="col-12 product-item list-view-item">
+    <div class="product product-list-grid">
+      <!-- product thumbnail -->
+      <div class="product-thumbnail">
+        <a href="{{ site_url }}/products/{{ slug }}" class="thumbnail">
+          {{ thumb_image }}
+            <img src="{{ url }}" alt="{{ alt }}">
+          {{ /thumb_image }}
+        </a>
+
+        <!-- -->
+        <div class="product-badges">
+          <span class="badge  onsale">-15%</span>
+        </div>
+      </div>
+      <!-- product content -->
+      <div class="product-content">
+        <!-- product tile -->
+        <h3 class="product-title">
+          <a href="{{ site_url }}/products/{{ slug }}">{{ title }}</a>
+        </h3>
+        <!-- product price -->
+        <span class="price"><ins>${{ price }}</ins></span>
+        <!-- entry description -->
+        <div class="entry-description">
+          <p>{{ short_description }}</p>
+        </div>
+        <!-- Product list button -->
+        <div class="product-list-buttons">
+          <div class="add_to_cart_button">
+            <a href="javascript:;" data-product-id="{{ id }}" class="btn btn-dark add-to-cart-btn">Add to cart</a>
+          </div>
+          <!-- product buttons icon-->
+          <div class="product-buttons-icon">
+            <a href="#product-quick-popup" data-get_view_url="{{ site_url }}/products/{{ slug }}" class="arrow-icon quick-view-link"><span class="ti-eye"></span></a>
+            <a href="javascript:;" data-product-id="{{ id }}" class="arrow-icon add-to-wishlist-btn"><span class="ti-heart"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{ elseif view_type === 'grid-three' }}
+        
+  <div class="col-12 col-sm-6 col-lg-4 product-item">
+    <div class="product product-style-3">
+      <!-- product thumbnail -->
+      <div class="product-thumbnail">
+        <a href="{{ site_url }}/products/{{ slug }}" class="thumbnail">
+          {{ thumb_image }}
+            <img src="{{ url }}" alt="{{ alt }}">
+          {{ /thumb_image }}
+        </a>
+
+        <!-- -->
+        <div class="product-badges">
+          <span class="badge  onsale">-15%</span>
+        </div>
+
+        <!-- product hover button -->
+        <div class="product-hover-button">
+          <a href="{{ site_url }}/products/{{ slug }}" class="select-option-btn">Select option</a>
+        </div>
+
+        <!-- product buttons icon-->
+        <div class="product-buttons-icon">
+          <a href="#product-quick-popup" data-get_view_url="{{ site_url }}/products/{{ slug }}" class="arrow-icon quick-view-link"><span class="ti-eye"></span></a>
+          <a href="javascript:;" data-product-id="{{ id }}" class="arrow-icon add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+          <a href="javascript:;" data-product-id="{{ id }}" class="arrow-icon add-to-wishlist-btn"><span class="ti-heart"></span></a>
+        </div>
+      </div>
+      <!-- product content -->
+      <div class="product-content">
+        <!-- product tile -->
+        <h3 class="product-title">
+          <a href="{{ site_url }}/products/{{ slug }}">{{ title }}</a>
+        </h3>
+        <!-- product price -->
+        <span class="price"><ins>${{ price }}</ins></span>
+      </div>
+    </div>
+  </div>
+
+{{ else }}
+    
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item">
+    <div class="product product-style-3">
+      <div class="product-thumbnail">
+        <a href="{{ site_url }}/products/{{ slug }}" class="thumbnail">
+          {{ thumb_image }}
+            <img src="{{ url }}" alt="{{ alt }}">
+          {{ /thumb_image }}
+        </a>
+        <div class="product-badges">
+          <span class="badge onsale">-15%</span>
+        </div>
+        <div class="product-hover-button">
+          <a href="{{ site_url }}/products/{{ slug }}" class="select-option-btn">Select option</a>
+        </div>
+        <div class="product-buttons-icon">
+          <a href="#product-quick-popup" data-get_view_url="{{ site_url }}/products/{{ slug }}" class="arrow-icon quick-view-link"><span class="ti-eye"></span></a>
+          <a href="javascript:;" data-product-id="{{ id }}" class="arrow-icon add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+          <a href="javascript:;" data-product-id="{{ id }}" class="arrow-icon add-to-wishlist-btn"><span class="ti-heart"></span></a>
+        </div>
+      </div>
+      <div class="product-content">
+        <h3 class="product-title">
+          <a href="{{ site_url }}/products/{{ slug }}">{{ title }}</a>
+        </h3>
+        <span class="price"><ins>${{ price }}</ins></span>
+      </div>
+    </div>
+  </div>
+
+{{ /if }}

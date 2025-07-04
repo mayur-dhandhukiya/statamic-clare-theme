@@ -1,0 +1,76 @@
+
+			<!-- Testimonial section -->
+			<section class="testimonial-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+
+							<!-- New arrival slider -->
+							<div class="testimonial-slider">
+								<!-- row -->
+								<div class="row">
+									<!-- column -->
+									<div class="col-12 col-md-6 order-2 order-md-1">
+										<!-- swiper -->
+										<div class="swiper mySwiper2">
+											<!-- swiper wrapper -->
+											<div class="swiper-wrapper">
+
+												{{ content_records }}
+												<!-- swiper slide -->
+												<div class="swiper-slide">
+													<!-- testimonial content -->
+													<div class="testimonial-content">
+														<h2>{{ content_record_title }}</h2>
+														<p>{{ content_record_description }}</p>
+
+														<!-- testimonial user info -->
+														<div class="testimonial-user-info">
+															<div class="testimonial-user-img">
+																{{ content_record_user_image }}
+																<img src="{{ url }}" alt="products img">
+																{{ /content_record_user_image }}
+															</div>
+															<h6 class="testimonial-user-name">{{ content_record_user_name }}</h6>
+														</div>
+													</div>
+												</div>
+												{{ /content_records }}
+
+											</div>
+											<!-- slider pagination -->
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+									<!-- column -->
+									<div class="col-12 col-md-6 order-1 order-md-2 ps-0 pe-0 ps-md-2 pe-md-2">
+										<!-- swiper -->
+										<div class="swiper mySwiper testimonial-thumbnail">
+											<!-- swiper wrapper -->
+											<div class="swiper-wrapper">
+
+												{{ content_records }}
+												<!-- swiper slide -->
+												<div class="swiper-slide">
+													<!-- testimonial right image -->
+													<div class="testimonial-right-image">
+														{{ content_record_section_image }}
+														<img src="{{ url }}" alt="testimonial img">
+														{{ /content_record_section_image }}
+													</div>
+												</div>
+												{{ /content_records }}
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Testimonial section -->

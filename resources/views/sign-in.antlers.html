@@ -1,0 +1,44 @@
+{{ if {session:has key="customer_logged_in"} == true }}
+	{{ redirect to="/" }}
+{{ /if }}
+			<!-- Account Page section -->
+			<section class="my-account-page">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- account form -->
+							<div class="account-form">
+								<!-- module header -->
+								<div class="module-header">
+									<!-- page title -->
+									<h1>Sign In</h1>
+									<p>New user? <a href="{{ site_url }}/sign-up" class="link">Create an account.</a></p>
+								</div>
+								
+								<div id="loginResponse" style="display:none; margin:10px 0; padding:10px; border-radius:3px; color:white;"></div>
+
+								<form class="all-form" id="customerLoginForm">
+								  <div class="form-group">
+								    <label for="Email">Email*</label>
+								    <input type="email" class="form-control" id="Email" name="email" autocomplete="new-email" autocorrect="off" spellcheck="false">
+								  </div>
+								  <div class="form-group">
+								    <div class="form-group-lable">
+								      <label for="Password">Password*</label> 
+								      <a href="{{ site_url }}/forgot-password">Forgot Password?</a>
+								    </div>
+								    <input type="password" class="form-control" id="Password" name="password" autocomplete="new-password" autocorrect="off" spellcheck="false">
+								  </div>
+								  <button type="submit" class="btn btn-dark btn-style-2">Submit</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+			<!--/ End Account Page section -->

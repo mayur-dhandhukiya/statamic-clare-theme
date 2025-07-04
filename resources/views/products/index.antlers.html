@@ -1,0 +1,145 @@
+
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="{{ site:url }}">Home</a></li>
+										{{ category_title = '' }}
+										{{ category_description = '' }}
+										{{ if cat_slug || get:category }}
+											{{ category_title = 'Category' }}
+											{{ taxonomy:categories }}
+												{{ if slug == cat_slug || slug == get:category }}
+													{{ category_title = title }}
+													{{ category_description = description }}
+												{{ /if }}
+											{{ /taxonomy:categories }}
+											<li class="breadcrumb-item"><a href="{{ site_url }}/shop">Shop</a></li>
+											<li class="breadcrumb-item active" aria-current="page">Category</li>
+										{{ else }}
+											<li class="breadcrumb-item active" aria-current="page">Shop</li>
+										{{ /if }}
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>{{ category_title ?? title }}</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!--/ End Hero slider section -->
+
+			<section class="blog-page-grid section-two filter-intro-section {{ if category_title }} {{ else }}d-none{{ /if }}">
+				<!-- container -->
+				<div class="container">
+					<h2>{{ category_title }}</h2>
+					<p>{{ category_description }}</p>
+				</div>
+			</section>
+
+			{{ sidebar_filter_type = 'left' }}
+
+			{{ if get:filter_type == 'left' || get:filter_type == 'right' }}
+				{{ sidebar_filter_type = get:filter_type }}
+			{{ elseif shop_setting:filter_type == 'left' || shop_setting:filter_type == 'right' }}
+				{{ sidebar_filter_type = shop_setting:filter_type }}
+			{{ /if }}
+
+			<!-- shop page grid section -->
+			<section class="shop-page-grid-section style-3  section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						{{ if sidebar_filter_type == 'left' }}
+						<div class="col-12 col-md-3">
+							<!-- Left sidebar -->
+							{{ partial:product-sidebar }}
+						</div>
+						{{ /if }}
+						<!-- column -->
+						<div class="col-12 col-md-9">
+							<!-- shop filter bar -->
+								
+								<div class="filter-shop-loop">
+									
+									<div class="d-flex w-100 mb-3 mb-md-0  align-items-center">
+										<p class="shop-result-count me-2">
+											Showing <span id="current-count">1</span> of <span id="total-count">32</span> results
+										</p>
+										<a class="filter-mobile-btn text-dark fw-medium d-flex align-items-center d-md-none">
+											<span class="ti-filter me-1"></span> Filter
+										</a>
+										<div id="appliedFilters" class="" style="display: none;">
+											<div class="d-inline-flex flex-wrap gap-2 align-items-center" id="appliedFilterList"></div>
+											<a href="javascript:void(0);" id="clearAllShopFilters" class="ms-2">Clear All</a>
+										</div>
+									</div>
+									
+									<!-- For get orderby from loop -->
+									<div class="sorting-products">
+										<select name="orderby" class="orderby" aria-label="Shop order">
+											<option value="date-desc" {{ if get:sorting == "date-desc" }}selected{{ /if }}>Default sorting</option>
+											<option value="popularity" {{ if get:sorting == "popularity" }}selected{{ /if }}>Popularity</option>
+											<option value="average_rating" {{ if get:sorting == "average_rating" }}selected{{ /if }}>Average rating</option>
+											<option value="price-asc" {{ if get:sorting == "price-asc" }}selected{{ /if }}>Low to high</option>
+											<option value="price-desc" {{ if get:sorting == "price-desc" }}selected{{ /if }}>High to low</option>
+										</select>
+									</div>
+									<!-- filter-button -->
+									<div class="product-views-buttons">
+										<a href="javascript:;" class="product-view-type list-view" data-view-type="list">
+											<span></span>
+											<span></span>
+											<span></span>
+										</a>
+										<a href="javascript:;" class="product-view-type grid-three-view" data-view-type="grid-three">
+											<span></span>
+											<span></span>
+											<span></span>
+										</a>
+										<a href="javascript:;" class="product-view-type grid-four-view active" data-view-type="grid-four">
+											<span></span>
+											<span></span>
+											<span></span>
+											<span></span>
+										</a>
+									</div>
+								</div>
+
+								<!-- row -->
+								<div class="row" id="product-result"></div>
+
+						</div>
+
+						{{ if sidebar_filter_type == 'right'}}
+						<div class="col-12 col-md-3">
+							<!-- Left sidebar -->
+							{{ partial:product-sidebar }}
+						</div>
+						{{ /if }}
+					</div>
+				</div>
+			</section>
+			<!--/ shop page grid section -->
+
+			<!-- Product Quick view Popup -->
+			<div id="product-quick-popup" class="mfp-hide product-quick-popup"></div>
+			<!-- End Product Quick view Popup -->

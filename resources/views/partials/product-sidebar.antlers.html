@@ -1,0 +1,262 @@
+
+							<div class="sidebar">
+								<!-- sidebar inner -->
+								<div class="sidebar-inner">
+									<div class="filter-close d-md-none">
+										<span class="ti-close"></span>
+									</div>
+									<!-- sidebar title -->
+									<h3 class="sidebar-title">Filter</h3>
+
+									<form id="shopFilterForm" method="GET" action="javascript:void(0);">
+										<!-- Add hidden inputs to carry selected filters -->
+										<input type="hidden" name="s" value="{{ get:s }}">
+										<input type="hidden" name="category" value="{{ cat_slug || get:category }}">
+										<input type="hidden" name="colors" value="{{ get:colors }}">
+										<input type="hidden" name="sizes" value="{{ get:sizes }}">
+										<input type="hidden" name="price_range" value="{{ get:price_range }}">
+										<input type="hidden" name="sorting" value="{{ get:sorting }}">
+										<input type="hidden" name="view_type" id="view_type" value="{{ get:view_type or 'grid-four' }}">
+									</form>
+
+									<!-- Sidebar widget -->
+									<div class="sidebar-widget">
+										<h4 class="widget-title">Categories</h4>
+										<!-- sidebar widget body -->
+										<div class="sidebar-widget-body">
+											<ul class="checkbox-categories-list" style="overflow-y: auto;max-height: 275px;">
+												{{ taxonomy:categories }}
+
+												{{ count_categories = 0 }}
+												{{ collection:products categories:contains="{slug}" }}
+													{{ count_categories = total_results }}
+												{{ /collection:products }}
+
+												{{ if count_categories > 0 }}
+													<li>
+														<a href="{{ site_url }}/category/{{ slug }}" data-category-slug="{{ slug }}">
+															<label class="checkcontainer">
+																<span class="checkmark {{ if cat_slug == slug }}active{{ /if }}" data-value="{{ slug }}">{{ title }}</span>
+															</label>
+														</a>
+														<span class="count">({{ count_categories }})</span>
+													</li>
+												{{ /if }}
+
+												{{ /taxonomy:categories }}
+											</ul>
+										</div>
+									</div>
+									<!-- Sidebar widget -->
+									<div class="sidebar-widget">
+										<h4 class="widget-title">Colours</h4>
+										<!-- sidebar widget body -->
+										<div class="sidebar-widget-body">
+											<ul class="checkbox-color-list">
+												<li>
+													<label class="checkcontainer" style="background-color: #F5E5C5;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #FFB629;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #591E1E;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #AC1D1D;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #4376A5;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #129B93;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #A311BB;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #CFA5A5;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #FEA0A5;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #FF1010;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #B45353;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #89EDDB;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #700E2C;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #000000;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #1F4949;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #30C651;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #C2E2C4;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #7971D7;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #4FE0BD;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #A5C648;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer" style="background-color: #0085FF;">
+														<input type="checkbox">
+														<span class="checkmark"></span>
+													</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!-- Sidebar widget -->
+									<div class="sidebar-widget">
+										<h4 class="widget-title">Sizes</h4>
+										<!-- sidebar widget body -->
+										<div class="sidebar-widget-body">
+											<ul class="checkbox-sizes-list">
+												<li>
+													<label class="checkcontainer">
+														<input type="checkbox">
+														<span class="checkmark">XS</span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer">
+														<input type="checkbox">
+														<span class="checkmark">S</span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer">
+														<input type="checkbox">
+														<span class="checkmark">M</span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer">
+														<input type="checkbox">
+														<span class="checkmark">L</span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer">
+														<input type="checkbox">
+														<span class="checkmark">XL</span>
+													</label>
+												</li>
+												<li>
+													<label class="checkcontainer">
+														<input type="checkbox">
+														<span class="checkmark">XXL</span>
+													</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!-- Sidebar widget -->
+									<div class="sidebar-widget">
+										<h4 class="widget-title">Price</h4>
+										<!-- sidebar widget body -->
+										<div class="sidebar-widget-body">
+											<ul class="checkbox-price-list">
+												<li>
+													<label class="checkcontainer"> 
+														<input type="checkbox" name="price" value="all">
+														<span class="checkmark filter-price-span" data-value="all">All</span>
+													</label>
+												</li>
+												{{ shop_setting:shop_price_filters }}
+										            <li>
+										                <label class="checkcontainer">
+										                    <input type="checkbox" name="price" value="{{ price_min }}-{{ price_max ?? 'max' }}">
+										                    <span class="checkmark filter-price-span" data-value="{{ price_min }}-{{ price_max ?? 'max' }}">
+										                        {{ if price_max }}
+										                            ${{ price_min | number_format(2) }} – ${{ price_max | number_format(2) }}
+										                        {{ else }}
+										                            ${{ price_min | number_format(2) }}+
+										                        {{ /if }}
+										                    </span>
+										                </label>
+										            </li>
+											    {{ /shop_setting:shop_price_filters }}
+											</ul>
+										</div>
+									</div>
+
+
+								</div>
+							</div>

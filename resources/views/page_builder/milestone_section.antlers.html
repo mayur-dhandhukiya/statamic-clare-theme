@@ -1,0 +1,65 @@
+    {{ if milestone_limit == 3 }}
+            <!-- Icon box section -->
+            <section class="icon-box-section section-all">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+
+                        <!-- column -->
+                        {{ milestones }}
+                        <div class="col-12 col-md-4">
+                            <!-- icon box -->
+                            <div class="icon-box">
+                                <div class="iconbox-icon">
+                                    {{ milestone_icon }}
+                                    <img src="{{ url }}" alt="">
+                                    {{ /milestone_icon }}
+                                </div>
+                                <div class="iconbox-detail">
+                                    <h6>{{ milestone_title }}</h6>
+                                    <p>{{ milestone_description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{ /milestones }}
+
+                    </div>
+                </div>
+            </section>
+            <!--/ End Icon box section -->
+
+    {{ elseif milestone_limit == 4 }}
+
+        <!-- Icon box section -->
+            <section class="icon-box-section style-2 section-two">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+
+                        {{ milestones }}
+                        <!-- column -->
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+                            <!-- icon box -->
+                            <div class="icon-box">
+                                <div class="iconbox-icon">
+                                    {{ milestone_icon }}
+                                    <img src="{{ url }}" alt="">
+                                    {{ /milestone_icon }}
+                                </div>
+                                <div class="iconbox-detail">
+                                    <h6>{{ milestone_title }}</h6>
+                                    <p>{{ milestone_description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{ /milestones }}
+                        
+                    </div>
+                </div>
+            </section>
+            <!--/ End Icon box section -->
+
+    {{ else }}
+    {{ /if }}

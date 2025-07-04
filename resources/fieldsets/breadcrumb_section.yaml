@@ -1,0 +1,16 @@
+title: 'Breadcrumb Section'
+fields:
+  -
+    handle: page_title
+    field:
+      type: text
+      display: 'Page Title'
+      width: 50
+  -
+    handle: background_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Background Image'
+      width: 50

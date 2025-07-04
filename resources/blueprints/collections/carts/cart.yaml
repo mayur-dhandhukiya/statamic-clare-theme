@@ -1,0 +1,74 @@
+title: Cart
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          - 
+            handle: customer
+            field:
+              type: entries
+              display: Customer
+              collections:
+                - customers
+              max_items: 1
+          - 
+            handle: cart_total
+            field:
+              type: integer
+              display: Cart Total
+              validate:
+                - required
+          - 
+            handle: cart_items
+            field:
+              type: grid
+              display: Cart Items
+              fields:
+                - 
+                  handle: product
+                  field:
+                    type: entries
+                    display: Product
+                    collections:
+                      - products
+                    max_items: 1
+                - 
+                  handle: product_title
+                  field:
+                    type: text
+                    display: Product Title
+                - 
+                  handle: qty
+                  field:
+                    type: integer
+                    display: Qty
+                - 
+                  handle: price
+                  field:
+                    type: integer
+                    display: Price
+                - 
+                  handle: total
+                  field:
+                    type: integer
+                    display: Total
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

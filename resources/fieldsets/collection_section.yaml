@@ -1,0 +1,156 @@
+title: 'Collection Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: section_description
+    field:
+      type: textarea
+      display: 'Section Description'
+  -
+    handle: section_buttons
+    field:
+      type: grid
+      display: 'Section Buttons'
+      fields:
+        -
+          handle: section_button_name
+          field:
+            type: text
+            display: 'Section Button Name'
+        -
+          handle: section_button_link
+          field:
+            type: text
+            display: 'Section Button Link'
+  -
+    handle: collection_section_type
+    field:
+      options:
+        -
+          key: accordion_view
+          value: 'Accordion View'
+        -
+          key: slider_view
+          value: 'Slider View'
+        -
+          key: card_view
+          value: 'Card View'
+        -
+          key: collection_slider_count
+          value: 'Slider + Items Count'
+        -
+          key: collection_accordion_with_tab
+          value: 'Accordion with Tab'
+        -
+          key: collection_accordion_bottom_slider
+          value: 'Collection Accordion Bottom Slider'
+        -
+          key: collection_accordion_with_timer
+          value: 'Collection Accordion with Timer'
+        -
+          key: collection_with_banner
+          value: 'Collection with Banner'
+        -
+          key: collection_accordion_view
+          value: 'Collection Accordion View 2'
+      type: select
+      display: 'Collection Section Type'
+  -
+    handle: banner_details
+    field:
+      type: group
+      display: 'Banner Details'
+      if:
+        collection_section_type: 'equals collection_with_banner'
+      fields:
+        -
+          handle: banner_title
+          field:
+            type: text
+            display: 'Banner Title'
+            width: 50
+        -
+          handle: banner_tag
+          field:
+            type: text
+            display: 'Banner Tag'
+            width: 50
+        -
+          handle: banner_image
+          field:
+            container: assets
+            type: assets
+            display: 'Banner Image'
+        -
+          handle: banner_buttons
+          field:
+            type: grid
+            display: 'Banner Buttons'
+            fields:
+              -
+                handle: banner_button_name
+                field:
+                  type: text
+                  display: 'Banner Button Name'
+              -
+                handle: banner_button_link
+                field:
+                  type: text
+                  display: 'Banner Button Link'
+  -
+    handle: collection_type
+    field:
+      options:
+        -
+          key: products
+          value: Products
+      type: select
+      display: 'Collection Type'
+      if:
+        collection_section_type: 'not collection_slider_count'
+  -
+    handle: products
+    field:
+      mode: select
+      collections:
+        - products
+      query_scopes:
+        - collection_products
+      type: entries
+      display: 'Collection Products'
+      listable: false
+      if:
+        collection_type: 'equals products'
+  -
+    handle: collection_slider_items
+    field:
+      type: grid
+      display: 'Collection Slider Items'
+      if:
+        collection_section_type: 'equals collection_slider_count'
+      fields:
+        -
+          handle: collection_slider_item_image
+          field:
+            container: assets
+            type: assets
+            display: 'Collection Slider Item Image'
+        -
+          handle: collection_slider_item_title
+          field:
+            type: text
+            display: 'Collection Slider Item Title'
+        -
+          handle: collection_slider_item_count
+          field:
+            type: text
+            display: 'Collection Slider Item Count'
+        -
+          handle: collection_slider_item_link
+          field:
+            type: text
+            display: 'Collection Slider Item Link'

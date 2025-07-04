@@ -1,0 +1,222 @@
+
+<!-- heading banner section -->
+<section class="heading-banner-section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+				<!-- heading banner wrap-->
+				<div class="heading-banner-wrap">
+					<!-- breadcrumb -->
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="{{ site:url }}">Home</a></li>
+							<li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+						</ol>
+					</nav>
+					<!-- page title -->
+					<h1>{{ title }}</h1>
+
+					<!-- heading banner img -->
+					<div class="heading-banner-img">
+						{{ common_setting:breadcrumb_background_image }}
+						<img src="{{ url }}" alt="heading banner img">
+						{{ /common_setting:breadcrumb_background_image }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+<!--/ End Hero slider section -->
+
+<!-- About content section -->
+<section class="about-content-section section-two">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+				<!-- about content wrap -->
+				<div class="about-content-wrap">
+					{{ about_setting:full_image }}
+					<img src="{{ url }}" alt="about banner img" class="full-img">
+					{{ /about_setting:full_image }}
+					<div class="about-content">
+						<h2>{{ about_setting:about_title }}</h2>
+						<p>{{ about_setting:about_description }}</p>
+						<p>{{ about_setting:additional_paragraph }}</p>
+					</div>
+					<!-- row -->
+					<div class="row align-items-center mt-md-5">
+						<!-- column -->
+						<div class="col-12 col-md-6">
+							{{ about_setting:features_left_image }}
+							<img src="{{ url }}" alt="about small img">
+							{{ /about_setting:features_left_image }}
+						</div>
+						<!-- column -->
+						<div class="col-12 col-md-6">
+							<!-- about service list -->
+							<div class="about-service-list">
+								<h2>{{ about_setting:features_title }}</h2>
+								<ul>
+									{{ about_setting:features }}
+									<li>
+										<div class="icon">
+											{{ icon }}
+											<img src="{{ url }}" alt="Soft Fabric icon">
+											{{ /icon }}
+										</div>
+										<div class="about-service-info">
+											<h5>{{ title }}</h5>
+											<p>{{ description }}</p>
+										</div>
+									</li>
+									{{ /about_setting:features }}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="about-content">
+						<h2>{{ about_setting:features_above_title }}</h2>
+						<p>{{ about_setting:features_above_description }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End About content section -->
+
+<!-- About video section -->
+<div class="about-video-section section-two">
+	<!-- Full video -->
+	<div class="full-video">
+		{{ about_setting:video_thumbnail }}
+		<img src="{{ url }}" alt="video bg img">
+		{{ /about_setting:video_thumbnail }}
+		<a href="{{ about_setting:video_url }}" class="video-play-icon">
+			{{ about_setting:video_play_image }}
+			<img src="{{ url }}" alt="video-play icon">
+			{{ /about_setting:video_play_image }}
+		</a>
+	</div>	
+</div>
+<!--/ End About video section -->
+
+<!-- Our Team section -->
+<section class="our-team-section section-two">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+				<h2>Our Team</h2>
+			</div>
+
+			<!-- column -->
+			{{ about_setting:team }}
+			<div class="col-12 col-md-6 col-lg-3">
+				<!-- Our Team grid-->
+				<div class="our-team-grid">
+					<!-- Our Team thumbnail-->
+					<div class="team-thumbnail">
+						<a href="#" class="thumbnail">
+							{{ image }}
+							<img src="{{ url }}" alt="team img">
+							{{ /image }}
+						</a>
+					</div>
+					<!-- Our Team info -->
+					<div class="our-team-info">
+						<h6><a href="#">{{ name }}</a> <span>{{ role }}</span></h6>
+						<p>{{ bio }}</p>
+					</div>
+				</div>
+			</div>
+			{{ /about_setting:team }}
+
+		</div>
+	</div>
+</section>
+<!--/ End Our Team section -->
+
+<!-- Testimonial section -->
+<section class="testimonial-section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+
+				<!-- New arrival slider -->
+				<div class="testimonial-slider">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12 col-md-6 order-2 order-md-1">
+							<!-- swiper -->
+							<div class="swiper mySwiper2">
+								<!-- swiper wrapper -->
+								<div class="swiper-wrapper">
+
+									<!-- swiper slide -->
+									{{ home2_setting:customer_reviews }}
+									<div class="swiper-slide">
+										<!-- testimonial content -->
+										<div class="testimonial-content">
+											<h2>{{ customer_review_title }}</h2>
+											<p>{{ customer_review_description }}</p>
+
+											<!-- testimonial user info -->
+											<div class="testimonial-user-info">
+												<div class="testimonial-user-img">
+													{{ customer_review_image }}
+													<img src="{{ url }}" alt="products img">
+													{{ /customer_review_image }}
+												</div>
+												<h6 class="testimonial-user-name">{{ customer_review_name }}</h6>
+											</div>
+										</div>
+									</div>
+									{{ /home2_setting:customer_reviews }}
+
+								</div>
+								<!-- slider pagination -->
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-md-6 order-1 order-md-2 ps-0 pe-0 ps-md-2 pe-md-2">
+							<!-- swiper -->
+							<div class="swiper mySwiper testimonial-thumbnail">
+								<!-- swiper wrapper -->
+								<div class="swiper-wrapper">
+
+									<!-- swiper slide -->
+									{{ home2_setting:customer_review_banners }}
+									<div class="swiper-slide">
+										<!-- testimonial right image -->
+										<div class="testimonial-right-image">
+											<img src="{{ url }}" alt="testimonial img">
+										</div>
+									</div>
+									{{ /home2_setting:customer_review_banners }}
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End Testimonial section -->

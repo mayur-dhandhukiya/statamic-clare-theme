@@ -1,0 +1,147 @@
+
+<footer class="footer-style-2">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12 col-md-8 pe-md-4">
+				<!-- newsletter form -->
+				<form action="#" class="newsletter-form">
+					<input type="hidden" name="type" value="simple">
+					<input type="email" placeholder="Email address" class="form-control" required name="email">
+					<button type="submit" class="btn btn-light">Subscribe now</button>
+				</form>
+				<p class="form-message" style="display:none;text-align: left;"></p>
+
+				<!-- row -->
+				<div class="row footer-menu-link">
+					<!-- column -->
+					<div class="col-12 col-sm-6 col-md-4">
+						<!-- footer column -->
+						<div class="footer-column">
+							<h6 class="widget-title">Contact</h6>
+							<div class="widget_text address-widget">
+								<p><a href="tel:{{ common_setting:contact_no }}">{{ common_setting:contact_no }}</a></p>
+								<p><a href="mailto:{{ common_setting:contact_email }}">{{ common_setting:contact_email }}</a></p>
+							</div>
+						</div>
+					</div>
+					<!-- column -->
+					<div class="col-6 col-sm-6 col-md-4 ps-lg-5">
+						<!-- footer column -->
+						<div class="footer-column widget_nav_menu">
+							<h6 class="widget-title">{{ common_setting:general_links }}</h6>
+							<!-- footer menu -->
+							<div class="footer-menu">
+								<ul class="menu">
+									{{ common_setting:footer_general_links }}
+									<li><a href="{{ site_url }}{{ footer_general_link_url }}">{{ footer_general_link_title }}</a></li>
+									{{ /common_setting:footer_general_links }}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- column -->
+					<div class="col-6 col-sm-6 col-md-4 ps-lg-5">
+						<!-- footer column -->
+						<div class="footer-column widget_nav_menu">
+							<h6 class="widget-title">{{ common_setting:helpful_title }}</h6>
+							<!-- footer menu -->
+							<div class="footer-menu">
+								<ul class="menu">
+									{{ common_setting:footer_helpful_links }}
+									<li><a href="{{ site_url }}{{ footer_helpful_link_url }}">{{ footer_helpful_link_title }}</a></li>
+									{{ /common_setting:footer_helpful_links }}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- footer bottom -->
+				<div class="footer-bottom d-none d-md-block">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12 col-md-9">
+							<!-- site-copyright -->
+							<div class="site-copyright">
+								<p>{{ common_setting:footer_copyrights }}</p>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-md-3">
+							<!-- social icon -->
+							<ul class="social-icon">
+								{{ common_setting:footer_socials }}
+								<li><a href="{{ footer_social_url }}"><i class="{{ footer_social_icon }}"></i></a></li>
+								{{ /common_setting:footer_socials }}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- column -->
+			<div class="col-12 col-md-4 ps-xl-5">
+				<!-- instagram grig -->
+				<div class="instagram-grid">
+					<!-- instagram box -->
+					<div class="instagram-box">
+						<img src="assets/images/instagram-img1.jpg" alt="instagram img 1">
+						<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+					</div>
+					<!-- instagram box -->
+					<div class="instagram-box">
+						<img src="assets/images/instagram-img2.jpg" alt="instagram img 2">
+						<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+					</div>
+					<!-- instagram box -->
+					<div class="instagram-box">
+						<img src="assets/images/instagram-img3.jpg" alt="instagram img 3">
+						<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+					</div>
+					<!-- instagram box -->
+					<div class="instagram-box">
+						<img src="assets/images/instagram-img4.jpg" alt="instagram img 4">
+						<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+					</div>
+					<!-- instagram box -->
+					<div class="instagram-box">
+						<img src="assets/images/instagram-img5.jpg" alt="instagram img 5">
+						<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+					</div>
+					<!-- instagram box -->
+					<div class="instagram-box">
+						<img src="assets/images/instagram-img6.jpg" alt="instagram img 6">
+						<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+					</div>
+				</div>
+
+				<!-- footer bottom -->
+				<div class="footer-bottom d-block d-md-none">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12 col-md-9">
+							<!-- site-copyright -->
+							<div class="site-copyright">
+								<p>{{ common_setting:footer_copyrights }}</p>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-md-3">
+							<!-- social icon -->
+							<ul class="social-icon">
+								{{ common_setting:footer_socials }}
+	                            <li><a href="{{ footer_social_url }}"><i class="{{ footer_social_icon }}"></i></a></li>
+	                            {{ /common_setting:footer_socials }}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,168 @@
+{{ if {session:has key="customer_logged_in"} != true }}
+	{{ redirect to="/sign-in" }}
+{{ /if }}
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="index-one.html">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">My Account</li>
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>My Account</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+			<!--/ End Hero slider section -->
+
+			<!-- Account dashboard page section -->
+			<section class="account-dashboard-page section-two">
+				<!-- container -->
+				<div class="container">
+
+					{{ partial:customer-info-box }}
+
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12 col-md-4 col-lg-3">
+
+							{{ partial:account-sidebar }}
+
+						</div>
+						<!-- column -->
+						<div class="col-12 col-md-8 col-lg-9">
+							<!-- My Account right wrap -->
+							<div class="account-right-wrap">
+								<!-- Account details form-->
+								<div class="account-details-form">
+									<form class="all-form account-detail-form" id="accountDetailForm">
+										<div class="form-row">
+											<div class="col-12 col-sm-6">
+												<div class="form-group">
+													<label for="FirstName">First Name*</label>
+													<input type="text" name="first_name" class="form-control" placeholder="First name" value="{{ customer_session:first_name }}">
+												</div>
+											</div>
+											<div class="col-12 col-sm-6">
+												<div class="form-group">
+													<label for="Fullname">Last Name*</label>
+													<input type="text" name="last_name" class="form-control" placeholder="Last Name" value="{{ customer_session:last_name }}">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="Fullname">Display name*</label>
+											<input type="text" name="full_name" class="form-control" placeholder="Name" value="{{ customer_session:name }}">
+											<small id="emailHelp" class="form-text">This will be how your name will be displayed in the account section and in reviews</small>
+										</div>
+										<div class="form-group">
+											<label for="Fullname">Email address*</label>
+											<input type="email" name="email" class="form-control" placeholder="Email address" value="{{ customer_session:email }}" autocomplete="new-email" autocorrect="off" spellcheck="false">
+										</div>
+										<div class="d-flex align-items-start" style="gap: 20px;">
+										    <!-- Upload Field Section: 70% -->
+										    <div style="flex: 0 0 90%;">
+										        <div class="form-group">
+										            <label for="Fullname">Profile Image</label>
+										            <input type="file" name="profile" accept="image/*" class="form-control">
+										        </div>
+										    </div>
+
+										    <!-- Preview Section: 30% -->
+										    <div class="profile-preview-container position-relative" style="flex: 0 0 10%; width: 100px; height: 100px;">
+										        <!-- Preview image -->
+										        <img id="profilePreview"
+											        src="{{ customer_session:profile_image | glide:width=100,height=100 }}"
+											        alt="Profile Preview"
+											        class="img-thumbnail"
+											        data-bs-toggle="modal"
+											        data-bs-target="#profileImageModal"
+											        style="cursor: pointer; width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block;">
+
+										        <!-- Remove image icon -->
+										        <button type="button"
+										                id="removeProfileImageBtn"
+										                class="bg-danger text-white remove-btn"
+										                style="position: absolute; top: -8px; right: -8px; padding: 0.25rem 0.5rem; border-radius: 50%; font-size: 1rem; line-height: 1; display: none;">
+										            &times;
+										        </button>
+
+										        <!-- Hidden field for backend -->
+										        <input type="hidden" name="remove_profile_image" id="removeProfileImage" value="0">
+										    </div>
+										</div>
+										<fieldset>
+											<legend>Choose your favorite monster</legend>
+											<div class="form-group">
+												<label for="Fullname">Current password (leave blank to leave unchanged)</label>
+												<div class="password-wrapper">
+													<input type="password" name="current_password" id="currentPassword" class="form-control" autocomplete="new-password" autocorrect="off" spellcheck="false">
+													<span class="toggle-password" data-target="#currentPassword" data-password-icon="{{ theme:asset src='assets/images/eye-icon.svg' }}" data-text-icon="{{ theme:asset src='assets/images/eye-off-icon.svg' }}"></span>
+												</div>
+											</div>
+											<div class="form-group password-wrapper">
+												<label for="Fullname">New password (leave blank to leave unchanged)</label>
+												<div class="password-wrapper">
+													<input type="password" name="new_password" id="newPassword" class="form-control" autocomplete="new-password" autocorrect="off" spellcheck="false">
+													<span class="toggle-password" data-target="#newPassword" data-password-icon="{{ theme:asset src='assets/images/eye-icon.svg' }}" data-text-icon="{{ theme:asset src='assets/images/eye-off-icon.svg' }}"></span>
+												</div>
+											</div>
+											<div class="form-group password-wrapper">
+												<label for="Fullname">Confirm new password</label>
+												<div class="password-wrapper">
+													<input type="password" name="new_password_confirmation" id="newPasswordConfirmation" class="form-control" autocomplete="new-password" autocorrect="off" spellcheck="false">
+													<span class="toggle-password" data-target="#newPasswordConfirmation" data-password-icon="{{ theme:asset src='assets/images/eye-icon.svg' }}" data-text-icon="{{ theme:asset src='assets/images/eye-off-icon.svg' }}"></span>
+												</div>
+											</div>
+										</fieldset>
+										<button type="submit" class="btn btn-dark btn-style-2">Save Changes</button>
+									</form>
+									<div id="accountResponse" style="margin-top: 10px; display: none;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Account dashboard page section -->
+
+			<!-- Image Preview Modal -->
+			<div class="modal fade" id="profileImageModal" tabindex="-1" aria-hidden="true">
+			  <div class="modal-dialog modal-fullscreen"> <!-- Fullscreen modal -->
+			    <div class="modal-content bg-transparent border-0">
+
+			      <!-- Close Icon -->
+			      <div class="modal-header border-0">
+			        <button type="button" class="btn-close btn-close-white ms-auto me-3 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+
+			      <!-- Full Image in Modal -->
+			      <div class="modal-body p-0 d-flex justify-content-center align-items-center" style="height: 100vh;">
+			        <img id="modalProfileImage"
+			             src=""
+			             alt="Full Profile"
+			             style="width: 100vw; height: 100vh; object-fit: contain;">
+			      </div>
+
+			    </div>
+			  </div>
+			</div>

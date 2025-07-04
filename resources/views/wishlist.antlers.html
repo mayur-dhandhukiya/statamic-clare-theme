@@ -1,0 +1,127 @@
+{{ if {session:has key="customer_logged_in"} != true }}
+	{{ redirect to="/sign-in" }}
+{{ /if }}
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="{{ site:url }}">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Wishlist</li>
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>Wishlist</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!--/ End Hero slider section -->
+
+			{{ has_wishlist_items = false }}
+	        {{ wishlist }}
+	            {{ if is_wishlist_items > 0 }}
+	                {{ has_wishlist_items = true }}
+	            {{ /if }}
+	        {{ /wishlist }}
+
+			<!-- shop page grid section -->
+			<section class="wishlist-grid-section style-3  section-two wishlist-list-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						
+						<!-- column -->
+						{{ if has_wishlist_items }}
+						{{ wishlist:wishlist_items }}
+						<div class="col-12">
+							<!-- Product -->
+							<div class="product product-list-grid">
+								<!-- Product close icon -->
+								<a href="javascript:;" class="product-close-icon remove-from-wishlist-btn" data-product-id="{{ product:id }}"><span class="ti-close"></span></a>
+								<!-- product thumbnail -->
+								<div class="product-thumbnail">
+									<a href="{{ site_url }}/products/{{ product:slug }}" class="thumbnail">
+										{{ if product:thumb_image }}
+			                                {{ product:thumb_image }}
+			                                <img src="{{ url }}" alt="{{ alt }}">
+			                                {{ /product:thumb_image }}
+			                            {{ else }}
+			                                <img src="{{ theme:asset src='assets/images/placeholder-product.jpeg' }}" alt="blog img 1">
+			                            {{ /if }}
+									</a>
+
+									<!-- -->
+									<div class="product-badges">
+										<span class="badge  onsale">-15%</span>
+									</div>
+								</div>
+								<!-- product content -->
+								<div class="product-content">
+									<!-- product tile -->
+									<h3 class="product-title">
+										<a href="{{ site_url }}/products/{{ product:slug }}">{{ product:title }}</a>
+									</h3>
+									<!-- product price -->
+									<span class="price"><ins>${{ product:price }}</ins></span>
+									<!-- entry description -->
+									<div class="entry-description">
+										<p>{{ product:short_description }}</p>
+									</div>
+									<!-- Product list button -->
+									<div class="product-list-buttons">
+										<div class="add_to_cart_button">
+											<button type="submit" class="btn btn-dark wishlist-add-to-cart-btn" data-product-id="{{ product:id }}">Add to cart</button>
+										</div>
+										<!-- product buttons icon-->
+										<div class="product-buttons-icon">
+											<a href="{{ site_url }}/products/{{ product:slug }}" class="arrow-icon"><span class="ti-eye"></span></a>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						{{ /wishlist:wishlist_items }}
+
+						<!-- column -->
+						<div class="col-12">
+							<div class="wishlist-bottom-btn">
+								<a href="javascript:;" class="remove-link remove-all-wishlist-btn">Remove all <span class="ti-trash"></span></a>
+								<button type="submit" class="btn btn-dark btn-style-2 add-all-to-cart-btn">Add to cart all</button>
+							</div>
+						</div>
+
+		                {{ else }}
+	                    <div class="col-12">
+							<!-- Empty Wishlist content -->
+							<div class="empty-cart-content">
+								<h3>Your Wishlist is currently  empty.</h3>
+								<p>Why not return to our amazing shop and start filling it with products. Just click on the button below to instantly get back to the shop page. Oh, and while you’re there, check out all of our mind-blowing discounts.</p>
+								<a href="{{ site_url }}/shop" class="btn btn-dark">
+									Return to shop
+								</a>
+							</div>
+						</div>
+		                {{ /if }}
+
+					</div>
+				</div>
+			</section>
+			<!--/ shop page grid section -->

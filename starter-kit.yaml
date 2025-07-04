@@ -1,0 +1,17 @@
+export_paths:
+  - app/Helpers
+  - app/Http
+  - app/Listeners
+  - app/Modifiers
+  - app/Providers
+  - app/Tags
+  - content
+  - public/assets
+  - resources/blueprints
+  - resources/fieldsets
+  - resources/forms
+  - resources/views
+  - routes/web.php
+  - storage/forms
+dependencies:
+  alt-design/alt-seo: "^1.3"

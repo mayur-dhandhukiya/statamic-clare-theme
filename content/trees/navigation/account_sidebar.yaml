@@ -1,0 +1,31 @@
+tree:
+  -
+    id: 94dde70f-30bc-468b-b805-809ec46e130d
+    title: Dashboard
+    url: /account-dashboard
+    data:
+      menu_icon: images/account-dashboard.svg
+  -
+    id: 1d8380e7-8d71-432b-a073-c5acc8f04191
+    title: Orders
+    url: /account-order
+    data:
+      menu_icon: images/account-order.svg
+  -
+    id: dec29cd4-29f8-49e5-94ac-34bc58d030f9
+    title: Addresses
+    url: /account-addresses
+    data:
+      menu_icon: images/account-addresses.svg
+  -
+    id: 692f70eb-a6fc-4ea2-bf25-5166592c510a
+    title: 'Account details'
+    url: /account-detail
+    data:
+      menu_icon: images/account-detail.svg
+  -
+    id: ddb643a8-2b16-499f-8f2d-1b3d55b1ca38
+    title: Logout
+    url: /customer/logout
+    data:
+      menu_icon: images/logout-icon.svg

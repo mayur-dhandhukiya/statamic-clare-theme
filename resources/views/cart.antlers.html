@@ -1,0 +1,191 @@
+
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="{{ site:url }}">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Cart</li>
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>Cart</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!--/ End Hero slider section -->
+
+			{{ has_cart_items = false }}
+	        {{ cart }}
+	            {{ if is_cart_items > 0 }}
+	                {{ has_cart_items = true }}
+	            {{ /if }}
+	        {{ /cart }}
+
+			<!-- cart page section -->
+			<section class="cart-page section-two cart-detail-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+		                {{ if has_cart_items }}
+						<div class="col-12 col-lg-8">
+							<!-- Cart product list -->
+							<table class="table cart-product-table">
+								<thead>
+									<tr>
+										<th scope="col" class="product-name" style="width:55%;">Product</th>
+										<th scope="col" class="price">Price</th>
+										<th scope="col" class="quantity-td">Quantity</th>
+										<th scope="col" class="total-price">TOTAL</th>
+										<th scope="col" class="remove"></th>
+									</tr>
+								</thead>
+								<tbody>
+
+					                {{ cart:cart_items }}
+									<tr class="cart-item-row" data-product-id="{{ product:id }}">
+										<td class="product-name">
+											<div class="cart-product">
+												<div class="cart-thumb">
+													<a href="{{ site_url }}/products/{{ product:slug }}">
+							                            {{ if product:thumb_image }}
+							                                {{ product:thumb_image }}
+							                                <img src="{{ url }}" alt="{{ alt }}">
+							                                {{ /product:thumb_image }}
+							                            {{ else }}
+							                                <img src="{{ theme:asset src='assets/images/placeholder-product.jpeg' }}" alt="blog img 1">
+							                            {{ /if }}
+							                        </a>
+												</div>
+												<div class="cart-product-title">
+													<a href="{{ site_url }}/products/{{ product:slug }}">{{ product:title }}</a>
+												</div>
+											</div>
+										</td>
+										<td class="price">
+											${{ price }}
+										</td>
+										<td class="quantity-td">
+											<div class="quantity">
+												<div class="quantity-click quantity-button minus">-</div>
+												<input type="text" class="input-text input-qty wc-input-qty text" value="{{ qty }}" title="Qty" size="4" placeholder="" autocomplete="off" data-product-id="{{ product:id }}">
+												<div class="quantity-click quantity-button plus">+</div>
+											</div>
+										</td>
+										<td class="total-price">
+											${{ total }}
+										</td>
+										<td class="remove">
+											<a href="javascript:;" class="remove-icon" data-product-id="{{ product:id }}"><span class="ti-trash"></span></a>
+										</td>
+									</tr>
+					                {{ /cart:cart_items }}
+
+								</tbody>
+							</table>
+							<!-- Car footer -->
+							<div class="cart-footer">
+								<!-- Coupon code -->
+								<div class="coupon-code">
+									<!-- Coupon form -->
+									<form action="#" class="coupon-code-form">
+										<input type="email" placeholder="Coupon code" class="form-control">
+										<button type="submit" class="btn btn-dark">Submit</button>
+									</form>
+								</div>
+
+								<!-- Update cart button -->
+								<div class="update-cart-btn">
+									<!-- <a href="javascript:;" class="update-cart">Update cart <span class="ti-reload"></span></a> -->
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-lg-4">
+							<!-- cart right sidebar -->
+							<div class="cart-sidebar">
+								<div class="cart-total-body">
+									<h4>Cart Total</h4>
+									<div class="cart-list">
+										<h6>Subtotal</h6>
+										<span>${{ cart:cart_total }}</span>
+									</div>
+									<div class="cart-list shipping-cart-list">
+										<h6>Shipping</h6>
+
+										<div class="shipping-total-list">
+											<label class="checkcontainer">
+												<input type="radio" name="shipping_method[0]">
+												<span class="checkmark">Free Shipping</span>
+											</label>
+											<span class="price">$0.00</span>
+										</div>
+										<div class="shipping-total-list">
+											<label class="checkcontainer">
+												<input type="radio" name="shipping_method[0]">
+												<span class="checkmark">Standart:</span>
+											</label>
+											<span class="price">$19.00</span>
+										</div>
+										<div class="shipping-total-list">
+											<label class="checkcontainer">
+												<input type="radio" name="shipping_method[0]">
+												<span class="checkmark">Express:</span>
+											</label>
+											<span class="price">$22.00</span>
+										</div>
+									</div>
+									<div class="car-country">
+										<h5>Estimate for Your Country</h5>
+										<p><a href="account-address.html" class="link">Change address</a></p>
+									</div>
+									<div class="cart-list cart-total">
+										<h6>Total</h6>
+										<span>$675.000</span>
+									</div>
+								</div>
+
+								<!-- Cart checkout button -->
+								<div class="cart-checkout-button">
+									<!-- <button type="button" class="btn btn-dark">Proceed to checkout</button> -->
+									<a href="{{ site_url }}/checkout" class="btn btn-dark">Proceed to checkout</a>
+									<a href="{{ site_url }}/shop" class="link">Continue to shopping</a>
+								</div>
+							</div>
+						</div>
+
+		                {{ else }}
+	                    <div class="col-12">
+							<!-- Empty Cart content -->
+							<div class="empty-cart-content">
+								<h3>Your cart is currently  empty.</h3>
+								<p>Why not return to our amazing shop and start filling it with products. Just click on the button below to instantly get back to the shop page. Oh, and while you’re there, check out all of our mind-blowing discounts.</p>
+								<a href="{{ site_url }}/shop" class="btn btn-dark">
+									Return to shop
+								</a>
+							</div>
+						</div>
+		                {{ /if }}
+
+					</div>
+				</div>
+			</section>
+			<!--/ End cart page section -->

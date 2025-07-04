@@ -1,0 +1,221 @@
+{{ if {session:has key="customer_logged_in"} != true }}
+	{{ redirect to="/sign-in" }}
+{{ /if }}
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="{{ site:url }}">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">My Account</li>
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>My Account</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+			<!--/ End Hero slider section -->
+
+			<!-- Account dashboard page section -->
+			<section class="account-dashboard-page section-two">
+				<!-- container -->
+				<div class="container">
+
+					{{ partial:customer-info-box }}
+
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12 col-md-4 col-lg-3">
+
+							{{ partial:account-sidebar }}
+							
+						</div>
+						<!-- column -->
+						<div class="col-12 col-md-8 col-lg-9">
+							<!-- My Account right wrap -->
+							<div class="account-right-wrap">
+								<!-- Account address -->
+								<div class="account-address">
+									<p>{{ account_setting:addresses_description }}</p>
+
+									{{ shipping_edit_url = '' }}
+									{{ shipping_first_name = '' }}
+									{{ shipping_last_name = '' }}
+									{{ shipping_email = '' }}
+									{{ shipping_phone_number = '' }}
+									{{ shipping_address = '' }}
+									{{ shipping_city = '' }}
+									{{ shipping_state = '' }}
+									{{ shipping_pin_code = '' }}
+									{{ shipping_country = '' }}
+
+									{{ billing_first_name = '' }}
+									{{ billing_last_name = '' }}
+									{{ billing_email = '' }}
+									{{ billing_phone_number = '' }}
+									{{ billing_address = '' }}
+									{{ billing_city = '' }}
+									{{ billing_state = '' }}
+									{{ billing_pin_code = '' }}
+									{{ billing_country = '' }}
+
+									{{ session_customer_id = '' }}
+									{{ customer_session }}
+										{{ session_customer_id = customer_id }}
+									{{ /customer_session }}
+
+								    {{ collection:addresses }}
+
+								    	{{ address_customer_id = '' }}
+								    	{{ customer }}
+									    	{{ address_customer_id = id }}
+								    	{{ /customer }}
+
+								    	{{ if address_customer_id == session_customer_id }}
+
+									        {{ if address_type == "shipping" }}
+
+												{{ shipping_first_name = first_name }}
+												{{ shipping_last_name = last_name }}
+												{{ shipping_email = email }}
+												{{ shipping_phone_number = phone_number }}
+												{{ shipping_address = address }}
+												{{ shipping_city = city }}
+												{{ shipping_state = state }}
+												{{ shipping_pin_code = pin_code }}
+												{{ shipping_country = country }}
+									        
+									        {{ elseif address_type == "billing" }}
+									        
+												{{ billing_first_name = first_name }}
+												{{ billing_last_name = last_name }}
+												{{ billing_email = email }}
+												{{ billing_phone_number = phone_number }}
+												{{ billing_address = address }}
+												{{ billing_city = city }}
+												{{ billing_state = state }}
+												{{ billing_pin_code = pin_code }}
+												{{ billing_country = country }}
+									        
+									        {{ /if }}
+
+								    	{{ /if }}
+
+								    {{ /collection:addresses }}
+
+									<!-- row -->
+									<div class="row">
+
+							            <!-- Billing Address -->
+							            <div class="col-12 col-md-6 pe-md-5 pt-2">
+							                <h5 class="account-title">
+							                    Billing Address
+							                    <a href="{{ site_url }}/account-addresses/billing-detail" class="addrss-edit-link">
+							                        <img src="{{ theme:asset src='assets/images/address-edit-icon.svg' }}" alt="address edit icon">
+							                    </a>
+							                </h5>
+							                <div class="address-column">
+							                    <p>
+							                        <span>Name:</span> {{ if billing_first_name || billing_last_name }} {{ billing_first_name }} {{ billing_last_name }} {{ else }} Name not exist {{ /if }}<br>
+							                        <span>Email:</span> {{ if billing_email }} {{ billing_email }} {{ else }} Email not exist {{ /if }}<br>
+							                        <span>Phone:</span> {{ if billing_phone_number }} {{ billing_phone_number }} {{ else }} Phone Number not exist {{ /if }}<br>
+							                    </p>
+							                    <p>	
+							                    	{{ if billing_address || billing_city || billing_state || billing_country || billing_pin_code }}
+							                    		<span>Address:</span>
+									            		{{ if billing_address }}
+									            			{{ billing_address }},<br>
+									            		{{ /if }}
+
+									            		{{ if billing_city }}
+									            			{{ billing_city }},
+									            		{{ /if }}
+
+									            		{{ if billing_state }}
+									            			{{ billing_state }},
+									            		{{ /if }}
+
+									            		{{ if billing_pin_code }}
+									            			{{ billing_pin_code }}<br>
+									            		{{ /if }}
+
+									            		{{ if billing_country }}
+									            			{{ billing_country }}
+									            		{{ /if }}
+								            		{{ /else }}
+								            			<span>Address:</span> Address not exist
+								            		{{ /if }}
+							                    </p>
+							                </div>
+							            </div>
+
+							            <!-- Shipping Address -->
+							            <div class="col-12 col-md-6 ps-md-5 pt-2">
+							                <h5 class="account-title">
+							                    Shipping Address
+							                    <a href="{{ site_url }}/account-addresses/shipping-detail" class="addrss-edit-link">
+							                        <img src="{{ theme:asset src='assets/images/address-edit-icon.svg' }}" alt="address edit icon">
+							                    </a>
+							                </h5>
+							                <div class="address-column">
+							                    <p>
+							                        <span>Name:</span> {{ if shipping_first_name || shipping_last_name }} {{ shipping_first_name }} {{ shipping_last_name }} {{ else }} Name not exist {{ /if }}<br>
+							                        <span>Email:</span> {{ if shipping_email }} {{ shipping_email }} {{ else }} Email not exist {{ /if }}<br>
+							                        <span>Phone:</span> {{ if shipping_phone_number }} {{ shipping_phone_number }} {{ else }} Phone Number not exist {{ /if }}<br>
+							                    </p>
+							                    <p>
+							                    	{{ if shipping_address || shipping_city || shipping_state || shipping_country || shipping_pin_code }}
+							                    		<span>Address:</span>
+									            		{{ if shipping_address }}
+									            			{{ shipping_address }},<br>
+									            		{{ /if }}
+
+									            		{{ if shipping_city }}
+									            			{{ shipping_city }},
+									            		{{ /if }}
+
+									            		{{ if shipping_state }}
+									            			{{ shipping_state }},
+									            		{{ /if }}
+
+									            		{{ if shipping_pin_code }}
+									            			{{ shipping_pin_code }}<br>
+									            		{{ /if }}
+
+									            		{{ if shipping_country }}
+									            			{{ shipping_country }}
+									            		{{ /if }}
+								            		{{ /else }}
+								            			<span>Address:</span> Address not exist
+								            		{{ /if }}
+							                    </p>
+							                </div>
+							            </div>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Account dashboard page section -->

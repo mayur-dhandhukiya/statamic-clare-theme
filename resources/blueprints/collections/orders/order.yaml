@@ -1,0 +1,262 @@
+title: Order
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+              visibility: hidden
+          -
+            handle: order_number
+            field:
+              type: text
+              display: 'Order Number'
+              validate:
+                - required
+                - 'unique:entries'
+          -
+            handle: customer
+            field:
+              type: entries
+              collections:
+                - customers
+              max_items: 1
+              display: Customer
+              query_scopes:
+                - customer
+          -
+            handle: order_status
+            field:
+              type: select
+              options:
+                pending: Pending
+                paid: Paid
+                cancelled: Cancelled
+                failed: Failed
+                shipped: Shipped
+                delivered: Delivered
+              default: pending
+              display: 'Order Status'
+          -
+            handle: order_total
+            field:
+              type: integer
+              display: 'Order Total'
+          -
+            handle: payment_method
+            field:
+              type: select
+              options:
+                -
+                  key: cod
+                  value: 'Cash on Delivery'
+                -
+                  key: stripe
+                  value: Stripe
+                -
+                  key: razorpay
+                  value: Razorpay
+              display: 'Payment Method'
+          -
+            handle: agree_terms
+            field:
+              type: toggle
+              display: 'Agree to Terms'
+              instructions: 'Customer agreed to terms and conditions.'
+          -
+            handle: order_notes
+            field:
+              type: textarea
+              display: 'Order Notes'
+          -
+            handle: created_at
+            field:
+              type: date
+              display: 'Created At'
+              format: 'Y-m-d H:i:s'
+          -
+            handle: updated_at
+            field:
+              type: date
+              display: 'Updated At'
+              format: 'Y-m-d H:i:s'
+  billing_detail:
+    display: 'Billing Detail'
+    sections:
+      -
+        fields:
+          -
+            handle: billing_first_name
+            field:
+              type: text
+              display: 'Billing First Name'
+          -
+            handle: billing_last_name
+            field:
+              type: text
+              display: 'Billing Last Name'
+          -
+            handle: billing_email
+            field:
+              type: text
+              display: 'Billing Email'
+          -
+            handle: billing_phone
+            field:
+              type: text
+              display: 'Billing Phone'
+          -
+            handle: billing_address
+            field:
+              type: text
+              display: 'Billing Street Address'
+          -
+            handle: billing_city
+            field:
+              type: text
+              display: 'Billing City'
+          -
+            handle: billing_state
+            field:
+              type: text
+              display: 'Billing State'
+          -
+            handle: billing_zip
+            field:
+              type: text
+              display: 'Billing ZIP'
+          -
+            handle: billing_country
+            field:
+              type: text
+              display: 'Billing Country'
+          -
+            handle: shipping_enabled
+            field:
+              type: toggle
+              display: 'Ship to Different Address?'
+  shipping_detail:
+    display: 'Shipping Detail'
+    sections:
+      -
+        fields:
+          -
+            handle: shipping_last_name
+            field:
+              type: text
+              display: 'Shipping Last Name'
+          -
+            handle: shipping_first_name
+            field:
+              type: text
+              display: 'Shipping First Name'
+          -
+            handle: shipping_email
+            field:
+              type: text
+              display: 'Shipping Email'
+          -
+            handle: shipping_phone
+            field:
+              type: text
+              display: 'Shipping Phone'
+          -
+            handle: shipping_address
+            field:
+              type: text
+              display: 'Shipping Street Address'
+          -
+            handle: shipping_city
+            field:
+              type: text
+              display: 'Shipping City'
+          -
+            handle: shipping_state
+            field:
+              type: text
+              display: 'Shipping State'
+          -
+            handle: shipping_zip
+            field:
+              type: text
+              display: 'Shipping ZIP'
+          -
+            handle: shipping_country
+            field:
+              type: text
+              display: 'Shipping Country'
+  order_items:
+    display: 'Order Items'
+    sections:
+      -
+        fields:
+          -
+            handle: order_items
+            field:
+              type: replicator
+              display: 'Order Items'
+              collapse: true
+              sets:
+                main:
+                  display: Main
+                  sets:
+                    product_item:
+                      display: 'Product Item'
+                      fields:
+                        -
+                          handle: product
+                          field:
+                            type: entries
+                            collections:
+                              - products
+                            display: Product
+                            max_items: 1
+                        -
+                          handle: product_title
+                          field:
+                            type: text
+                            display: 'Product Title'
+                            width: 66
+                        -
+                          handle: added_at
+                          field:
+                            type: date
+                            display: 'Added At'
+                            width: 33
+                            format: 'Y-m-d H:i:s'
+                        -
+                          handle: qty
+                          field:
+                            type: integer
+                            display: Quantity
+                            width: 33
+                        -
+                          handle: price
+                          field:
+                            type: integer
+                            display: Price
+                            width: 33
+                        -
+                          handle: total
+                          field:
+                            type: integer
+                            display: Total
+                            width: 33
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

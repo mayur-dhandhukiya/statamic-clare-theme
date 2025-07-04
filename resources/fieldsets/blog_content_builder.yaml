@@ -1,0 +1,93 @@
+title: 'Blog Content Builder'
+fields:
+  -
+    handle: blog_content_builder
+    field:
+      type: replicator
+      display: 'Blog Content Builder'
+      collapse: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            paragraphs_section:
+              display: 'Paragraphs Section'
+              fields:
+                -
+                  handle: paragraphs
+                  field:
+                    type: grid
+                    display: Paragraphs
+                    fields:
+                      -
+                        handle: paragraphs
+                        field:
+                          type: textarea
+                          display: Paragraphs
+            split_section:
+              display: 'Split Section'
+              fields:
+                -
+                  handle: is_split_image
+                  field:
+                    type: toggle
+                    display: 'Is Split Image'
+                    width: 33
+                -
+                  handle: split_image_position
+                  field:
+                    options:
+                      -
+                        key: left
+                        value: Left
+                      -
+                        key: right
+                        value: Right
+                    type: select
+                    display: 'Split Image Position'
+                    width: 33
+                    if:
+                      is_split_image: 'equals true'
+                -
+                  handle: split_image
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Split Image'
+                    width: 33
+                    if:
+                      is_split_image: 'equals true'
+                    max_files: 1
+                -
+                  handle: split_title
+                  field:
+                    type: text
+                    display: 'Split Title'
+                -
+                  handle: split_contents
+                  field:
+                    type: grid
+                    display: 'Split Contents'
+                    fields:
+                      -
+                        handle: split_content
+                        field:
+                          type: textarea
+                          display: 'Split Content'
+            blockquote_section:
+              display: 'Blockquote Section'
+              fields:
+                -
+                  handle: blockquote_content
+                  field:
+                    type: textarea
+                    display: 'Blockquote Content'
+            gallery_section:
+              display: 'Gallery Section'
+              fields:
+                -
+                  handle: gallery
+                  field:
+                    container: assets
+                    type: assets
+                    display: Gallery

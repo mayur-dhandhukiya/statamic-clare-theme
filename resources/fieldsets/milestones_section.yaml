@@ -1,0 +1,36 @@
+title: 'Milestones Section'
+fields:
+  -
+    handle: milestone_limit
+    field:
+      options:
+        -
+          key: 3
+          value: '3'
+        -
+          key: 4
+          value: '4'
+      type: select
+      display: 'Milestone Limit'
+  -
+    handle: milestones
+    field:
+      type: grid
+      display: Milestones
+      fields:
+        -
+          handle: milestone_icon
+          field:
+            container: assets
+            type: assets
+            display: 'Milestone Icon'
+        -
+          handle: milestone_title
+          field:
+            type: text
+            display: 'Milestone Title'
+        -
+          handle: milestone_description
+          field:
+            type: textarea
+            display: 'Milestone Description'

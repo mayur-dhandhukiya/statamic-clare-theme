@@ -1,0 +1,63 @@
+title: 'Faq Section'
+fields:
+  -
+    handle: accordion_items
+    field:
+      collapse: true
+      type: replicator
+      display: 'Accordion Items'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            accordion_items:
+              display: 'Accordion Items'
+              fields:
+                -
+                  handle: accordion_item_heading
+                  field:
+                    type: text
+                    display: 'Accordion Item Heading'
+                -
+                  handle: accordion_item_records
+                  field:
+                    type: grid
+                    display: 'Accordion Item Records'
+                    fields:
+                      -
+                        handle: accordion_item_question
+                        field:
+                          type: text
+                          display: 'Accordion Item Question'
+                      -
+                        handle: accordion_item_answers
+                        field:
+                          type: grid
+                          display: 'Accordion Item Answers'
+                          fields:
+                            -
+                              handle: accordion_item_answer
+                              field:
+                                type: textarea
+                                display: 'Accordion Item Answer'
+  -
+    handle: description_for_button
+    field:
+      type: textarea
+      display: 'Description for Button'
+  -
+    handle: buttons
+    field:
+      type: grid
+      display: Buttons
+      fields:
+        -
+          handle: button_name
+          field:
+            type: text
+            display: 'Button Name'
+        -
+          handle: button_link
+          field:
+            type: text
+            display: 'Button Link'

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="{{ site:short_locale }}">
+<head>
+    <!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='copyright' content=''>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Live preview for Clare E-Commerce HTML Template">
+    <meta name="twitter:title" content="Live preview for Clare E-Commerce HTML Template">
+    <meta name="og:image:alt" content="Live preview for Clare E-Commerce HTML Template">
+
+    <meta name="site-url" content="{{ site:url }}">
+    <meta name="current-full-url" content="{{ current_full_url }}">
+    <meta name="segment-1" content="{{ segment_1 }}">
+    <meta name="segment-2" content="{{ segment_2 }}">
+    <meta name="segment-3" content="{{ segment_3 }}">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <meta name="customer_logged_in" content="{{ session:customer_logged_in ? 'true' : 'false' }}">
+
+    <!-- <script>
+        if ('{{ segment_1 }}' == 'wishlist') {
+            if ('{{session:has key="customer_logged_in"}}' == false) {
+                localStorage.setItem('redirectUrl', '{{ current_full_url }}');
+                window.location.href = "/sign-in";
+            }
+        }
+    </script> -->
+
+    <!-- Title Tag  -->
+    <title>{{ title ?? site:name }}</title>
+    {{ vite src="resources/js/site.js|resources/css/site.css" }}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ theme:asset src='assets/images/favicon.png' }}">
+    <!-- Web Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap" rel="stylesheet">
+    
+    <!-- StyleSheet -->
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/bootstrap.min.css' }}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/magnific-popup.css' }}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/all-fontawesome.min.css' }}">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/themify-icons.css' }}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/swiper-bundle.min.css' }}">
+    
+    
+    <!-- Eshop StyleSheet -->
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/reset.css' }}">
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/style.css' }}">
+    <link rel="stylesheet" href="{{ theme:asset src='assets/css/responsive.css' }}">
+    
+</head>
+<body class="js no-scroll">
+    <!-- wrapper -->
+    <div class="wrapper">
+        <!-- Preloader -->
+        {{ partial:preloader }}
+        <!-- End Preloader -->
+
+
+        <!-- Header -->
+        {{ if url == '/home-1' }}
+            {{ partial:header }}
+        {{ elseif url == '/home-2' }}
+            {{ partial:header2 }}
+        {{ elseif url == '/home-3' }}
+            {{ partial:header3 }}
+        {{ else }}
+            {{ if common_setting:header_layout == "header_v2" }}
+                {{ partial:header2 }}
+            {{ elseif common_setting:header_layout == "header_v3" }}
+                {{ partial:header3 }}
+            {{ else }}
+                {{ partial:header }}
+            {{ /if }}
+        {{ /if }}
+        <!--/ End Header -->
+
+        <!-- site-primary -->
+        <main class="site-primary">
+            {{ template_content }}
+        </main>
+        <!--/ End site-primary -->
+
+        <!--/ Footer -->
+        {{ if url == '/home-1' }}
+            {{ partial:footer }}
+        {{ elseif url == '/home-2' }}
+            {{ partial:footer2 }}
+        {{ elseif url == '/home-3' }}
+            {{ partial:footer3 }}
+        {{ else }}
+            {{ if common_setting:footer_layout == "footer_v2" }}
+                {{ partial:footer2 }}
+            {{ elseif common_setting:footer_layout == "footer_v3" }}
+                {{ partial:footer3 }}
+            {{ else }}
+                {{ partial:footer }}
+            {{ /if }}
+        {{ /if }}
+        <!--/ End Footer -->
+
+        {{ partial:other }}
+    </div>
+
+    
+    <!-- Jquery -->
+    <script src="{{ theme:asset src='assets/js/jquery.min.js' }}"></script>
+    <script src="{{ theme:asset src='assets/js/bootstrap.bundle.min.js' }}"></script>
+    <!-- imagesloaded JS -->
+    <!-- <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script> -->
+    <script src="{{ theme:asset src='assets/js/imagesloaded.pkgd.min.js' }}"></script>
+    <!-- swiper JS -->
+    <script src="{{ theme:asset src='assets/js/swiper-bundle.min.js' }}"></script>
+    <!-- Magnific Popup JS -->
+    <script src="{{ theme:asset src='assets/js/magnific-popup.js' }}"></script>
+    <!-- isotope JS -->
+    <script src="{{ theme:asset src='assets/js/isotope.pkgd.min.js' }}"></script>
+    <!-- Razorpay JS -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <!-- <script src="{{ theme:asset src='assets/js/checkout-razorpay.js' }}"></script> -->
+    <!-- Stripe JS -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- <script src="{{ theme:asset src='assets/js/stripe.js' }}"></script> -->
+    <!-- Active JS -->
+    <script src="{{ theme:asset src='assets/js/custom.js' }}"></script>
+    <script>
+        $(document).ready(function () {
+            const isHome = window.location.pathname === '/' || window.location.pathname === '/index' || window.location.pathname === '/home-1';
+
+            if (!isHome && $('.departments-menu').is(':visible')) {
+                $('.departments-menu').slideUp();
+            }
+        });
+    </script>
+
+</body>
+</html>

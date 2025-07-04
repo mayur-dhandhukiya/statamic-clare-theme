@@ -1,0 +1,90 @@
+{{ if blogs_total > 0 }}
+
+{{ blogs }}
+<div class="filter-shop-loop">
+	<div class="d-flex w-100 mb-3 mb-md-0 justify-content-between align-items-center">
+		<p class="shop-result-count">
+			Showing <span id="from-count">{{ from }}</span> to <span id="current-count">{{ to }}</span> of <span id="total-count">{{ total }}</span> results
+		</p>
+		<a class="filter-mobile-btn text-dark fw-medium d-flex align-items-center d-md-none">
+			<span class="ti-filter me-1"></span> Filter
+		</a>
+	</div>
+</div>
+{{ /blogs }}
+
+{{ blogs:data }}
+<div class="col-12 col-md-6">
+	<!-- blog grid-->
+	<div class="blog-grid-style-3">
+		<!-- blog grid image-->
+		<div class="blog-grid-image">
+			<a href="{{ site_url }}/blogs/{{ slug }}">
+				{{ thumb_image }}
+					<img src="{{ url }}" alt="{{ alt }}">
+				{{ /thumb_image }}
+			</a>
+		</div>
+		<!-- blog grid content-->
+		<div class="blog-grid-content">
+			<h6>
+				{{ blog_categories }}
+					<a href="javascript:;">{{ title }}</a>
+				{{ /blog_categories }}
+				<span>{{ date format="jS M Y" }}</span>
+			</h6>
+			<h5 class="entry-title">
+				<a href="{{ site_url }}/blogs/{{ slug }}">{{ title }}</a>
+			</h5>
+			<p>{{ short_description }}</p>
+			<a href="{{ site_url }}/blogs/{{ slug }}" class="btn link">Read more <span class="ti-arrow-right"></span></a>
+		</div>
+	</div>
+</div>
+{{ /blogs:data }}
+
+<!-- Pagination -->
+{{ blogs }}
+	{{ if prev_page_url || next_page_url }}
+		<div class="col-12">
+			<!-- pagination -->
+			<div class="pagination-part">
+				<nav aria-label="...">
+					<ul class="pagination">
+
+						{{ if prev_page_url }}
+						<li class="page-item previous-link">
+							<a class="page-link" href="{{ prev_page_url }}">Prev</a>
+						</li>
+						{{ /if }}
+
+						{{ links}}
+							{{ if label != "Next &raquo;" && label != "&laquo; Previous" }}
+								<li class="page-item {{ if active }}active{{ /if }}">
+									{{ if active }}
+										<span class="page-link">{{ label }}</span>
+									{{ else }}
+										<a class="page-link" href="{{ url }}">{{ label }}</a>
+									{{ /if }}
+								</li>
+							{{ /if }}
+						{{ /links}}
+
+						{{ if next_page_url }}
+						<li class="page-item next-link">
+							<a class="page-link" href="{{ next_page_url }}">Next</a>
+						</li>
+						{{ /if }}
+
+					</ul>
+				</nav>
+			</div>
+		</div>
+	{{ /if }}
+{{ /blogs }}
+{{ else }}
+<div class="text-center py-5">
+	<h2 class="">No Blogs Found</h2>
+	<p class="text-secondary">We couldn't find any blog posts matching your criteria. Try again later or clear your filters.</p>
+</div>
+{{ /if }}

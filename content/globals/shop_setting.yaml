@@ -1,0 +1,81 @@
+title: 'Shop Setting'
+data:
+  filter_type: left
+  shop_price_filters:
+    -
+      id: mciyqw19
+      price_min: 0
+      price_max: 100
+    -
+      id: mciyscnx
+      price_min: 100
+      price_max: 200
+    -
+      id: mciysfl0
+      price_min: 200
+      price_max: 300
+    -
+      id: mciysid9
+      price_min: 300
+      price_max: 400
+    -
+      id: mciyssdo
+      price_min: 500
+  searchbar_categories:
+    - accessories
+    - coats
+    - dresses
+    - floral
+    - printed
+    - shoes
+    - sweaters
+    - tops
+  global_filters:
+    -
+      id: mclylxc7
+      global_filter_name: 'Best seller'
+      global_filter_link: '/shop?sorting=popularity'
+    -
+      id: mclyob8f
+      global_filter_name: 'Trending this week'
+      global_filter_link: '/shop?sorting=average_rating'
+    -
+      id: mclyofeo
+      global_filter_name: 'back in stock'
+      global_filter_link: /shop
+    -
+      id: mclyog9b
+      global_filter_name: Dresses
+      global_filter_link: /category/dresses
+    -
+      id: mclyolb4
+      global_filter_name: Floral
+      global_filter_link: /category/floral
+    -
+      id: mclyooaf
+      global_filter_name: Printed
+      global_filter_link: /category/printed
+    -
+      id: mclyorov
+      global_filter_name: 'New arrival'
+      global_filter_link: '/shop?sorting=date-desc'
+    -
+      id: mclyovfz
+      global_filter_name: Shoes
+      global_filter_link: /category/shoes
+    -
+      id: mclyp0tj
+      global_filter_name: Oversized
+      global_filter_link: /shop
+    -
+      id: mclyp466
+      global_filter_name: 'Work outfits'
+      global_filter_link: /shop
+    -
+      id: mclyp7wn
+      global_filter_name: 'The gift shop'
+      global_filter_link: /shop
+    -
+      id: mclypbvj
+      global_filter_name: 'Premium Cloth'
+      global_filter_link: /shop

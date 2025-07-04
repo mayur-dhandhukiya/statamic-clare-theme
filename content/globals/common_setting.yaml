@@ -1,0 +1,115 @@
+title: 'Common Setting'
+data:
+  layout: home_v1
+  header_layout: header_v1
+  footer_layout: footer_v1
+  main_logo_image:
+    - images/logo-dark.svg
+  white_logo:
+    - images/logo-light.svg
+  breadcrumb_background_image:
+    - images/heading-banner-img.png
+  offer_text: 'Free Express Shipping on orders $200!'
+  home_2_offer_text: 'Refer a friend & get <span>$20</span> in credits each <span>⚡</span>'
+  contact_no: '+1 234 565 7676'
+  contact_email: clare@gmail.com
+  footer_logo_image:
+    - images/logo-dark.svg
+  footer_title: 'About Us'
+  footer_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.'
+  feature_title: Feature
+  footer_feature_menu:
+    -
+      id: m9b6pdo2
+      feature_menu_title: 'About Us'
+      feature_menu_url: /about
+    -
+      id: m9b6pe5e
+      feature_menu_title: 'Terms Condition'
+      feature_menu_url: /terms-conditions
+    -
+      id: m9b6pej6
+      feature_menu_title: 'Best Products'
+      feature_menu_url: /shop
+  general_links: 'General Links'
+  footer_general_links:
+    -
+      id: m9b6q9oi
+      footer_general_link_title: Blogs
+      footer_general_link_url: /blogs
+    -
+      id: m9b6qa4z
+      footer_general_link_title: 'Site Map'
+      footer_general_link_url: /sitemap
+    -
+      id: m9b6qan7
+      footer_general_link_title: 'Become Seller'
+      footer_general_link_url: /become-seller
+  helpful_title: Helpful
+  footer_helpful_links:
+    -
+      id: m9b6r0t7
+      footer_helpful_link_title: 'Flash Sale'
+      footer_helpful_link_url: /shop
+    -
+      id: m9b6r1fn
+      footer_helpful_link_title: FAQ
+      footer_helpful_link_url: /faq
+    -
+      id: m9b6r1tn
+      footer_helpful_link_title: Support
+      footer_helpful_link_url: /support
+  footer_socials:
+    -
+      id: m9b6rq0c
+      footer_social_icon: 'fa-brands fa-facebook'
+      footer_social_url: 'https://www.facebook.com/'
+    -
+      id: m9b6tjdw
+      footer_social_icon: 'fa-brands fa-instagram'
+      footer_social_url: 'https://www.instagram.com/'
+    -
+      id: m9b6tjr1
+      footer_social_icon: 'fa-brands fa-youtube'
+      footer_social_url: 'https://www.youtube.com/'
+  footer_copyrights: '©2025 Clare All rights reserved'
+  footer_payments_icon:
+    - images/payments-icon.png
+  footer3_menu:
+    -
+      id: m9bexagz
+      footer3_menu_title: Home
+      footer3_menu_url: /
+    -
+      id: m9bexb1e
+      footer3_menu_title: Shop
+      footer3_menu_url: /shop
+    -
+      id: m9bexbey
+      footer3_menu_title: About
+      footer3_menu_url: /about
+    -
+      id: m9bexbyq
+      footer3_menu_title: Blogs
+      footer3_menu_url: /blogs
+    -
+      id: m9bexcs2
+      footer3_menu_title: Contact
+      footer3_menu_url: /contact
+    -
+      id: m9bey1dt
+      footer3_menu_title: Orders
+      footer3_menu_url: /orders
+  footer3_second_menu:
+    -
+      id: m9beyxb5
+      footer3_second_menu_title: 'Privacy policy'
+      footer3_second_menu_url: /privacy-policy
+    -
+      id: m9beyyex
+      footer3_second_menu_title: 'Terms & condition'
+      footer3_second_menu_url: /terms-condition
+    -
+      id: m9beyyux
+      footer3_second_menu_title: 'Track order'
+      footer3_second_menu_url: /order-track

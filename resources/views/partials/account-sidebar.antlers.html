@@ -1,0 +1,15 @@
+
+<!-- My Account left menu -->
+<div class="account-left-menu">
+	<ul>
+		{{ nav:account_sidebar }}
+		<li class="{{ if url|contains:segment_1 }}active{{ /if }}">
+			<a href="{{ url }}">
+				<span class="menu-icon">
+					{{ svg src="{menu_icon}" }}
+				</span>
+			{{ title }}</a>
+		</li>
+		{{ /nav:account_sidebar }}
+	</ul>
+</div>

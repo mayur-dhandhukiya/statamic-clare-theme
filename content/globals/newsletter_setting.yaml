@@ -1,0 +1,7 @@
+title: 'Newsletter Setting'
+data:
+  newsletter_title: 'Get 20% Off Discount Coupon'
+  newsletter_subtitle: 'by Subscribe our Newsletter'
+  newsletter_description: "Get has been the industry's standard dummy text ever sincethe ey of type andmen unlimiedted offer book."
+  newsletter_background_image:
+    - images/newsletter-bg-img.png

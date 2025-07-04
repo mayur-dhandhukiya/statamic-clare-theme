@@ -1,0 +1,63 @@
+
+			<!-- About content section -->
+			<section class="about-content-section section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- about content wrap -->
+							<div class="about-content-wrap">
+								{{ banner_image }}
+								<img src="{{ url }}" alt="about banner img" class="full-img">
+								{{ /banner_image }}
+								<div class="about-content">
+									<h2>{{ heading_1 }}</h2>
+									{{ content_1_paragraphs }}
+									<p>{{ content_1_paragraph }}</p>
+									{{ /content_1_paragraphs }}
+								</div>
+								<!-- row -->
+								<div class="row align-items-center mt-md-5">
+									<!-- column -->
+									<div class="col-12 col-md-6">
+										{{ small_image }}
+										<img src="{{ url }}" alt="about small img">
+										{{ /small_image }}
+									</div>
+									<!-- column -->
+									<div class="col-12 col-md-6">
+										<!-- about service list -->
+										<div class="about-service-list">
+											<h2>{{ service_section_heading }}</h2>
+											<ul>
+												{{ services }}
+												<li>
+													<div class="icon">
+														{{ icon }}
+														<img src="{{ url }}" alt="{{ alt }}">
+														{{ /icon }}
+													</div>
+													<div class="about-service-info">
+														<h5>{{ title }}</h5>
+														<p>{{ description }}</p>
+													</div>
+												</li>
+												{{ /services }}
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="about-content">
+									<h2>{{ heading_2 }}</h2>
+									{{ content_2_paragraphs }}
+									<p>{{ content_2_paragraph }}</p>
+									{{ /content_2_paragraphs }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End About content section -->

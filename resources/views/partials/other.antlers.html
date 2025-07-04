@@ -1,0 +1,58 @@
+
+<!-- Newsletter Popup -->
+<!-- link that opens popup -->
+<a class="newsletter-popup-link d-none" href="#newsletter-popup">Newsletter Popup</a>
+
+{{ background_image_url = '{site_url}/assets/images/newsletter-bg-img.png' }}
+
+{{ if newsletter_setting:newsletter_background_image }}
+    {{ newsletter_setting:newsletter_background_image }}
+        {{ background_image_url = url }}
+    {{ /newsletter_setting:newsletter_background_image }}
+{{ /if }}
+
+<!-- Newsletter Popup box-->
+<div id="newsletter-popup" class="mfp-hide newsletter-popup-block">
+    <div class="newsletter-body" style="background-image:url('{{ background_image_url  }}');">
+        <div class="newsletter-popup-content">
+            <!-- site-brand -->
+            <div class="site-brand">
+                <a href="{{ site_url }}">
+                    {{ if common_setting:main_logo_image }}
+                        {{ common_setting:main_logo_image }}
+                            <img src="{{ url }}" alt="{{ alt }}">
+                        {{ /common_setting:main_logo_image }}
+                    {{ else }}
+                        <img src="{{ theme:asset src='assets/images/logo-dark.svg' }}" alt="logo">
+                    {{ /if }}
+                </a>
+            </div>
+            <h6>{{ newsletter_setting:newsletter_subtitle }}</h6>
+            <h3>{{ newsletter_setting:newsletter_title }}</h3>
+            <p>{{ newsletter_setting:newsletter_description }}</p>
+
+            <!-- newsletter form -->
+            <form action="#" class="newsletter-form">
+                <input type="hidden" name="type" value="popup">
+                <input type="email" placeholder="Email address" class="form-control" required name="email">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <p class="form-message" style="display:none;text-align: left;"></p>
+        </div>
+    </div>
+</div>
+<!-- End Newsletter Popup -->
+
+<!-- cookie popup -->
+<div class="cookie-popup open">
+    <h4>{{ cookie_setting:cookie_title }}</h4>
+    {{ cookie_setting:cookie_description }}
+        <p>{{ paragraph }}</p>
+    {{ /cookie_setting:cookie_description }}
+
+    <!-- cookie Button-->
+    <div class="cookie-button">
+        <a href="javascript:;" class="btn btn-dark accept-all-btn">Accept all</a>
+        <a href="javascript:;" class="btn btn-secondary decline-all-btn">Decline all</a>
+    </div>
+</div>

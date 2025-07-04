@@ -1,0 +1,22 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: cookie_title
+            field:
+              type: text
+              display: 'Cookie Title'
+          -
+            handle: cookie_description
+            field:
+              type: grid
+              display: 'Cookie Description'
+              fields:
+                -
+                  handle: paragraph
+                  field:
+                    type: textarea
+                    display: Paragraph

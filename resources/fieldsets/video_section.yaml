@@ -1,0 +1,29 @@
+title: 'Video Section'
+fields:
+  -
+    handle: video_background_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Video Background Image'
+      width: 50
+      validate:
+        - required
+  -
+    handle: video_play_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Video Play Image'
+      width: 50
+      validate:
+        - required
+  -
+    handle: video_full_url
+    field:
+      type: text
+      display: 'Video Full Url'
+      validate:
+        - required

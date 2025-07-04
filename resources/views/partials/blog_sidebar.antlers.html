@@ -1,0 +1,135 @@
+
+							<div class="sidebar blog-sidebar">
+								<!-- sidebar inner -->
+								<div class="sidebar-inner">
+
+
+									<form id="blogFilterForm" method="GET" action="javascript:void(0);">
+
+										<!-- widget -->
+										<div class="widget widget-search">
+											<!-- Widget Search  -->
+											<div class="widget-search-form">
+												<input type="text" name="s" value="{{ get:s }}" id="filterSearch" placeholder="Search here..." class="form-control">
+												<button type="submit" class="btn btn-dark"><span class="ti-search"></span></button>
+											</div>
+										</div>
+
+										<!-- widget -->
+										<div class="widget widget-popular-posts">
+											<h4 class="widget-title">Popular Posts</h4>
+											<div class="popular-posts">
+												{{ collection:blogs }}
+													{{ if is_popular }}
+														<div class="popular-posts-list">
+															<div class="thumbnail">
+																<a href="{{ site_url }}/blogs/{{ slug }}">
+																	{{ thumb_image }}
+																		<img src="{{ url }}" alt="{{ alt }}">
+																	{{ /thumb_image }}
+																</a>
+															</div>
+															<div class="popular-posts-info">
+																<span>{{ date format="jS M Y" }}</span>
+																<h6><a href="{{ site_url }}/blogs/{{ slug }}">{{ title }}</a></h6>
+															</div>
+														</div>
+													{{ /if }}
+												{{ /collection:blogs }}
+											</div>
+										</div>
+
+										<!-- widget -->
+										<div class="widget widget-categories">
+											<h4 class="widget-title">Categories</h4>
+											<div class="categories-list">
+												<ul>
+													{{ taxonomy:blog_categories }}
+														{{ count_blog_categories = 0 }}
+														{{ collection:blogs blog_categories:contains="{slug}" }}
+															{{ count_blog_categories = total_results }}
+														{{ /collection:blogs }}
+
+														{{ if count_blog_categories > 0 }}
+															<li>
+																<a href="javascript:void(0);" class="{{ if get:category == slug }}active{{ /if }}">
+																	{{ title }}
+																	<span class="count">{{ count_blog_categories }}</span>
+																</a>
+																<input type="radio" name="category" value="{{ slug }}" class="d-none" {{ if get:category == slug || cat_slug == slug }}checked{{ /if }}>
+															</li>
+														{{ /if }}
+													{{ /taxonomy:blog_categories }}
+												</ul>
+											</div>
+										</div>
+
+										<!-- widget -->
+										<div class="widget widget-popular-tags">
+											<h4 class="widget-title">Popular Tags</h4>
+											<div class="popular-tags-list">
+												<ul>
+													{{ taxonomy:blog_tags }}
+														{{ count_blog_tags = 0 }}
+														{{ collection:blogs blog_tags:contains="{slug}" }}
+															{{ count_blog_tags = total_results }}
+														{{ /collection:blogs }}
+
+														{{ if count_blog_tags > 0 }}
+															<li>
+																<a href="javascript:void(0);" class="{{ if get:tag == slug }}active{{ /if }}">{{ title }}</a>
+																<input type="radio" name="tag" value="{{ slug }}" class="d-none" {{ if get:tag == slug }}checked{{ /if }}>
+															</li>
+														{{ /if }}
+													{{ /taxonomy:blog_tags }}
+												</ul>
+											</div>
+										</div>
+
+									</form>
+
+									<!-- widget -->
+									<div class="widget widget-instagram">
+										<h4 class="widget-title">Instagram</h4>
+										<!-- Instagram list -->
+										<div class="instagram-list">
+											<!-- instagram box -->
+											<div class="instagram-box">
+												<img src="{{ theme:asset src='assets/images/instagram-img1.jpg' }}" alt="instagram img 1">
+												<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+											</div>
+											<!-- instagram box -->
+											<div class="instagram-box">
+												<img src="{{ theme:asset src='assets/images/instagram-img2.jpg' }}" alt="instagram img 2">
+												<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+											</div>
+											<!-- instagram box -->
+											<div class="instagram-box">
+												<img src="{{ theme:asset src='assets/images/instagram-img3.jpg' }}" alt="instagram img 3">
+												<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+											</div>
+											<!-- instagram box -->
+											<div class="instagram-box">
+												<img src="{{ theme:asset src='assets/images/instagram-img4.jpg' }}" alt="instagram img 4">
+												<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+											</div>
+											<!-- instagram box -->
+											<div class="instagram-box">
+												<img src="{{ theme:asset src='assets/images/instagram-img5.jpg' }}" alt="instagram img 5">
+												<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+											</div>
+											<!-- instagram box -->
+											<div class="instagram-box">
+												<img src="{{ theme:asset src='assets/images/instagram-img6.jpg' }}" alt="instagram img 6">
+												<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+											</div>
+											<!-- instagram box -->
+											<div class="instagram-box">
+												<img src="{{ theme:asset src='assets/images/instagram-img6.jpg' }}" alt="instagram img 6">
+												<div class="instagram-overlay"><a href="#"><span class="ti-instagram"></span></a></div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>

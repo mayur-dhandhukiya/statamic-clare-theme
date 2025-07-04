@@ -1,0 +1,890 @@
+
+
+            <!-- Hero banner section -->
+            <section class="hero-banner-section">
+                <!-- Hero banner body -->
+                <div class="hero-banner-body">
+                    <!-- container -->
+                    <div class="container">
+                        <!-- row -->
+                        <div class="row align-items-center">
+                            <!-- column -->
+                            <div class="col-12 col-md-6">
+                                <!-- hero banner content -->
+                                <div class="hero-banner-content">
+                                    <h1>{{ home_setting:hero_title }}</h1>
+                                    <p>{{ home_setting:hero_description }}</p>
+                                    <a href="{{ site_url }}{{ home_setting:hero_button_link }}" class="btn-link">{{ home_setting:hero_button_name }}</a>
+                                </div>
+                            </div>
+                            <!-- column -->
+                            <div class="col-12 col-md-6">
+                                <!-- Hero banner img -->
+                                <div class="hero-banner-img">
+                                    {{ home_setting:hero_banner }}
+                                    <img src="{{ url }}" alt="hero-banner-img">
+                                    {{ /home_setting:hero_banner }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ End Hero banner section -->
+
+            <!-- Icon box section -->
+            <section class="icon-box-section section-all">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+
+                        <!-- column -->
+                        {{ home_setting:hero_milestones }}
+                        <div class="col-12 col-md-4">
+                            <!-- icon box -->
+                            <div class="icon-box">
+                                <div class="iconbox-icon">
+                                    {{ hero_milestone_icon }}
+                                    <img src="{{ url }}" alt="Free Shipping">
+                                    {{ /hero_milestone_icon }}
+                                </div>
+                                <div class="iconbox-detail">
+                                    <h6>{{ hero_milestone_title }}</h6>
+                                    <p>{{ hero_milestone_sub_title }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{ /home_setting:hero_milestones }}
+
+                    </div>
+                </div>
+            </section>
+            <!--/ End Icon box section -->
+
+            <!-- banner adds section -->
+            <section class="banner-adds-section section-all">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+
+                        {{ home_setting:seasons }}
+                        <!-- column -->
+                        {{ if index == 0 || index == 1 }}
+                        <div class="col-12 col-md-6 {{ if index == 1 }}ps-lg-4{{ else }}pe-lg-4{{ /if }}">
+                        {{ /if }}
+                            <!-- banner -->
+                            <div class="banner {{ if index == 1 || index == 2 }}banner-small{{ /if }}">
+                                <!-- banner content-->
+                                <div class="banner-content">
+                                    <h4 class="entry-subtitle">{{ season_sub_title }}</h4>
+                                    <h2 class="entry-title">{{ season_title }}</h2>
+                                    <a href="{{ season_button_url }}" class="btn link">{{ season_button_text }} <span class="ti-arrow-right"></span></a>
+                                </div>
+                                <!-- banner image-->
+                                <div class="banner-image">
+                                    {{ season_image }}
+                                    <img src="{{ url }}" alt="banner img 1">
+                                    {{ /season_image }}
+                                </div>
+                            </div>
+                        {{ if index == 0 || index == 2 }}
+                        </div>
+                        {{ /if }}
+                        {{ /home_setting:seasons }}
+
+                    </div>
+                </div>
+            </section>
+            <!--/ End banner adds section -->
+
+            <!-- Popular Categories section -->
+            <section class="popular-categories-section section-all">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- column -->
+                        <div class="col-12">
+                            <!-- popular categories wrap-->
+                            <div class="popular-categories-wrap">
+                                <!-- module header -->
+                                <div class="module-header">
+                                    <h2 class="entry-title">Popular Categories</h2>
+                                    <div class="entry-header-right">
+                                        <a href="{{ site_url }}/shop" class="btn link">Shop all categories <span class="ti-arrow-right"></span></a>
+                                    </div>
+                                </div>
+
+                                <!-- Popular Categories grid -->
+                                <div class="popular-categories-grid">
+                                    <!-- Popular Categories -->
+                                    <div class="popular-categories">
+                                        <!-- Popular Categories img -->
+                                        <div class="popular-categories-img">
+                                            <a href="{{ site_url }}/shop"><img src="assets/images/categories-img1.jpg" alt="categories img"></a>
+                                        </div>
+                                        <!-- Popular Categories title -->
+                                        <div class="popular-categories-title">
+                                            <h6><a href="{{ site_url }}/shop">Accessories</a></h6>
+                                        </div>
+                                    </div>
+                                    <!-- Popular Categories -->
+                                    <div class="popular-categories">
+                                        <!-- Popular Categories img -->
+                                        <div class="popular-categories-img">
+                                            <a href="{{ site_url }}/shop"><img src="assets/images/categories-img2.jpg" alt="categories img"></a>
+                                        </div>
+                                        <!-- Popular Categories title -->
+                                        <div class="popular-categories-title">
+                                            <h6><a href="{{ site_url }}/shop">Jewellery</a></h6>
+                                        </div>
+                                    </div>
+                                    <!-- Popular Categories -->
+                                    <div class="popular-categories">
+                                        <!-- Popular Categories img -->
+                                        <div class="popular-categories-img">
+                                            <a href="{{ site_url }}/shop"><img src="assets/images/categories-img3.jpg" alt="categories img"></a>
+                                        </div>
+                                        <!-- Popular Categories title -->
+                                        <div class="popular-categories-title">
+                                            <h6><a href="{{ site_url }}/shop">Denims</a></h6>
+                                        </div>
+                                    </div>
+                                    <!-- Popular Categories -->
+                                    <div class="popular-categories">
+                                        <!-- Popular Categories img -->
+                                        <div class="popular-categories-img">
+                                            <a href="{{ site_url }}/shop"><img src="assets/images/categories-img4.jpg" alt="categories img"></a>
+                                        </div>
+                                        <!-- Popular Categories title -->
+                                        <div class="popular-categories-title">
+                                            <h6><a href="{{ site_url }}/shop">Tops</a></h6>
+                                        </div>
+                                    </div>
+                                    <!-- Popular Categories -->
+                                    <div class="popular-categories">
+                                        <!-- Popular Categories img -->
+                                        <div class="popular-categories-img">
+                                            <a href="{{ site_url }}/shop"><img src="assets/images/categories-img5.jpg" alt="categories img"></a>
+                                        </div>
+                                        <!-- Popular Categories title -->
+                                        <div class="popular-categories-title">
+                                            <h6><a href="{{ site_url }}/shop">Dresses</a></h6>
+                                        </div>
+                                    </div>
+                                    <!-- Popular Categories -->
+                                    <div class="popular-categories">
+                                        <!-- Popular Categories img -->
+                                        <div class="popular-categories-img">
+                                            <a href="{{ site_url }}/shop"><img src="assets/images/categories-img6.jpg" alt="categories img"></a>
+                                        </div>
+                                        <!-- Popular Categories title -->
+                                        <div class="popular-categories-title">
+                                            <h6><a href="{{ site_url }}/shop">Shoes</a></h6>
+                                        </div>
+                                    </div>
+                                    <!-- Popular Categories -->
+                                    <div class="popular-categories">
+                                        <!-- Popular Categories img -->
+                                        <div class="popular-categories-img">
+                                            <a href="{{ site_url }}/shop"><img src="assets/images/categories-img7.jpg" alt="categories img"></a>
+                                        </div>
+                                        <!-- Popular Categories title -->
+                                        <div class="popular-categories-title">
+                                            <h6><a href="{{ site_url }}/shop">Sweaters</a></h6>
+                                        </div>
+                                    </div>
+                                    <!-- Popular Categories -->
+                                    <div class="popular-categories">
+                                        <!-- Popular Categories img -->
+                                        <div class="popular-categories-img">
+                                            <a href="{{ site_url }}/shop"><img src="assets/images/categories-img8.jpg" alt="categories img"></a>
+                                        </div>
+                                        <!-- Popular Categories title -->
+                                        <div class="popular-categories-title">
+                                            <h6><a href="{{ site_url }}/shop">Bags</a></h6>
+                                        </div>
+                                    </div>
+                                    <!-- Popular Categories -->
+                                    <div class="popular-categories">
+                                        <!-- Popular Categories img -->
+                                        <div class="popular-categories-img">
+                                            <a href="{{ site_url }}/shop"><img src="assets/images/categories-img9.jpg" alt="categories img"></a>
+                                        </div>
+                                        <!-- Popular Categories title -->
+                                        <div class="popular-categories-title">
+                                            <h6><a href="{{ site_url }}/shop">Gifts</a></h6>
+                                        </div>
+                                    </div>
+                                    <!-- Popular Categories -->
+                                    <div class="popular-categories">
+                                        <!-- Popular Categories img -->
+                                        <div class="popular-categories-img">
+                                            <a href="{{ site_url }}/shop"><img src="assets/images/categories-img10.jpg" alt="categories img"></a>
+                                        </div>
+                                        <!-- Popular Categories title -->
+                                        <div class="popular-categories-title">
+                                            <h6><a href="{{ site_url }}/shop">Coats</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ End Popular Categories section -->
+
+            <!-- Trending Collection section -->
+            <section class="trending-collection-section section-all">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- column -->
+                        <div class="col-12">
+                            <!-- module header -->
+                            <div class="module-header">
+                                <h2 class="entry-title">Trending Collection</h2>
+                                <div class="entry-header-right">
+                                    <!-- slider arrow -->
+                                    <div class="slider-arrow">
+                                        <div class="swiper-button-prev"><span class="ti-arrow-left"></span></div>
+                                        <div class="swiper-button-next"><span class="ti-arrow-right"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Trending Collection slider -->
+                            <div class="trending-collection-slider">
+
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide">
+                                            <!-- Product -->
+                                            <div class="product product-style-1">
+                                                <!-- product thumbnail -->
+                                                <div class="product-thumbnail">
+                                                    <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img8.jpg" alt="products img"></a>
+
+                                                    <!-- product hover button -->
+                                                    <div class="product-hover-button">
+                                                        <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                                        <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                                    </div>
+                                                </div>
+                                                <!-- product content -->
+                                                <div class="product-content">
+                                                    <!-- product in stock -->
+                                                    <h6>BACK IN STOCK</h6>
+                                                    <h3 class="product-title">
+                                                        <a href="{{ site_url }}/product-detail-1">The Woven Sweet Dreams P.J. Top</a>
+                                                    </h3>
+                                                    <!-- product price -->
+                                                    <span class="price"><ins>$60.00</ins></span>
+                                                    <!-- product-switcher -->
+                                                    <div class="product-switcher">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <!-- Product -->
+                                            <div class="product product-style-1">
+                                                <!-- product thumbnail -->
+                                                <div class="product-thumbnail">
+                                                    <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img7.jpg" alt="products img"></a>
+
+                                                    <!-- product hover button -->
+                                                    <div class="product-hover-button">
+                                                        <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                                        <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                                    </div>
+                                                </div>
+                                                <!-- product content -->
+                                                <div class="product-content">
+                                                    <!-- product in stock -->
+                                                    <h6>NEW ARRIVAL</h6>
+                                                    <h3 class="product-title">
+                                                        <a href="{{ site_url }}/product-detail-1">The ReNew Merino Long Liner</a>
+                                                    </h3>
+                                                    <!-- product price -->
+                                                    <span class="price"><ins>$22.00</ins></span>
+                                                    <!-- product-switcher -->
+                                                    <div class="product-switcher">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <!-- Product -->
+                                            <div class="product product-style-1">
+                                                <!-- product thumbnail -->
+                                                <div class="product-thumbnail">
+                                                    <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img6.jpg" alt="products img"></a>
+
+                                                    <!-- product hover button -->
+                                                    <div class="product-hover-button">
+                                                        <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                                        <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                                    </div>
+                                                </div>
+                                                <!-- product content -->
+                                                <div class="product-content">
+                                                    <!-- product in stock -->
+                                                    <h6>BEST SELLER</h6>
+                                                    <h3 class="product-title">
+                                                        <a href="{{ site_url }}/product-detail-1">The Brushed Flannel Caro Shirt</a>
+                                                    </h3>
+                                                    <!-- product price -->
+                                                    <span class="price"><ins>$10.00</ins></span>
+                                                    <!-- product-switcher -->
+                                                    <div class="product-switcher">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <!-- Product -->
+                                            <div class="product product-style-1">
+                                                <!-- product thumbnail -->
+                                                <div class="product-thumbnail">
+                                                    <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img5.jpg" alt="products img"></a>
+
+                                                    <!-- product hover button -->
+                                                    <div class="product-hover-button">
+                                                        <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                                        <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                                    </div>
+                                                </div>
+                                                <!-- product content -->
+                                                <div class="product-content">
+                                                    <!-- product in stock -->
+                                                    <h6>BEST SELLER</h6>
+                                                    <h3 class="product-title">
+                                                        <a href="{{ site_url }}/product-detail-1">The Felted Merino Half-Zip Sweater</a>
+                                                    </h3>
+                                                    <!-- product price -->
+                                                    <span class="price"><ins>$44.00</ins></span>
+                                                    <!-- product-switcher -->
+                                                    <div class="product-switcher">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <!-- Product -->
+                                            <div class="product product-style-1">
+                                                <!-- product thumbnail -->
+                                                <div class="product-thumbnail">
+                                                    <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img4.jpg" alt="products img"></a>
+
+                                                    <!-- product hover button -->
+                                                    <div class="product-hover-button">
+                                                        <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                                        <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                                    </div>
+                                                </div>
+                                                <!-- product content -->
+                                                <div class="product-content">
+                                                    <!-- product in stock -->
+                                                    <h6>BEST SELLER</h6>
+                                                    <h3 class="product-title">
+                                                        <a href="{{ site_url }}/product-detail-1">The Felted Merino Half-Zip Sweater</a>
+                                                    </h3>
+                                                    <!-- product price -->
+                                                    <span class="price"><ins>$44.00</ins></span>
+                                                    <!-- product-switcher -->
+                                                    <div class="product-switcher">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ End  Trending Collection section -->
+
+            <!-- offer banner section -->
+            <section class="offer-banner-section section-all">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- column -->
+                        <div class="col-12">
+                            <!-- offer banner -->
+                            <div class="offer-banner">
+                                <!-- offer banner content -->
+                                <div class="offer-banner-content" style="background-image: url({{ home_setting:offer_back_image  }}{{ url  }}{{ /home_setting:offer_back_image  }});">
+                                    <h2>{{ home_setting:offer_title  }}</h2>
+                                    <p>{{ home_setting:offer_description  }}</p>
+                                    <!-- price -->
+                                    <span class="price"><ins>{{ home_setting:offer_price  }}</ins> <del>{{ home_setting:actual_price  }}</del></span>
+                                    <a href="{{ site_url }}{{ home_setting:offer_button_url  }}" class="btn btn-light">{{ home_setting:offer_button_text  }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ End  offer banner section -->
+
+            <!-- Feature Products section -->
+            <section class="feature-products-section section-all">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- column -->
+                        <div class="col-12">
+                            <!-- module header -->
+                            <div class="module-header">
+                                <h2 class="entry-title">Feature Products</h2>
+                                <div class="entry-header-right">
+                                    <a href="{{ site_url }}/shop" class="btn link">Shop all <span class="ti-arrow-right"></span></a>
+                                </div>
+                            </div>
+
+                            <!-- Feature Products grid -->
+                            <div class="feature-products-grid">
+                                <!-- Product -->
+                                <div class="product product-style-1">
+                                    <!-- product thumbnail -->
+                                    <div class="product-thumbnail">
+                                        <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img4.jpg" alt="products img"></a>
+
+                                        <!-- product hover button -->
+                                        <div class="product-hover-button">
+                                            <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                            <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                        </div>
+                                    </div>
+                                    <!-- product content -->
+                                    <div class="product-content">
+                                        <!-- product in stock -->
+                                        <h6>BACK IN STOCK</h6>
+                                        <h3 class="product-title">
+                                            <a href="{{ site_url }}/product-detail-1">The Woven Sweet Dreams Party dress</a>
+                                        </h3>
+                                        <!-- product price -->
+                                        <span class="price"><ins>$660.00</ins></span>
+                                        <!-- product-switcher -->
+                                        <div class="product-switcher">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="product product-style-1">
+                                    <!-- product thumbnail -->
+                                    <div class="product-thumbnail">
+                                        <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img3.jpg" alt="products img"></a>
+
+                                        <!-- product hover button -->
+                                        <div class="product-hover-button">
+                                            <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                            <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                        </div>
+                                    </div>
+                                    <!-- product content -->
+                                    <div class="product-content">
+                                        <!-- product in stock -->
+                                        <h6>NEW ARRIVAL</h6>
+                                        <h3 class="product-title">
+                                            <a href="{{ site_url }}/product-detail-1">The winter joejoe sweat shirt</a>
+                                        </h3>
+                                        <!-- product price -->
+                                        <span class="price"><ins>$12.00</ins></span>
+                                        <!-- product-switcher -->
+                                        <div class="product-switcher">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="product product-style-1">
+                                    <!-- product thumbnail -->
+                                    <div class="product-thumbnail">
+                                        <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img2.jpg" alt="products img"></a>
+
+                                        <!-- product hover button -->
+                                        <div class="product-hover-button">
+                                            <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                            <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                        </div>
+                                    </div>
+                                    <!-- product content -->
+                                    <div class="product-content">
+                                        <!-- product in stock -->
+                                        <h6>BEST SELLER</h6>
+                                        <h3 class="product-title">
+                                            <a href="{{ site_url }}/product-detail-1">Beinge profession coat wear</a>
+                                        </h3>
+                                        <!-- product price -->
+                                        <span class="price"><ins>$190.00</ins></span>
+                                        <!-- product-switcher -->
+                                        <div class="product-switcher">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="product product-style-1">
+                                    <!-- product thumbnail -->
+                                    <div class="product-thumbnail">
+                                        <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img1.jpg" alt="products img"></a>
+
+                                        <!-- product hover button -->
+                                        <div class="product-hover-button">
+                                            <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                            <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                        </div>
+                                    </div>
+                                    <!-- product content -->
+                                    <div class="product-content">
+                                        <!-- product in stock -->
+                                        <h6>BEST SELLER</h6>
+                                        <h3 class="product-title">
+                                            <a href="{{ site_url }}/product-detail-1">Fairy flower dress</a>
+                                        </h3>
+                                        <!-- product price -->
+                                        <span class="price"><ins>$14.00</ins></span>
+                                        <!-- product-switcher -->
+                                        <div class="product-switcher">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product -->
+                                <div class="product product-style-1">
+                                    <!-- product thumbnail -->
+                                    <div class="product-thumbnail">
+                                        <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img11.jpg" alt="products img"></a>
+
+                                        <!-- product hover button -->
+                                        <div class="product-hover-button">
+                                            <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                            <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                        </div>
+                                    </div>
+                                    <!-- product content -->
+                                    <div class="product-content">
+                                        <!-- product in stock -->
+                                        <h6>BACK IN STOCK</h6>
+                                        <h3 class="product-title">
+                                            <a href="{{ site_url }}/product-detail-1">Sport comfy t-shirts in combos</a>
+                                        </h3>
+                                        <!-- product price -->
+                                        <span class="price"><ins>$6.00</ins></span>
+                                        <!-- product-switcher -->
+                                        <div class="product-switcher">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="product product-style-1">
+                                    <!-- product thumbnail -->
+                                    <div class="product-thumbnail">
+                                        <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img12.jpg" alt="products img"></a>
+
+                                        <!-- product hover button -->
+                                        <div class="product-hover-button">
+                                            <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                            <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                        </div>
+                                    </div>
+                                    <!-- product content -->
+                                    <div class="product-content">
+                                        <!-- product in stock -->
+                                        <h6>NEW ARRIVAL</h6>
+                                        <h3 class="product-title">
+                                            <a href="{{ site_url }}/product-detail-1">Plain black t-shirt</a>
+                                        </h3>
+                                        <!-- product price -->
+                                        <span class="price"><ins>$21.00</ins></span>
+                                        <!-- product-switcher -->
+                                        <div class="product-switcher">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="product product-style-1">
+                                    <!-- product thumbnail -->
+                                    <div class="product-thumbnail">
+                                        <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img10.jpg" alt="products img"></a>
+
+                                        <!-- product hover button -->
+                                        <div class="product-hover-button">
+                                            <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                            <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                        </div>
+                                    </div>
+                                    <!-- product content -->
+                                    <div class="product-content">
+                                        <!-- product in stock -->
+                                        <h6>BEST SELLER</h6>
+                                        <h3 class="product-title">
+                                            <a href="{{ site_url }}/product-detail-1">The Felted Merino Half-Zip Sweater</a>
+                                        </h3>
+                                        <!-- product price -->
+                                        <span class="price"><ins>$10.00</ins></span>
+                                        <!-- product-switcher -->
+                                        <div class="product-switcher">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="product product-style-1">
+                                    <!-- product thumbnail -->
+                                    <div class="product-thumbnail">
+                                        <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/products-img9.jpg" alt="products img"></a>
+
+                                        <!-- product hover button -->
+                                        <div class="product-hover-button">
+                                            <a href="{{ site_url }}/product-detail-1" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+                                            <a href="{{ site_url }}/product-detail-1" class="wishlist-btn"><span class="ti-heart"></span></a>
+                                        </div>
+                                    </div>
+                                    <!-- product content -->
+                                    <div class="product-content">
+                                        <!-- product in stock -->
+                                        <h6>New</h6>
+                                        <h3 class="product-title">
+                                            <a href="{{ site_url }}/product-detail-1">The Oversized Alpaca Crew</a>
+                                        </h3>
+                                        <!-- product price -->
+                                        <span class="price"><ins>$24.00</ins></span>
+                                        <!-- product-switcher -->
+                                        <div class="product-switcher">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ End Feature Products section -->
+
+            <!-- Weekly best sell section -->
+            <section class="weekly-products-section section-all">
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- column -->
+                        <div class="col-12">
+                            <!-- module header -->
+                            <div class="module-header">
+                                <h2 class="entry-title">Weekly best sell</h2>
+                                <div class="entry-header-right">
+                                    <a href="{{ site_url }}/shop" class="btn link">Shop all <span class="ti-arrow-right"></span></a>
+                                </div>
+                            </div>
+
+                            <!-- row -->
+                            <div class="row">
+                                <!-- column -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <!-- weekly products -->
+                                    <div class="weekly-products product">
+                                        <!-- weekly products thumbnail -->
+                                        <div class="weekly-products-thumbnail">
+                                            <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/weekly-product-img6.jpg" alt="weekly products img"></a>
+                                        </div>
+                                        <!-- weekly product content -->
+                                        <div class="product-content">
+                                            <h3 class="product-title">
+                                                <a href="{{ site_url }}/product-detail-1">Girly fashion coat</a>
+                                            </h3>
+                                            <!-- product price -->
+                                            <span class="price"><ins>$50.00</ins></span>
+                                            <!-- product-buttons -->
+                                            <div class="product-buttons">
+                                                <a href="{{ site_url }}/product-detail-1" class="btn btn-light add_to_cart_button">
+                                                    Add to cart
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- column -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <!-- weekly products -->
+                                    <div class="weekly-products product">
+                                        <!-- weekly products thumbnail -->
+                                        <div class="weekly-products-thumbnail">
+                                            <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/weekly-product-img5.jpg" alt="weekly products img"></a>
+                                        </div>
+                                        <!-- weekly product content -->
+                                        <div class="product-content">
+                                            <h3 class="product-title">
+                                                <a href="{{ site_url }}/product-detail-1">The alpha waffle top</a>
+                                            </h3>
+                                            <!-- product price -->
+                                            <span class="price"><ins>$660.00</ins></span>
+                                            <!-- product-buttons -->
+                                            <div class="product-buttons">
+                                                <a href="{{ site_url }}/product-detail-1" class="btn btn-light add_to_cart_button">
+                                                    Add to cart
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- column -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <!-- weekly products -->
+                                    <div class="weekly-products product">
+                                        <!-- weekly products thumbnail -->
+                                        <div class="weekly-products-thumbnail">
+                                            <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/weekly-product-img4.jpg" alt="weekly products img"></a>
+                                        </div>
+                                        <!-- weekly product content -->
+                                        <div class="product-content">
+                                            <h3 class="product-title">
+                                                <a href="{{ site_url }}/product-detail-1">Red carpet dress</a>
+                                            </h3>
+                                            <!-- product price -->
+                                            <span class="price"><ins>$34.00</ins></span>
+                                            <!-- product-buttons -->
+                                            <div class="product-buttons">
+                                                <a href="{{ site_url }}/product-detail-1" class="btn btn-light add_to_cart_button">
+                                                    Add to cart
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- column -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <!-- weekly products -->
+                                    <div class="weekly-products product">
+                                        <!-- weekly products thumbnail -->
+                                        <div class="weekly-products-thumbnail">
+                                            <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/weekly-product-img3.jpg" alt="weekly products img"></a>
+                                        </div>
+                                        <!-- weekly product content -->
+                                        <div class="product-content">
+                                            <h3 class="product-title">
+                                                <a href="{{ site_url }}/product-detail-1">Floral dress</a>
+                                            </h3>
+                                            <!-- product price -->
+                                            <span class="price"><ins>$24.00</ins></span>
+                                            <!-- product-buttons -->
+                                            <div class="product-buttons">
+                                                <a href="{{ site_url }}/product-detail-1" class="btn btn-light add_to_cart_button">
+                                                    Add to cart
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- column -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <!-- weekly products -->
+                                    <div class="weekly-products product">
+                                        <!-- weekly products thumbnail -->
+                                        <div class="weekly-products-thumbnail">
+                                            <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/weekly-product-img2.jpg" alt="weekly products img"></a>
+                                        </div>
+                                        <!-- weekly product content -->
+                                        <div class="product-content">
+                                            <h3 class="product-title">
+                                                <a href="{{ site_url }}/product-detail-1">The ReNew Merino par</a>
+                                            </h3>
+                                            <!-- product price -->
+                                            <span class="price"><ins>$45.00</ins></span>
+                                            <!-- product-buttons -->
+                                            <div class="product-buttons">
+                                                <a href="{{ site_url }}/product-detail-1" class="btn btn-light add_to_cart_button">
+                                                    Add to cart
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- column -->
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <!-- weekly products -->
+                                    <div class="weekly-products product">
+                                        <!-- weekly products thumbnail -->
+                                        <div class="weekly-products-thumbnail">
+                                            <a href="{{ site_url }}/product-detail-1" class="thumbnail"><img src="assets/images/weekly-product-img1.jpg" alt="weekly products img"></a>
+                                        </div>
+                                        <!-- weekly product content -->
+                                        <div class="product-content">
+                                            <h3 class="product-title">
+                                                <a href="{{ site_url }}/product-detail-1">Oversized sweatshirt</a>
+                                            </h3>
+                                            <!-- product price -->
+                                            <span class="price"><ins>$44.00</ins></span>
+                                            <!-- product-buttons -->
+                                            <div class="product-buttons">
+                                                <a href="{{ site_url }}/product-detail-1" class="btn btn-light add_to_cart_button">
+                                                    Add to cart
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ End Weekly best sell section -->
+
+            <!-- Newsletter section -->
+            <section class="newsletter-section">
+                <div class="newsletter-left-img">
+                    {{ home_setting:subscribe_left_image }}
+                    <img src="{{ url }}" alt="newsletter img">
+                    {{ /home_setting:subscribe_left_image }}
+                </div>
+                <div class="newsletter-right-img">
+                    {{ home_setting:subscribe_right_image }}
+                    <img src="{{ url }}" alt="newsletter img">
+                    {{ /home_setting:subscribe_right_image }}
+                </div>
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- column -->
+                        <div class="col-12">
+                            <!-- Newsletter content -->
+                            <div class="newsletter-content">
+                                <h2>{{ home_setting:subscribe_title }}</h2>
+                                <p>{{ home_setting:subscribe_sub_title }}</p>
+                                <!-- newsletter form -->
+                                <form action="#" class="newsletter-form">
+                                    <input type="email" placeholder="Email address" class="form-control" required>
+                                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ End Weekly best sell section -->

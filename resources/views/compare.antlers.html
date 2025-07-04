@@ -1,0 +1,253 @@
+{{ if {session:has key="customer_logged_in"} != true }}
+	{{ redirect to="/sign-in" }}
+{{ /if }}
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="{{ site:url }}">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Compare</li>
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>Compare</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!--/ End Hero slider section -->
+
+			{{ has_compare_items = false }}
+	        {{ compare }}
+	            {{ if is_compare_items > 0 }}
+	                {{ has_compare_items = true }}
+	            {{ /if }}
+	        {{ /compare }}
+
+			<!-- Compare page section -->
+			<div class="compare-page section-two compare-list-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- Compare list -->
+							<div class="compare-product-list">
+								{{ if has_compare_items }}
+								<div class="order-table">
+									<table class="table">
+										<tbody>
+											<tr>
+												{{ compare:compare_items }}
+												{{ if index == 0 }}
+												<td style="width: 60%;" class="p-0 mobile-inline">
+													<table class="table">
+														<thead>
+															<tr>
+																<th scope="col" style="width: 33.33%;"></th>
+																<th scope="col" style="width: 66.66%;"><span class="h6">{{ product:title }}</span> <a href="javascript:;" class="link remove-from-compare-btn" data-product-id="{{ product:id }}">remove</a></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="th-title">
+																	Image
+																</td>
+																<td class="compare-image">
+																	<div class="compare-image-box">
+																		{{ if product:thumb_image }}
+											                                {{ product:thumb_image }}
+											                                <img src="{{ url }}" alt="{{ alt }}">
+											                                {{ /product:thumb_image }}
+											                            {{ else }}
+											                                <img src="{{ theme:asset src='assets/images/placeholder-product.jpeg' }}" alt="blog img 1">
+											                            {{ /if }}
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="th-title">Price</td>
+																<td>${{ product:price }}</td>
+															</tr>
+															<tr>
+																<td class="th-title">Availability</td>
+																<td></td>
+															</tr>
+															<tr>
+																<td class="th-title">Add to cart</td>
+																<td>
+																	<button class="btn btn-dark compare-add-to-cart-btn" data-product-id="{{ product:id }}">Add to cart</button>
+																</td>
+															</tr>
+															<tr>
+																<td class="th-title">Content</td>
+																<td>
+																	<div class="compare-des-content">
+																		{{ product:description }}
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="th-title">Additional information</td>
+																<td>
+																	<div class="additional-information-list">
+																		<table class="table">
+																			<tbody>
+																				<tr>
+																					<td class="th-title">
+																						Brand
+																					</td>
+																					<td>
+																						Balenciaza
+																					</td>
+																				</tr>
+																				<tr>
+																					<td class="th-title">
+																						Color
+																					</td>
+																					<td>
+																						Latte
+																					</td>
+																				</tr>
+																				<tr>
+																					<td class="th-title">
+																						Size
+																					</td>
+																					<td>
+																						L, M, S, XL, XXL
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+												{{ else }}
+
+												<td style="width: 40%;" class="p-0 mobile-inline">
+													<table class="table">
+														<thead>
+															<tr>
+																<th scope="col" class="hidden-td"></th>
+																<th scope="col"><span class="h6">CHARLOTTE TRENCH</span> <a href="javascript:;" class="link remove-from-compare-btn" data-product-id="{{ product:id }}">remove</a></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="th-title hidden-td">
+																	Image
+																</td>
+																<td class="compare-image">
+																	<div class="compare-image-box">
+																		{{ if product:thumb_image }}
+											                                {{ product:thumb_image }}
+											                                <img src="{{ url }}" alt="{{ alt }}">
+											                                {{ /product:thumb_image }}
+											                            {{ else }}
+											                                <img src="{{ theme:asset src='assets/images/placeholder-product.jpeg' }}" alt="blog img 1">
+											                            {{ /if }}
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="th-title hidden-td">Price</td>
+																<td>${{ product:price }}</td>
+															</tr>
+															<tr>
+																<td class="th-title hidden-td">Price</td>
+																<td>37 in stock</td>
+															</tr>
+															<tr>
+																<td class="th-title hidden-td">Add to cart</td>
+																<td>
+																	<button class="btn btn-dark compare-add-to-cart-btn" data-product-id="{{ product:id }}">Add to cart</button>
+																</td>
+															</tr>
+															<tr>
+																<td class="th-title hidden-td">Content</td>
+																<td>
+																	<div class="compare-des-content">
+																		{{ product:description }}
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td class="th-title hidden-td">Additional information</td>
+																<td>
+																	<div class="additional-information-list">
+																		<table class="table">
+																			<tbody>
+																				<tr>
+																					<td class="th-title">
+																						Brand
+																					</td>
+																					<td>
+																						Balenciaza
+																					</td>
+																				</tr>
+																				<tr>
+																					<td class="th-title">
+																						Color
+																					</td>
+																					<td>
+																						Latte
+																					</td>
+																				</tr>
+																				<tr>
+																					<td class="th-title">
+																						Size
+																					</td>
+																					<td>
+																						L, M, S, XL, XXL
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+												{{ /if }}
+												{{ /compare:compare_items }}
+											</tr>
+										</tbody>
+									</table>
+								</div>
+				                {{ else }}
+									<!-- Empty Compare content -->
+									<div class="empty-cart-content">
+										<h3>Your Compare is currently  empty.</h3>
+										<p>Why not return to our amazing shop and start filling it with products. Just click on the button below to instantly get back to the shop page. Oh, and while you’re there, check out all of our mind-blowing discounts.</p>
+										<a href="{{ site_url }}/shop" class="btn btn-dark">
+											Return to shop
+										</a>
+									</div>
+				                {{ /if }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Compare page section -->

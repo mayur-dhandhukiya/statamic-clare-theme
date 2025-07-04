@@ -1,0 +1,14 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: menu_icon
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Menu Icon'
+              instructions: 'Only SVG files are allowed for upload.'

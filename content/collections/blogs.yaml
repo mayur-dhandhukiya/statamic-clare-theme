@@ -1,0 +1,23 @@
+title: Blogs
+template: blogs/show
+layout: layout
+taxonomies:
+  - blog_categories
+  - blog_tags
+revisions: false
+route: '/blogs/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+search:
+  index: true
+  fields:
+    - title
+    - content
+    - short_description

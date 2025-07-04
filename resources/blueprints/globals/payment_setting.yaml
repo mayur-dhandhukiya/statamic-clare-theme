@@ -1,0 +1,61 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: payment_methods
+            field:
+              type: array
+              display: 'Payment Methods'
+      -
+        display: 'Cash on Delivery'
+        fields:
+          -
+            handle: cash_on_delivery_enabled
+            field:
+              type: toggle
+              display: 'Cash on Delivery Enabled'
+      -
+        display: 'Stripe Configuration'
+        fields:
+          -
+            handle: public_key
+            field:
+              type: text
+              display: 'Public Key'
+              instructions: 'Starts with "pk_test_..."'
+              width: 50
+          -
+            handle: secret_key
+            field:
+              type: text
+              display: 'Secret Key'
+              instructions: 'Starts with "sk_test_..."'
+              width: 50
+          -
+            handle: stripe_enabled
+            field:
+              type: toggle
+              display: 'Stripe Enabled'
+      -
+        display: 'Razorpay Configuration'
+        fields:
+          -
+            handle: razorpay_key
+            field:
+              type: text
+              display: 'Razorpay Key'
+              width: 50
+          -
+            handle: razorpay_secret
+            field:
+              type: text
+              display: 'Razorpay Secret'
+              width: 50
+          -
+            handle: razorpay_enabled
+            field:
+              type: toggle
+              display: 'Razorpay Enabled'

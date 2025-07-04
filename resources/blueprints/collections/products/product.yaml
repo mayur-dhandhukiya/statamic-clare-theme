@@ -1,0 +1,155 @@
+title: Product
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: thumb_image
+            field:
+              container: assets
+              type: assets
+              display: 'Thumb Image'
+              max_files: 1
+          -
+            handle: banner_images
+            field:
+              container: assets
+              type: assets
+              display: 'Banner Images'
+          -
+            handle: short_description
+            field:
+              type: textarea
+              display: 'Short Description'
+          -
+            handle: description
+            field:
+              buttons:
+                - h2
+                - h3
+                - h4
+                - h5
+                - h6
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - underline
+                - strikethrough
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              remove_empty_nodes: false
+              type: bard
+              display: Description
+      -
+        display: Questions
+        fields:
+          -
+            handle: questions
+            field:
+              collapse: true
+              type: replicator
+              display: Questions
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    questions:
+                      display: Questions
+                      fields:
+                        -
+                          handle: question_title
+                          field:
+                            type: text
+                            display: 'Question Title'
+                        -
+                          handle: question_description
+                          field:
+                            type: textarea
+                            display: 'Question Description'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: sku
+            field:
+              type: text
+              display: SKU
+              instructions: 'Stock Keeping Unit (unique identifier)'
+              validate:
+                - required
+                - 'new \Statamic\Rules\UniqueEntryValue({collection}, {id}, {site})'
+          -
+            handle: price
+            field:
+              input_type: number
+              type: text
+              display: Price
+          -
+            handle: discount
+            field:
+              input_type: number
+              character_limit: 2
+              type: text
+              display: Discount
+              instructions: 'Percentage (%)'
+          -
+            handle: categories
+            field:
+              mode: select
+              taxonomies:
+                - categories
+              query_scopes:
+                - categories
+              type: terms
+              display: Categories
+          -
+            handle: tags
+            field:
+              mode: select
+              taxonomies:
+                - product_tags
+              type: terms
+              display: Tags
+          -
+            handle: popularity
+            field:
+              type: integer
+              display: Popularity
+              default: '0'
+          -
+            handle: average_rating
+            field:
+              type: float
+              display: 'Average Rating'
+              default: '0'

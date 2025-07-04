@@ -1,0 +1,25 @@
+
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- My Account admin -->
+							<div class="account-admin account-info-box">
+								<div class="vcard">
+									{{ customer_session }}
+									    {{ if customer_profile_img }}
+									        <img src="{{ customer_profile_img }}" alt="Image">
+									    {{ /if }}
+
+									    {{ unless customer_profile_img }}
+									        <img src="{{ theme:asset src='assets/images/user-placeholder.png' }}" alt="Image">
+									    {{ /unless }}
+									{{ /customer_session }}
+								</div>
+								<div class="account-admin-title">
+									<h4>Hello {{ customer_session:name ?? '-' }}</h4>
+									<p>Clare Member Since {{ customer_session:details }}{{ created_date }}{{ /customer_session:details }}</p>
+								</div>
+							</div>
+						</div>
+					</div>

@@ -1,0 +1,91 @@
+title: 'About Content Section'
+fields:
+  -
+    handle: banner_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Banner Image'
+      instructions: 'Full width image for the top'
+      width: 50
+  -
+    handle: heading_1
+    field:
+      type: text
+      display: 'Heading 1'
+      width: 50
+  -
+    handle: content_1_paragraphs
+    field:
+      type: grid
+      display: 'Content 1 Paragraphs'
+      fields:
+        -
+          handle: content_1_paragraph
+          field:
+            type: textarea
+            display: 'Content 1 Paragraph'
+  -
+    handle: small_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Small Image'
+      instructions: 'Small image in two column'
+      width: 50
+  -
+    handle: service_section_heading
+    field:
+      type: text
+      display: 'Service Section Heading'
+      width: 50
+  -
+    handle: services
+    field:
+      collapse: true
+      type: replicator
+      display: Services
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            service_item:
+              display: 'Service Item'
+              fields:
+                -
+                  handle: icon
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Icon
+                    width: 50
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                    width: 50
+                -
+                  handle: description
+                  field:
+                    type: textarea
+                    display: Description
+  -
+    handle: heading_2
+    field:
+      type: text
+      display: 'Heading 2'
+  -
+    handle: content_2_paragraphs
+    field:
+      type: grid
+      display: 'Content 2 Paragraphs'
+      fields:
+        -
+          handle: content_2_paragraph
+          field:
+            type: textarea
+            display: 'Content 2 Paragraph'

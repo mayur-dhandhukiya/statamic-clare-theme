@@ -1,0 +1,103 @@
+
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="{{ site_url }}">Home</a></li>
+										{{ if get:category || cat_slug }}
+											<li class="breadcrumb-item"><a href="{{ site_url }}/blogs">Blogs</a></li>
+											<li class="breadcrumb-item active" aria-current="page">Category</li>
+										{{ elseif get:tag }}
+											<li class="breadcrumb-item"><a href="{{ site_url }}/blogs">Blogs</a></li>
+											<li class="breadcrumb-item active" aria-current="page">Tag</li>
+										{{ else }}
+											<li class="breadcrumb-item active" aria-current="page">Blogs</li>
+										{{ /if }}
+									</ol>
+								</nav>
+								<!-- page title -->
+								{{ blog_page_title = '' }}
+								{{ blog_page_description = '' }}
+								
+								{{ if get:category }}
+
+									{{ taxonomy:blog_categories }}
+										{{ if slug == get:category }}
+											{{ blog_page_title = title }}
+											{{ blog_page_description = description }}
+										{{ /if }}
+									{{ /taxonomy:blog_categories }}
+
+								{{ elseif get:tag }}
+
+									{{ taxonomy:blog_tags }}
+										{{ if slug == get:tag }}
+											{{ blog_page_title = title }}
+											{{ blog_page_description = description }}
+										{{ /if }}
+									{{ /taxonomy:blog_tags }}
+
+								{{ /if }}
+
+								{{ if blog_page_title }}
+									<h1>{{ blog_page_title }}</h1>
+								{{ else }}
+									<h1>{{ title }}</h1>
+								{{ /if }}
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!--/ End Hero slider section -->
+
+			<section class="blog-page-grid section-two filter-intro-section d-none ">
+				<!-- container -->
+				<div class="container">
+					<h2>{{ blog_page_title }}</h2>
+					<p>{{ blog_page_description }}</p>
+				</div>
+			</section>
+
+			<!-- shop Blog grid section -->
+			<section class="blog-page-grid section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+
+						<!-- column -->
+						<div class="col-12 col-md-8">
+							<!-- row -->
+							<div id="appliedFilters" class="mb-4" style="display: none;">
+								<strong>Filters:</strong>
+								<div class="d-inline-flex flex-wrap gap-2 align-items-center" id="appliedFilterList"></div>
+								<a href="javascript:void(0);" id="clearAllFilters" class="ms-2">Clear All</a>
+							</div>
+
+							<div class="row" id="blogListAjaxWrapper"></div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-md-4">
+							<!-- Left sidebar -->
+							{{ partial:blog_sidebar }}
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ shop page grid section -->

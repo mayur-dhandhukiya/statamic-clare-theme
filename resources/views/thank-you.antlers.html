@@ -1,0 +1,248 @@
+{{ if {session:has key="customer_logged_in"} != true }}
+	{{ redirect to="/cart" }}
+{{ /if }}
+
+{{ if {session:last_order_id} == '' }}
+	{{ redirect to="/cart" }}
+{{ /if }}
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="{{ site:url }}">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Thank you</li>
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>Thank you</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!--/ End Hero slider section -->
+
+			<!-- Thank you page section -->
+			<section class="thank-you-page section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- Thank you msg-->
+							<div class="thank-you-msg">
+								<p><img src="{{ theme:asset src='assets/images/thumb-up.svg' }}" alt="thumb up"> Thank you. Your order has been received.</p>
+							</div>
+
+							{{ order:details }}
+							<!-- Thank you order -->
+							<div class="thank-you-order">
+								<!-- row -->
+								<div class="row">
+									<!-- column -->
+									<div class="col-6 col-md-6 col-lg-2">
+										<div class="order-payment-method">
+											<h6>Order number:</h6>
+											<h5>{{ order_number ?? '-' }}</h5>
+										</div>
+									</div>
+									<!-- column -->
+									<div class="col-6 col-md-6 col-lg-3">
+										<div class="order-payment-method">
+											<h6>Date:</h6>
+											<h5>{{ created_at format="F j, Y" }}</h5>
+										</div>
+									</div>
+									<!-- column -->
+									<div class="col-6 col-md-6 col-lg-2">
+										<div class="order-payment-method">
+											<h6>Total:</h6>
+											<h5>${{ order_total ?? '0' }}</h5>
+										</div>
+									</div>
+									<!-- column -->
+									<div class="col-6 col-md-6 col-lg-3">
+										<div class="order-payment-method">
+											<h6>Payment method:</h6>
+											<h5>{{ if payment_method_label }}{{ payment_method_label}}{{ else }}-{{ /if }}</h5>
+										</div>
+									</div>
+									<!-- column -->
+									<div class="col-6 col-md-6 col-lg-2">
+										<div class="order-payment-method">
+											<h6>Status:</h6>
+											<h5 style="text-transform: capitalize;">{{ order_status ?? '-' }}</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="d-flex justify-content-between">
+								<h3>Order details</h3>
+								<button id="downloadInvoice" data-order-id="{{ id }}" class="btn btn-dark mb-2">Download Invoice PDF</button>
+							</div>
+
+							<div class="payment-order-table">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th scope="col" style="width: 60%;">Product</th>
+											<th scope="col" style="width: 40%;">Total</th>
+										</tr>
+									</thead>
+									<tbody>
+
+										{{ order_items }}
+										<tr>
+											<td>
+												<div class="cart-product">
+													<div class="cart-thumb">
+														<a href="{{ site_url }}/products/{{ product:slug }}">
+															{{ if product:thumb_image }}
+								                                {{ product:thumb_image }}
+								                                <img src="{{ url }}" alt="{{ alt }}">
+								                                {{ /product:thumb_image }}
+								                            {{ else }}
+								                                <img src="{{ theme:asset src='assets/images/placeholder-product.jpeg' }}" alt="blog img 1">
+								                            {{ /if }}
+														</a>
+													</div>
+													<div class="cart-product-title">
+														<h6>{{ product_title ?? '-' }}</h6>
+														<p>Qty : {{ qty ?? '0' }}</p>
+														<p>Price : ${{ price ?? '0' }}</p>
+													</div>
+												</div>
+											</td>
+											<td>${{ total ?? '0' }}</td>
+										</tr>
+										{{ /order_items }}
+
+										<tr>
+											<td>
+												<p>Subtotal</p>
+											</td>
+											<td><span>${{ order_total ?? '0' }}</span></td>
+										</tr>
+										<tr>
+											<td>
+												<p>Shipping</p>
+											</td>
+											<td><span>Free Shipping</span></td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td><strong>Total</strong></td>
+											<td><strong>${{ order_total ?? '0' }}</strong></td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							<div class="row">
+						        <div class="col-12 col-md-6 pe-md-5 pt-2">
+						            <h5 class="account-title">Billing address</h5>
+						            <div class="address-column">
+						            	{{ if billing_first_name || billing_last_name || billing_address || billing_city || billing_state || billing_country || billing_zip }}
+							            	<p>
+							            		{{ if billing_first_name || billing_last_name }}
+							            			{{ billing_first_name }} {{ billing_last_name }}<br>
+							            		{{ /if }}
+
+							            		{{ if billing_address }}
+							            			{{ billing_address }}<br>
+							            		{{ /if }}
+
+							            		{{ if billing_city }}
+							            			{{ billing_city }} -
+							            		{{ /if }}
+
+							            		{{ if billing_state }}
+							            			{{ billing_state }}<br>
+							            		{{ /if }}
+
+							            		{{ if billing_country }}
+							            			{{ billing_country }} -
+							            		{{ /if }}
+
+							            		{{ if billing_zip }}
+							            			{{ billing_zip }}<br>
+							            		{{ /if }}
+							            	</p>
+						            	{{ /if }}
+
+						                {{ if billing_phone }}
+							                <p><i class="fa-solid fa-phone"></i> {{ billing_phone }}</p>
+						        		{{ /if }}
+
+						                {{ if billing_email }}
+							                <p><i class="fa-solid fa-envelope"></i> {{ billing_email }}</p>
+						        		{{ /if }}
+						            </div>
+						        </div>
+
+						        <div class="col-12 col-md-6 pe-md-5 pt-2">
+						            <h5 class="account-title">Shipping address</h5>
+						            <div class="address-column">
+						            	{{ if shipping_first_name || shipping_last_name || shipping_address || shipping_city || shipping_state || shipping_country || shipping_zip }}
+							            	<p>
+							            		{{ if shipping_first_name || shipping_last_name }}
+							            			{{ shipping_first_name }} {{ shipping_last_name }}<br>
+							            		{{ /if }}
+
+							            		{{ if shipping_address }}
+							            			{{ shipping_address }}<br>
+							            		{{ /if }}
+
+							            		{{ if shipping_city }}
+							            			{{ shipping_city }} -
+							            		{{ /if }}
+
+							            		{{ if shipping_state }}
+							            			{{ shipping_state }}<br>
+							            		{{ /if }}
+
+							            		{{ if shipping_country }}
+							            			{{ shipping_country }} -
+							            		{{ /if }}
+
+							            		{{ if shipping_zip }}
+							            			{{ shipping_zip }}<br>
+							            		{{ /if }}
+							            	</p>
+						            	{{ /if }}
+
+						                {{ if shipping_phone }}
+						                	<p><i class="fa-solid fa-phone"></i> {{ shipping_phone }}</p>
+						                {{ /if }}
+
+						                {{ if shipping_email }}
+						                	<p><i class="fa-solid fa-envelope"></i> {{ shipping_email }}</p>
+						                {{ /if }}
+						            </div>
+						        </div>
+						    </div>
+							{{ /order:details }}
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Thank you page section -->

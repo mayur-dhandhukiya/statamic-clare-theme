@@ -1,0 +1,46 @@
+{{ if {session:has key="customer_logged_in"} == true }}
+	{{ redirect to="/" }}
+{{ /if }}
+			<!-- Account Page section -->
+			<section class="my-account-page">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- account form -->
+							<div class="account-form">
+								<!-- module header -->
+								<div class="module-header">
+									<!-- page title -->
+									<h1>Sign Up</h1>
+									<p>Already have an account? <a href="{{ site_url }}/sign-in" class="link">Sign in</a></p>
+								</div>
+								<div id="registerResponse" style="display:none; margin:10px 0; padding:10px; border-radius:3px; color:white;"></div>
+								<form class="all-form" id="register-form">
+									<div class="form-group">
+										<label for="Fullname">Full name*</label>
+										<input type="text" class="form-control" id="Fullname" name="full_name">
+									</div>
+									<div class="form-group">
+										<label for="Email">Email*</label>
+										<input type="Email" class="form-control" id="Email" name="email" autocomplete="new-email" autocorrect="off" spellcheck="false">
+									</div>
+									<div class="form-group">
+										<label for="Password">Password*</label>
+										<input type="Password" class="form-control" id="Password" name="password" autocomplete="new-password" autocorrect="off" spellcheck="false">
+									</div>
+									<div class="form-group form-check">
+										<input type="checkbox" class="form-check-input" id="Agree" name="agree">
+										<label class="form-check-label" for="Agree">I agree to the <a href="{{ site_url }}/terms-and-conditions" class="link">Terms</a> and <a href="{{ site_url }}/privacy-policy" class="link">Privacy Policy</a></label>
+									</div>
+									<button type="submit" class="btn btn-dark btn-style-2">Submit</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+			<!--/ End Account Page section -->

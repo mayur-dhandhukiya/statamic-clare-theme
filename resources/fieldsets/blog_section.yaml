@@ -1,0 +1,48 @@
+title: 'Blog Section'
+fields:
+  -
+    handle: section_type
+    field:
+      options:
+        -
+          key: layout_1
+          value: 'Layout 1'
+        -
+          key: layout_2
+          value: 'Layout 2'
+      type: select
+      display: 'Section Type'
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: section_description
+    field:
+      type: textarea
+      display: 'Section Description'
+  -
+    handle: section_buttons
+    field:
+      type: grid
+      display: 'Section Buttons'
+      fields:
+        -
+          handle: section_button_name
+          field:
+            type: text
+            display: 'Section Button Name'
+        -
+          handle: section_button_link
+          field:
+            type: text
+            display: 'Section Button Link'
+  -
+    handle: collection_blogs
+    field:
+      mode: select
+      collections:
+        - blogs
+      type: entries
+      display: 'Collection Blogs'

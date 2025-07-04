@@ -1,0 +1,34 @@
+
+            <!-- Hero banner section -->
+            <section class="hero-banner-section">
+                <!-- Hero banner body -->
+                <div class="hero-banner-body">
+                    <!-- container -->
+                    <div class="container">
+                        <!-- row -->
+                        <div class="row align-items-center">
+                            <!-- column -->
+                            <div class="col-12 col-md-6">
+                                <!-- hero banner content -->
+                                <div class="hero-banner-content">
+                                    <h1>{{ hero_title }}</h1>
+                                    <p>{{ hero_description }}</p>
+                                    {{ hero_button }}
+                                    <a href="{{ site_url }}{{ hero_button_link }}" class="btn-link">{{ hero_button_name }}</a>
+                                    {{ /hero_button }}
+                                </div>
+                            </div>
+                            <!-- column -->
+                            <div class="col-12 col-md-6">
+                                <!-- Hero banner img -->
+                                <div class="hero-banner-img">
+                                    {{ hero_banner }}
+                                    <img src="{{ url }}" alt="hero-banner-img">
+                                    {{ /hero_banner }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ End Hero banner section -->

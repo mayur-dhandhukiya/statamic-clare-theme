@@ -1,0 +1,119 @@
+
+			<!-- Contact us page section -->
+			<section class="contact-us-page-section section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- module header -->
+							<div class="module-header">
+								<div class="module-header-left">
+									<h2 class="entry-title">{{ section_title }}</h2>
+									<p>{{ section_description }}</p>
+								</div>
+							</div>
+
+							<!-- row -->
+							<div class="row">
+								<!-- column -->
+								<div class="col-12 col-lg-6">
+									<!-- Contact Information -->
+									<div class="contact-information">
+										{{ informations }}
+
+											{{ if type == "information_half_box" }}
+
+												<div class="contact-information-box">
+													<div class="icon">
+														{{ information_icon }}
+														<img src="{{ url }}" alt="{{ alt }}">
+														{{ /information_icon }}
+													</div>
+													<div class="information">
+														<h4>{{ information_title }}</h4>
+														<p>
+															{{ information_records }}
+																{{ if information_type == "phone" }}
+																	<a href="tel:{{ information_data }}">{{ information_data }}</a><br>
+																{{ elseif information_type == "email" }}
+																	<a href="mailto:{{ information_data }}">{{ information_data }}</a><br>
+																{{ /if }}
+															{{ /information_records }}
+														</p>
+													</div>
+												</div>
+
+											{{ elseif type == "information_full_box" }}
+
+												<div class="information-full-box">
+													<div class="contact-information-box">
+														<div class="icon">
+															{{ information_icon }}
+															<img src="{{ url }}" alt="{{ alt }}">
+															{{ /information_icon }}
+														</div>
+														<div class="information">
+															<h4>{{ information_title }}</h4>
+															<p>{{ information_description }}</p>
+														</div>
+													</div>
+
+													{{ if information_embed }}
+													<!-- Contact map -->
+													<div class="contact-map">
+														{{ information_embed }}
+													</div>
+													{{ /if }}
+
+												</div>
+
+											{{ else }}
+											{{ /if }}
+
+										{{ /informations }}
+
+									</div>
+								</div>
+								<!-- column -->
+								<div class="col-12 col-lg-6">
+									<!-- Contact form -->
+									<div class="contact-form">
+
+										{{ form:contact_us class="all-form" }}
+											
+											{{ if success }}
+												<div class="" style="margin: 10px 0;padding: 10px;border-radius: 3px 3px 3px 3px;color: white;background-color: #186f65;">
+													<i class="fa fa-check"></i> {{ success }}
+												</div>
+											{{ /if }}
+											
+								            {{ fields }}
+												<div class="form-group">
+													<label for="{{ handle }}">{{ display }}{{ if validate contains="required" }}*{{ /if }}</label>
+													
+													{{ if type == 'textarea' }}
+														<textarea class="form-control" name="{{ handle }}" id="{{ handle }}"></textarea>
+													{{ else }}
+														<input type="{{ type }}" name="{{ handle }}" id="{{ handle }}" class="form-control">
+													{{ /if }}
+													
+													{{ if error }}
+														<p class="" style="color: #ff0000;">{{ error }}</p>
+													{{ /if }}
+												</div>
+								            {{ /fields }}
+
+								            <button type="submit" class="btn btn-dark btn-style-2">Submit</button>
+
+										{{ /form:contact_us }}
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Contact us page section -->

@@ -1,0 +1,7 @@
+title: Orders
+template: orders/show
+revisions: false
+route: '/account-order/{order_number}'
+date_behavior:
+  past: public
+  future: private

@@ -1,0 +1,85 @@
+title: 'Multi Grid Section'
+fields:
+  -
+    handle: multi_grids
+    field:
+      type: replicator
+      display: 'Multi Grids'
+      collapse: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            multi_grid:
+              display: 'Multi Grid'
+              fields:
+                -
+                  handle: multi_grid_tag_1
+                  field:
+                    type: text
+                    display: 'Multi Grid Tag 1'
+                    width: 33
+                -
+                  handle: multi_grid_title_1
+                  field:
+                    type: text
+                    display: 'Multi Grid Title 1'
+                    width: 33
+                -
+                  handle: multi_grid_image_1
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Multi Grid Image 1'
+                    width: 33
+                -
+                  handle: multi_grid_buttons_1
+                  field:
+                    type: grid
+                    display: 'Multi Grid Buttons 1'
+                    fields:
+                      -
+                        handle: multi_grid_button_name
+                        field:
+                          type: text
+                          display: 'Multi Grid Button Name'
+                      -
+                        handle: multi_grid_button_link
+                        field:
+                          type: text
+                          display: 'Multi Grid Button Link'
+                -
+                  handle: multi_grid_tag_2
+                  field:
+                    type: text
+                    display: 'Multi Grid Tag 2'
+                    width: 33
+                -
+                  handle: multi_grid_title_2
+                  field:
+                    type: text
+                    display: 'Multi Grid Title 2'
+                    width: 33
+                -
+                  handle: multi_grid_image_2
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Multi Grid Image 2'
+                    width: 33
+                -
+                  handle: multi_grid_buttons_2
+                  field:
+                    type: grid
+                    display: 'Multi Grid Buttons 2'
+                    fields:
+                      -
+                        handle: multi_grid_button_name
+                        field:
+                          type: text
+                          display: 'Multi Grid Button Name'
+                      -
+                        handle: multi_grid_button_link
+                        field:
+                          type: text
+                          display: 'Multi Grid Button Link'

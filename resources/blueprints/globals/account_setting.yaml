@@ -1,0 +1,20 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Dashboard
+        fields:
+          -
+            handle: dashboard_description
+            field:
+              type: textarea
+              display: 'Dashboard Description'
+      -
+        display: Addresses
+        fields:
+          -
+            handle: addresses_description
+            field:
+              type: textarea
+              display: 'Addresses Description'

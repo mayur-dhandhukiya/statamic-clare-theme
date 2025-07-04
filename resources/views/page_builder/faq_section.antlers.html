@@ -1,0 +1,47 @@
+
+			<!-- FAQ page section -->
+			<section class="faq-page section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- faq list -->
+							<div class="faq-list">
+
+								{{ accordion_items }}
+								<h3>{{ accordion_item_heading }}</h3>
+								<!-- accordion -->
+								<div class="accordion">
+
+									<!-- accordion list -->
+									{{ accordion_item_records }}
+									<div class="accordion-list">
+										<!-- accordion title -->
+										<h4 class="accordion-title">{{ accordion_item_question }}</h4>
+										<!-- accordion content -->
+										<div class="accordion-content">
+											{{ accordion_item_answers }}
+											<p>{{ accordion_item_answer }}</p>
+											{{ /accordion_item_answers }}
+										</div>
+									</div>
+									{{ /accordion_item_records }}
+
+								</div>
+								{{ /accordion_items }}
+
+							</div>
+
+							<div class="faq-bottom-button">
+								<p>{{ description_for_button }}</p>
+								{{ buttons }}
+								<a href="{{ site_url }}{{ button_link }}" class="btn btn-dark">{{ button_name }}</a>
+								{{ /buttons }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End FAQ page section -->

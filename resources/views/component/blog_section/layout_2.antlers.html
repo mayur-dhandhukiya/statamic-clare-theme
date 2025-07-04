@@ -1,0 +1,55 @@
+
+			<!-- Latest bloog & news section -->
+			<section class="blogs-and-news-section section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- module header -->
+							<div class="module-header  style-3">
+								<div class="module-header-left">
+									<h2 class="entry-title">{{ section_title }}</h2>
+									<p>{{ section_description }}</p>
+								</div>
+								<div class="entry-header-right">
+									{{ section_buttons }}
+									<a href="{{ site_url }}{{ section_button_link }}" class="btn btn-dark btn-style-2">{{ section_button_name }}</a>
+									{{ /section_buttons }}
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- row -->
+					<div class="row">
+
+						{{ collection_blogs }}
+						<!-- column -->
+						<div class="col-12 col-md-6">
+							<!-- blog grid-->
+							<div class="blog-grid-style-2">
+								<!-- blog grid image-->
+								<div class="blog-grid-image">
+									<a href="{{ site_url }}/blogs/{{ slug }}">
+										{{ thumb_image }}
+										<img src="{{ url }}" alt="blog img 1">
+										{{ /thumb_image }}
+									</a>
+									<div class="blog-date">{{ date format="d M Y" }}</div>
+								</div>
+								<!-- blog grid content-->
+								<div class="blog-grid-content">
+									<h5 class="entry-title"><a href="{{ site_url }}/blogs/{{ slug }}">{{ title }}</a></h5>
+
+									<p>{{ short_description }}</p>
+								</div>
+							</div>
+						</div>
+						{{ /collection_blogs }}
+
+					</div>
+				</div>
+			</section>
+			<!--/ End Latest bloog & news section -->

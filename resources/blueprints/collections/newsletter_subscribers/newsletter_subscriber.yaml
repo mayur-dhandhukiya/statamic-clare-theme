@@ -1,0 +1,44 @@
+title: 'Newsletter Subscriber'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              type: text
+              display: 'Email Address'
+              input_type: email
+              validate:
+                - required
+                - email
+          - 
+            handle: subscribed_at
+            field:
+              type: date
+              display: Subscribed At
+              instructions: Date and time the user subscribed
+              mode: single
+              time_enabled: true
+              read_only: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate:
+                - 'max:200'

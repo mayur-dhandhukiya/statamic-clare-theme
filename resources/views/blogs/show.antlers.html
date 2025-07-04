@@ -1,0 +1,245 @@
+{{ blog_url = '{site:url}blogs/{slug}' }}
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="{{ site_url }}">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">Blog</li>
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>Blog</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!--/ End Hero slider section -->
+
+			<!-- Blog single page section -->
+			<section class="blog-single-page section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+
+						<!-- column -->
+						<div class="col-12 col-lg-8">
+							<!-- blog-posts -->
+							<article class="post-article">
+
+								{{ thumb_image }}
+								<figure class="entry-thumbnail">
+									<img src="{{ url }}" alt="{{ alt }}">
+								</figure>
+								{{ /thumb_image }}
+
+								<!-- blog entry wrapper -->
+								<div class="blog-entry-wrapper">
+									<!--  blog entry meta --> 
+									<div class="entry-meta top">
+										<!-- entry admin -->
+										<div class="entry-admin">
+											by <a href="#" class="link">John Doe</a>
+										</div>
+										<!-- entry date -->
+										<div class="entry-date">{{ date format="M j, Y" }}</div>
+										<!-- entry Comments -->
+										<div class="entry-comments">2 Comments</div>
+									</div>
+									<!-- entry title -->
+									{{ if title }}
+									<h2 class="entry-title">{{ title }}</h2>
+									{{ /if }}
+									<!-- entry content -->
+									<div class="entry-content">
+
+										{{ blog_content_builder scope="block" }}
+											{{ partial src="blog_content_builder/{type}" }}
+										{{ /blog_content_builder }}
+
+										<!-- post footer tag-->
+										<div class="post-footer-tag">
+											<!-- post footer tag -->
+											<div class="post-tag">
+												{{ blog_categories }}
+												<a href="{{ site_url }}/blogs?category={{ slug }}">{{ title }}</a>
+												{{ /blog_categories }}
+											</div>
+											<!-- post footer social -->
+											<div class="post-social">
+												<h6>Share this post:</h6>
+												<ul>
+													<li>
+														<a href="https://www.facebook.com/sharer/sharer.php?u={{ current_full_url }}&message={{ short_description }}"><i class="fa-brands fa-facebook-f"></i></a>
+													</li>
+													<li>
+														<a href="https://twitter.com/intent/tweet?text={{ short_description }}"><i class="fa-brands fa-twitter"></i></a>
+													</li>
+													<li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+													<li><a href="#"><i class="fa-brands fa-medium"></i></a></li>
+													<li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+												</ul>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</article>
+							<!-- Comments -->
+							<div class="entry-footer">
+								<!-- post comments -->
+								{{ blog_comment_total_results = 0 }}
+								
+								{{ form:submissions in="blog_comments" scope="blog_comment" blog_entry:contains="{id}"  }}
+									{{ blog_comment_total_results = blog_comment:total_results }}
+								{{ /form:submissions }}
+
+								{{ if blog_comment_total_results > 0 }}
+								<div class="post-comments">
+									<h2 class="entry-title">
+										Comments
+									</h2>
+									<!-- comment list -->
+									<ul class="comment-list">
+										{{ form:submissions in="blog_comments" scope="blog_comment" blog_entry:contains="{id}"  }}
+											{{ if blog_comment:total_results > 0 }}
+												<li class="comment">
+													<article class="comment-body">
+														<div class="comment-user-info">
+															<div class="vcard">
+																{{ if customer_entry:profile }}
+																{{ customer_entry:profile }}
+																	<img src="{{ url }}" alt="User Image">
+																{{ /customer_entry:profile }}
+																{{ else }}
+																	<img src="{{ theme:asset src='assets/images/user-placeholder.png' }}" alt="User Image">
+																{{ /if }}
+																
+															</div>
+															<div class="comment-author">
+																<h5>{{ full_name }}</h5>
+																<h6>{{ comment_date format="F Y" }}</h6>
+															</div>
+														</div>
+														<div class="comment-right-info">
+															<p>{{ comment }}</p>
+															<div class="reply">
+																<a href="#" class="active"><i class="fa-solid fa-thumbs-up"></i> Helpful</a>
+																<a href="#"><i class="fa-solid fa-thumbs-down"></i> Not Helpful</a>
+															</div>
+														</div>
+													</article>
+												</li>
+											
+											{{ /if }}
+										{{ /form:submissions }}
+									</ul>
+								</div>
+								{{ /if }}
+								<!-- post comments form -->
+								<div class="post-comments-form">
+									<h2 class="entry-title">Leave a comment</h2>
+
+									{{ if {session:has key="customer_logged_in"} == true }}
+										<div id="commentResponse" style="display:none; margin:10px 0; padding:10px; border-radius:3px; color:white;"></div>
+
+										<form class="all-form" id="blogCommentForm">
+											<div class="form-row">
+												<div class="col-12 col-sm-6">
+													<div class="form-group">
+														<input type="text" class="form-control" name="full_name" placeholder="Full name*" required>
+													</div>
+												</div>
+												<div class="col-12 col-sm-6">
+													<div class="form-group">
+														<input type="email" class="form-control" name="email" placeholder="Email*" required>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<textarea class="form-control" name="comment" placeholder="Write your Comment" required></textarea>
+											</div>
+
+											<input type="hidden" name="blog_entry" value="{{ id }}">
+											<input type="hidden" name="customer_entry" value="{{ session:customer_id }}">
+											<input type="hidden" name="comment_date" value="{{ now format='Y-m-d' }}">
+
+											<button type="submit" class="btn btn-dark btn-style-2">Submit</button>
+										</form>
+									{{ else }}
+										<div class="note-message">
+											<strong>Note:</strong> If you want to comment, please <a href="{{ site_url }}/sign-in">sign in</a>.
+										</div>
+									{{ /if }}
+
+								</div>
+
+								<!-- Related Blogs -->
+								<div class="related-blogs">
+									<h2 class="entry-title">Related Blogs</h2>
+									<!-- row -->
+									<div class="row">
+
+										<!-- column -->
+										{{ collection:blogs
+											id:not="{id}"
+											blog_categories:contains="{{ blog_categories | pluck:slug | join:'|' }}"
+											limit="3"
+										}}
+										<div class="col-12 col-md-4">
+											<!-- blog grid-->
+											<div class="blog-grid-style-3">
+												<!-- blog grid image-->
+												<div class="blog-grid-image">
+													<a href="{{ site_url }}/blogs/{{ slug }}">
+														{{ thumb_image }}
+															<img src="{{ url }}" alt="{{ alt }}">
+														{{ /thumb_image }}
+													</a>
+												</div>
+												<!-- blog grid content-->
+												<div class="blog-grid-content">
+													<h6>
+														{{ blog_categories }}
+															<a href="javasript:;">{{ title }}</a> 
+														{{ /blog_categories }}
+														<span>15th Aug 2022</span>
+													</h6>
+													<h5 class="entry-title"><a href="{{ site_url }}/blogs/{{ slug }}">{{ title }}</a></h5>
+													<p>{{ short_description }}</p>
+													<a href="{{ site_url }}/blogs/{{ slug }}" class="btn link">Read more <span class="ti-arrow-right"></span></a>
+												</div>
+											</div>
+										</div>
+										{{ /collection:blogs }}
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-lg-4 d-none d-md-block">
+							<!-- Left sidebar -->
+							{{ partial:blog_sidebar }}
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ Blog single page section -->

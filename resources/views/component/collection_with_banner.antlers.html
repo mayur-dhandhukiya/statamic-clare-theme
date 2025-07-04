@@ -1,0 +1,113 @@
+
+			<!-- Top collection section -->
+			<section class="top-collection-section style-3 section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- module header -->
+							<div class="module-header">
+								<div class="module-header-left">
+									<h2 class="entry-title">{{ section_title }}</h2>
+									<p>{{ section_description }}</p>
+								</div>
+								<div class="entry-header-right">
+									{{ if section_buttons }}
+									{{ section_buttons }}
+									{{ if section_button_name }}
+									<a href="{{ site_url }}{{ section_button_link }}" class="btn btn-dark btn-style-2">{{ section_button_name }}</a>
+									{{ /if }}
+									{{ /section_buttons }}
+									{{ /if }}
+								</div>
+							</div>
+
+							<!-- Feature Products grid -->
+							<div class="bestsellers-products-grid">
+								<!-- row -->
+								<div class="row">
+									<!-- column -->
+									<div class="col-12 col-lg-6">
+
+										{{ banner_details }}
+										<!-- banner -->
+										<div class="banner">
+											<!-- banner content-->
+											<div class="banner-content">
+												<h2 class="entry-title">{{ banner_title }}</h2>
+												{{ banner_buttons }}
+												{{ if banner_button_name }}
+												<a href="{{ site_url }}{{ banner_button_link }}" class="btn btn-dark">{{ banner_button_name }}</a>
+												{{ /if }}
+												{{ /banner_buttons }}
+											</div>
+											<!-- banner image-->
+											<div class="banner-image">
+												{{ banner_image }}
+												<img src="{{ url }}" alt="">
+												{{ /banner_image }}
+											</div>
+										</div>
+										{{ /banner_details }}
+									</div>
+									<!-- column -->
+									<div class="col-12 col-lg-6">
+										<!-- row -->
+										<div class="row">
+
+											{{ if collection_type == 'products' }}
+											{{ products }}
+											{{ /if }}
+											<!-- column -->
+											<div class="col-12 col-md-6">
+												<!-- Product -->
+												<div class="product product-style-4">
+													<!-- product thumbnail -->
+													<div class="product-thumbnail">
+														<a href="{{ site_url }}/products/{{ slug }}" class="thumbnail">
+															{{ thumb_image }}
+															<img src="{{ url }}" alt="">
+															{{ /thumb_image }}
+														</a>
+
+														<!-- -->
+														{{ if discount > 0 && discount < 100 }}
+														<div class="product-badges">
+															<span class="badge  onsale">-{{ discount }}%</span>
+														</div>
+														{{ /if }}
+
+														<!-- product buttons icon-->
+														<div class="product-buttons-icon">
+															<a href="#product-quick-popup" data-get_view_url="{{ site_url }}/products/{{ slug }}" class="arrow-icon quick-view-link"><span class="ti-eye"></span></a>
+															<a href="javascript:;" data-product-id="{{ id }}" class="arrow-icon add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+															<a href="javascript:;" data-product-id="{{ id }}" class="arrow-icon add-to-wishlist-btn"><span class="ti-heart"></span></a>
+														</div>
+													</div>
+													<!-- product content -->
+													<div class="product-content">
+														<!-- product tile -->
+														<h3 class="product-title">
+															<a href="{{ site_url }}/products/{{ slug }}">{{ title }}</a>
+														</h3>
+														<!-- product price -->
+														<span class="price"><ins>${{ price }}</ins></span>
+													</div>
+												</div>
+											</div>
+											{{ if collection_type == 'products' }}
+											{{ /products }}
+											{{ /if }}
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Top collection section -->

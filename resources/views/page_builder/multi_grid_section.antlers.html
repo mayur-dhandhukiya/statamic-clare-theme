@@ -1,0 +1,75 @@
+
+			<!-- banner adds section -->
+			<section class="banner-adds-section section-all">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						{{ multi_grids }}
+							{{ if multi_grid_title_2 }}
+								<div class="col-12 col-md-6 ps-lg-4">
+									<!-- banner -->
+									<div class="banner banner-small">
+										<!-- banner content-->
+										<div class="banner-content">
+											<h4 class="entry-subtitle">{{ multi_grid_tag_1 }}</h4>
+											<h2 class="entry-title">{{ multi_grid_title_1 }}</h2>
+											{{ multi_grid_buttons_1 }}
+												<a href="{{ site_url }}{{ multi_grid_button_link }}" class="btn link">{{ multi_grid_button_name }} <span class="ti-arrow-right"></span></a>
+											{{ /multi_grid_buttons_1 }}
+										</div>
+										<!-- banner image-->
+										<div class="banner-image">
+											{{ multi_grid_image_1 }}
+											<img src="{{ url }}" alt="">
+											{{ /multi_grid_image_1 }}
+										</div>
+									</div>
+
+									<!-- banner -->
+									<div class="banner banner-small">
+										<!-- banner content-->
+										<div class="banner-content">
+											<h4 class="entry-subtitle">{{ multi_grid_tag_2 }}</h4>
+											<h2 class="entry-title">{{ multi_grid_title_2 }}</h2>
+											{{ multi_grid_buttons_2 }}
+												<a href="{{ site_url }}{{ multi_grid_button_link }}" class="btn link">{{ multi_grid_button_name }} <span class="ti-arrow-right"></span></a>
+											{{ /multi_grid_buttons_2 }}
+										</div>
+										<!-- banner image-->
+										<div class="banner-image">
+											{{ multi_grid_image_2 }}
+											<img src="{{ url }}" alt="">
+											{{ /multi_grid_image_2 }}
+										</div>
+									</div>
+								</div>
+							{{ else }}
+								<div class="col-12 col-md-6 pe-lg-4">
+									<!-- banner -->
+									<div class="banner">
+										<!-- banner content-->
+										<div class="banner-content">
+											<h4 class="entry-subtitle">{{ multi_grid_tag_1 }}</h4>
+											<h2 class="entry-title">{{ multi_grid_title_1 }}</h2>
+											{{ multi_grid_buttons_1 }}
+												<a href="{{ site_url }}{{ multi_grid_button_link }}" class="btn link">{{ multi_grid_button_name }} <span class="ti-arrow-right"></span></a>
+											{{ /multi_grid_buttons_1 }}
+										</div>
+										<!-- banner image-->
+										<div class="banner-image">
+											{{ multi_grid_image_1 }}
+											<img src="{{ url }}" alt="">
+											{{ /multi_grid_image_1 }}
+										</div>
+									</div>
+								</div>
+							{{ /if }}
+						{{ /multi_grids }}
+						<!-- column -->
+
+					</div>
+				</div>
+			</section>
+			<!--/ End banner adds section -->

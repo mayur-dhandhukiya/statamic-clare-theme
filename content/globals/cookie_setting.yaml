@@ -1,0 +1,10 @@
+title: 'Cookie Setting'
+data:
+  cookie_title: 'Can we store cookies?'
+  cookie_description:
+    -
+      id: mc0dstgm
+      paragraph: 'Nunc faucibus a pellentesque sit. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Scelerisque fermentum dui faucibus in. Blandit cursus risus at ultrices mi tempus. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae.'
+    -
+      id: mc0dt3px
+      paragraph: 'You can fimillarize with our <a href="/privacy-policy">Privacy policy.</a>'

@@ -1,0 +1,36 @@
+
+            <!-- Newsletter section -->
+            <section class="newsletter-section">
+                <div class="newsletter-left-img">
+                    {{ offer_background_image_1 }}
+                    <img src="{{ url }}" alt="newsletter img">
+                    {{ /offer_background_image_1 }}
+                </div>
+                <div class="newsletter-right-img">
+                    {{ offer_background_image_2 }}
+                    <img src="{{ url }}" alt="newsletter img">
+                    {{ /offer_background_image_2 }}
+                </div>
+                <!-- container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- column -->
+                        <div class="col-12">
+                            <!-- Newsletter content -->
+                            <div class="newsletter-content">
+                                <h2>{{ offer_title }}</h2>
+                                <p>{{ offer_description }}</p>
+                                <!-- newsletter form -->
+                                <form action="#" class="newsletter-form">
+                                    <input type="hidden" name="type" value="simple">
+                                    <input type="email" placeholder="Email address" class="form-control" required name="email">
+                                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                                </form>
+                                <p class="form-message" style="display:none;text-align: left;"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/ End Weekly best sell section -->

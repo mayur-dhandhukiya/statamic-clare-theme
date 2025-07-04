@@ -1,0 +1,11 @@
+{{ if split_title }}
+	<h5>{{ split_title }}</h5>
+{{ /if }}
+
+{{ if split_contents }}
+	<ul>
+		{{ split_contents }}
+			<li>{{ split_content }}</li>
+		{{ /split_contents }}
+	</ul>
+{{ /if }}

@@ -1,0 +1,942 @@
+
+<!-- Hero slider section -->
+<section class="hero-slider-section">
+	<!-- swiper -->
+	<div class="swiper mySwiper">
+		<!-- swiper wrapper -->
+		<div class="swiper-wrapper">
+
+			<!-- swiper slide -->
+			{{ home2_setting:hero_sliders }}
+			<div class="swiper-slide">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row align-items-center">
+						<!-- column -->
+						<div class="col-12 col-md-6">
+							<!-- hero banner content -->
+							<div class="hero-banner-content">
+								<h4 class="entry-subtitle">{{ hero_keyword }}</h4>
+								<h1>{{ hero_title }}</h1>
+								<p>{{ hero_description }}</p>
+								<a href="{{ site_url }}{{ hero_button_link }}" class="btn btn-dark btn-style-2">{{ hero_button_name }}</a>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-md-6">
+							<!-- Hero banner img -->
+							<div class="hero-banner-img">
+								{{ hero_banner }}
+								<img src="{{ url }}" alt="hero-slider-img">
+								{{ /hero_banner }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{ /home2_setting:hero_sliders }}
+
+		</div>
+		<!-- slider pagination -->
+		<div class="swiper-pagination"></div>
+	</div>
+</section>
+<!--/ End Hero slider section -->
+
+<!-- Season Collection section -->
+<section class="season-collection-section section-two">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+				<!-- module header -->
+				<div class="module-header">
+					<h2 class="entry-title">Trending Collection</h2>
+					<div class="entry-header-right">
+						<!-- slider arrow -->
+						<div class="slider-arrow no-box-arrow">
+							<div class="swiper-button-prev"><span class="ti-arrow-left"></span></div>
+							<div class="swiper-button-next"><span class="ti-arrow-right"></span></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Season Collection slider -->
+				<div class="season-collection-slider">
+
+					<!-- swiper -->
+					<div class="swiper mySwiper">
+						<!-- swiper wrapper -->
+						<div class="swiper-wrapper">
+							<!-- swiper slide -->
+							<div class="swiper-slide">
+								<!-- Product -->
+								<div class="product product-style-2">
+									<!-- product thumbnail -->
+									<div class="product-thumbnail">
+										<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/season-product-img1.jpg" alt="season products img"></a>
+									</div>
+									<!-- product content -->
+									<div class="product-content-overlay">
+										<!-- overlay title -->
+										<div class="product-overlay-title">
+											<h3 class="product-title">
+												<a href="product-detail-2.html">Dresses</a>
+											</h3>
+											<span class="items-count">20 items</span>
+										</div>
+										<div class="product-arrow">
+											<a href="product-detail-2.html" class="arrow-icon"><span class="ti-arrow-right"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- swiper slide -->
+							<div class="swiper-slide">
+								<!-- Product -->
+								<div class="product product-style-2">
+									<!-- product thumbnail -->
+									<div class="product-thumbnail">
+										<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/season-product-img2.jpg" alt="season products img"></a>
+									</div>
+									<!-- product content -->
+									<div class="product-content-overlay">
+										<!-- overlay title -->
+										<div class="product-overlay-title">
+											<h3 class="product-title">
+												<a href="product-detail-2.html">Shoes</a>
+											</h3>
+											<span class="items-count">188 items</span>
+										</div>
+										<div class="product-arrow">
+											<a href="product-detail-2.html" class="arrow-icon"><span class="ti-arrow-right"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- swiper slide -->
+							<div class="swiper-slide">
+								<!-- Product -->
+								<div class="product product-style-2">
+									<!-- product thumbnail -->
+									<div class="product-thumbnail">
+										<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/season-product-img3.jpg" alt="season products img"></a>
+									</div>
+									<!-- product content -->
+									<div class="product-content-overlay">
+										<!-- overlay title -->
+										<div class="product-overlay-title">
+											<h3 class="product-title">
+												<a href="product-detail-2.html">Caps</a>
+											</h3>
+											<span class="items-count">99 items</span>
+										</div>
+										<div class="product-arrow">
+											<a href="product-detail-2.html" class="arrow-icon"><span class="ti-arrow-right"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- swiper slide -->
+							<div class="swiper-slide">
+								<!-- Product -->
+								<div class="product product-style-2">
+									<!-- product thumbnail -->
+									<div class="product-thumbnail">
+										<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/season-product-img4.jpg" alt="season products img"></a>
+									</div>
+									<!-- product content -->
+									<div class="product-content-overlay">
+										<!-- overlay title -->
+										<div class="product-overlay-title">
+											<h3 class="product-title">
+												<a href="product-detail-2.html">Casual wear</a>
+											</h3>
+											<span class="items-count">1999 items</span>
+										</div>
+										<div class="product-arrow">
+											<a href="product-detail-2.html" class="arrow-icon"><span class="ti-arrow-right"></span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End Season Collection section -->
+
+<!-- Best Sellers section -->
+<section class="bestsellers-products-section section-two">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+				<!-- module header -->
+				<div class="module-header">
+					<h2 class="entry-title">{{ home2_setting:best_sellers_heading }}</h2>
+					<div class="entry-header-right">
+						<ul class="menu">
+							{{ home2_setting:best_sellers_categories }}
+							<li class="{{ if index == 0 }}active{{ /if }}"><a href="#" data-slug="{{ best_sellers_category_slug }}">{{ best_sellers_category_title }}</a></li>
+							{{ /home2_setting:best_sellers_categories }}
+						</ul>
+					</div>
+				</div>
+
+				<!-- Feature Products grid -->
+				<div class="bestsellers-products-grid">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<!-- Product -->
+							<div class="product product-style-3">
+								<!-- product thumbnail -->
+								<div class="product-thumbnail">
+									<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/best-sellers-img1.jpg" alt="best sellers products img"></a>
+
+									<!-- -->
+									<div class="product-badges">
+										<span class="badge  onsale">-15%</span>
+									</div>
+
+									<!-- product hover button -->
+									<div class="product-hover-button">
+										<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+									</div>
+
+									<!-- product buttons icon-->
+									<div class="product-buttons-icon">
+										<a href="#product-quick-popup" class="arrow-icon quick-view-link"><span class="ti-eye"></span></a>
+										<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+										<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+									</div>
+								</div>
+								<!-- product content -->
+								<div class="product-content">
+									<!-- product tile -->
+									<h3 class="product-title">
+										<a href="product-detail-2.html">Coastal Linen S/S Shirt</a>
+									</h3>
+									<!-- product price -->
+									<span class="price"><ins>$499.00</ins></span>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<!-- Product -->
+							<div class="product product-style-3">
+								<!-- product thumbnail -->
+								<div class="product-thumbnail">
+									<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/best-sellers-img2.jpg" alt="best sellers products img"></a>
+
+									<!-- -->
+									<div class="product-badges">
+										<span class="badge  onsale">-15%</span>
+									</div>
+
+									<!-- product hover button -->
+									<div class="product-hover-button">
+										<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+									</div>
+
+									<!-- product buttons icon-->
+									<div class="product-buttons-icon">
+										<a href="product-detail-2.html" class="arrow-icon"><span class="ti-eye"></span></a>
+										<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+										<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+									</div>
+								</div>
+								<!-- product content -->
+								<div class="product-content">
+									<!-- product tile -->
+									<h3 class="product-title">
+										<a href="product-detail-2.html">Casual cotton t-shirt</a>
+									</h3>
+									<!-- product price -->
+									<span class="price"><ins>$199.00</ins></span>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<!-- Product -->
+							<div class="product product-style-3">
+								<!-- product thumbnail -->
+								<div class="product-thumbnail">
+									<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/best-sellers-img3.jpg" alt="best sellers products img"></a>
+
+
+									<!-- product hover button -->
+									<div class="product-hover-button">
+										<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+									</div>
+
+									<!-- product buttons icon-->
+									<div class="product-buttons-icon">
+										<a href="product-detail-2.html" class="arrow-icon"><span class="ti-eye"></span></a>
+										<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+										<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+									</div>
+								</div>
+								<!-- product content -->
+								<div class="product-content">
+									<!-- product tile -->
+									<h3 class="product-title">
+										<a href="product-detail-2.html">Floral designed dress</a>
+									</h3>
+									<!-- product price -->
+									<span class="price"><ins>$99.00</ins></span>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<!-- Product -->
+							<div class="product product-style-3">
+								<!-- product thumbnail -->
+								<div class="product-thumbnail">
+									<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/best-sellers-img4.jpg" alt="best sellers products img"></a>
+
+									<!-- -->
+									<div class="product-badges">
+										<span class="badge  onsale">-11%</span>
+									</div>
+
+									<!-- product hover button -->
+									<div class="product-hover-button">
+										<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+									</div>
+
+									<!-- product buttons icon-->
+									<div class="product-buttons-icon">
+										<a href="product-detail-2.html" class="arrow-icon"><span class="ti-eye"></span></a>
+										<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+										<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+									</div>
+								</div>
+								<!-- product content -->
+								<div class="product-content">
+									<!-- product tile -->
+									<h3 class="product-title">
+										<a href="product-detail-2.html">Crop tops for daily wear</a>
+									</h3>
+									<!-- product price -->
+									<span class="price"><ins>$45.00</ins></span>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<!-- Product -->
+							<div class="product product-style-3">
+								<!-- product thumbnail -->
+								<div class="product-thumbnail">
+									<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/best-sellers-img5.jpg" alt="best sellers products img"></a>
+
+									<!-- product HOT -->
+									<div class="product-hot">
+										<span class="badge-hot">HOT</span>
+									</div>
+
+									<!-- product hover button -->
+									<div class="product-hover-button">
+										<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+									</div>
+
+									<!-- product buttons icon-->
+									<div class="product-buttons-icon">
+										<a href="product-detail-2.html" class="arrow-icon"><span class="ti-eye"></span></a>
+										<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+										<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+									</div>
+								</div>
+								<!-- product content -->
+								<div class="product-content">
+									<!-- product tile -->
+									<h3 class="product-title">
+										<a href="product-detail-2.html">Casual sneakers</a>
+									</h3>
+									<!-- product price -->
+									<span class="price"><ins>$699.00</ins></span>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<!-- Product -->
+							<div class="product product-style-3">
+								<!-- product thumbnail -->
+								<div class="product-thumbnail">
+									<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/best-sellers-img6.jpg" alt="best sellers products img"></a>
+
+									<!-- -->
+									<div class="product-badges">
+										<span class="badge  onsale">-15%</span>
+									</div>
+
+									<!-- product hover button -->
+									<div class="product-hover-button">
+										<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+									</div>
+
+									<!-- product buttons icon-->
+									<div class="product-buttons-icon">
+										<a href="product-detail-2.html" class="arrow-icon"><span class="ti-eye"></span></a>
+										<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+										<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+									</div>
+								</div>
+								<!-- product content -->
+								<div class="product-content">
+									<!-- product tile -->
+									<h3 class="product-title">
+										<a href="product-detail-2.html">Trendy alansca cotton dress</a>
+									</h3>
+									<!-- product price -->
+									<span class="price"><ins>$105.00</ins></span>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<!-- Product -->
+							<div class="product product-style-3">
+								<!-- product thumbnail -->
+								<div class="product-thumbnail">
+									<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/best-sellers-img7.jpg" alt="best sellers products img"></a>
+
+									<!-- -->
+									<div class="product-badges">
+										<span class="badge  onsale">-15%</span>
+									</div>
+
+									<!-- product hover button -->
+									<div class="product-hover-button">
+										<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+									</div>
+
+									<!-- product buttons icon-->
+									<div class="product-buttons-icon">
+										<a href="product-detail-2.html" class="arrow-icon"><span class="ti-eye"></span></a>
+										<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+										<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+									</div>
+								</div>
+								<!-- product content -->
+								<div class="product-content">
+									<!-- product tile -->
+									<h3 class="product-title">
+										<a href="product-detail-2.html">Winter wear outertops</a>
+									</h3>
+									<!-- product price -->
+									<span class="price"><ins>$99.00</ins></span>
+								</div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<!-- Product -->
+							<div class="product product-style-3">
+								<!-- product thumbnail -->
+								<div class="product-thumbnail">
+									<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/best-sellers-img8.jpg" alt="best sellers products img"></a>
+
+									<!-- -->
+									<div class="product-badges">
+										<span class="badge  onsale">-15%</span>
+									</div>
+
+									<!-- product hover button -->
+									<div class="product-hover-button">
+										<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+									</div>
+
+									<!-- product buttons icon-->
+									<div class="product-buttons-icon">
+										<a href="product-detail-2.html" class="arrow-icon"><span class="ti-eye"></span></a>
+										<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+										<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+									</div>
+								</div>
+								<!-- product content -->
+								<div class="product-content">
+									<!-- product tile -->
+									<h3 class="product-title">
+										<a href="product-detail-2.html">Branded  sky jeans</a>
+									</h3>
+									<!-- product price -->
+									<span class="price"><ins>$333.00</ins></span>
+								</div>
+							</div>
+						</div>
+
+						<!-- column -->
+						<div class="col-12">
+							<div class="section-full-btn">
+								<a href="{{ site_url }}{{ home2_setting:best_sellers_button_url }}" class="btn btn-dark btn-style-2">{{ home2_setting:best_sellers_button_text }}</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End Best Sellers section -->
+
+<!-- image with text section -->
+<section class="image-with-text-section section-two">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+				<!-- image with text box-->
+				<div class="image-with-text-box">
+					<!-- row -->
+					<div class="row align-items-center">
+						<!-- column -->
+						<div class="col-12 col-md-6">
+							<!-- banner image-->
+							<div class="banner-image">
+								{{ home2_setting:offer_image }}
+								<img src="{{ url }}" alt="sale-event img">
+								{{ /home2_setting:offer_image }}
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12  col-md-6">
+							<!-- image with text des -->
+							<div class="image-with-text-des">
+								<h4 class="entry-subtitle">{{ home2_setting:offer_sub_title }}</h4>
+								<h2 class="entry-title">{{ home2_setting:offer_title }}</h2>
+								<p>{{ home2_setting:offer_description }}</p>
+								<a href="{{ site_url }}{{ home2_setting:offer_button_url }}" class="btn btn-dark btn-style-2">{{ home2_setting:offer_button_text }}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End image with text  section -->
+
+<!-- New arrival section -->
+<section class="new-arrival-section section-two">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+				<!-- module header -->
+				<div class="module-header">
+					<h2 class="entry-title">{{ home2_setting:new_arrival_heading }}</h2>
+					<div class="entry-header-right">
+						<a href="{{ site_url }}{{ home2_setting:new_arrival_button_url }}" class="btn btn-dark btn-style-2">{{ home2_setting:new_arrival_button_text }}</a>
+					</div>
+				</div>
+
+				<!-- New arrival slider -->
+				<div class="new-arrival-slider">
+
+					<!-- swiper -->
+					<div class="swiper mySwiper">
+						<!-- swiper wrapper -->
+						<div class="swiper-wrapper">
+							<!-- swiper slide -->
+							<div class="swiper-slide">
+								<!-- Product -->
+								<div class="product product-style-3">
+									<!-- product thumbnail -->
+									<div class="product-thumbnail">
+										<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/new-arrival-img1.jpg" alt="new arrival products img"></a>
+
+										<!-- -->
+										<div class="product-badges">
+											<span class="badge  onsale">-15%</span>
+										</div>
+
+										<!-- product hover button -->
+										<div class="product-hover-button">
+											<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+										</div>
+
+										<!-- product buttons icon-->
+										<div class="product-buttons-icon">
+											<a href="#product-quick-popup" class="arrow-icon quick-view-link"><span class="ti-eye"></span></a>
+											<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+											<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+										</div>
+									</div>
+									<!-- product content -->
+									<div class="product-content">
+										<!-- product tile -->
+										<h3 class="product-title">
+											<a href="product-detail-2.html">Stonewashed Utility Jacket</a>
+										</h3>
+										<!-- product price -->
+										<span class="price"><ins>$188.00</ins></span>
+									</div>
+								</div>
+							</div>
+							<!-- swiper slide -->
+							<div class="swiper-slide">
+								<!-- Product -->
+								<div class="product product-style-3">
+									<!-- product thumbnail -->
+									<div class="product-thumbnail">
+										<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/new-arrival-img2.jpg" alt="new arrival products img"></a>
+
+										<!-- -->
+										<div class="product-badges">
+											<span class="badge  onsale">-15%</span>
+										</div>
+
+										<!-- product hover button -->
+										<div class="product-hover-button">
+											<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+										</div>
+
+										<!-- product buttons icon-->
+										<div class="product-buttons-icon">
+											<a href="product-detail-2.html" class="arrow-icon"><span class="ti-eye"></span></a>
+											<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+											<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+										</div>
+									</div>
+									<!-- product content -->
+									<div class="product-content">
+										<!-- product tile -->
+										<h3 class="product-title">
+											<a href="product-detail-2.html">Nike Air Max 97 OG</a>
+										</h3>
+										<!-- product price -->
+										<span class="price"><ins>$299.00</ins></span>
+									</div>
+								</div>
+							</div>
+							<!-- swiper slide -->
+							<div class="swiper-slide">
+								<!-- Product -->
+								<div class="product product-style-3">
+									<!-- product thumbnail -->
+									<div class="product-thumbnail">
+										<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/new-arrival-img3.jpg" alt="new arrival products img"></a>
+
+										<!-- -->
+										<div class="product-badges">
+											<span class="badge  onsale">-15%</span>
+										</div>
+
+										<!-- product hover button -->
+										<div class="product-hover-button">
+											<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+										</div>
+
+										<!-- product buttons icon-->
+										<div class="product-buttons-icon">
+											<a href="product-detail-2.html" class="arrow-icon"><span class="ti-eye"></span></a>
+											<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+											<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+										</div>
+									</div>
+									<!-- product content -->
+									<div class="product-content">
+										<!-- product tile -->
+										<h3 class="product-title">
+											<a href="product-detail-2.html">Boys white t shirt</a>
+										</h3>
+										<!-- product price -->
+										<span class="price"><ins>$99.00</ins></span>
+									</div>
+								</div>
+							</div>
+							<!-- swiper slide -->
+							<div class="swiper-slide">
+								<!-- Product -->
+								<div class="product product-style-3">
+									<!-- product thumbnail -->
+									<div class="product-thumbnail">
+										<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/new-arrival-img4.jpg" alt="new arrival products img"></a>
+
+										<!-- -->
+										<div class="product-badges">
+											<span class="badge  onsale">-15%</span>
+										</div>
+
+										<!-- product hover button -->
+										<div class="product-hover-button">
+											<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+										</div>
+
+										<!-- product buttons icon-->
+										<div class="product-buttons-icon">
+											<a href="product-detail-2.html" class="arrow-icon"><span class="ti-eye"></span></a>
+											<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+											<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+										</div>
+									</div>
+									<!-- product content -->
+									<div class="product-content">
+										<!-- product tile -->
+										<h3 class="product-title">
+											<a href="product-detail-2.html">Stonewashed Utility Jacket</a>
+										</h3>
+										<!-- product price -->
+										<span class="price"><ins>$435.00</ins></span>
+									</div>
+								</div>
+							</div>
+							<!-- swiper slide -->
+							<div class="swiper-slide">
+								<!-- Product -->
+								<div class="product product-style-3">
+									<!-- product thumbnail -->
+									<div class="product-thumbnail">
+										<a href="product-detail-2.html" class="thumbnail"><img src="assets/images/new-arrival-img3.jpg" alt="new arrival products img"></a>
+
+										<!-- -->
+										<div class="product-badges">
+											<span class="badge  onsale">-15%</span>
+										</div>
+
+										<!-- product hover button -->
+										<div class="product-hover-button">
+											<a href="product-detail-2.html" class="select-option-btn">Select option</a>
+										</div>
+
+										<!-- product buttons icon-->
+										<div class="product-buttons-icon">
+											<a href="product-detail-2.html" class="arrow-icon"><span class="ti-eye"></span></a>
+											<a href="cart.html" class="arrow-icon"><span class="ti-shopping-cart"></span></a>
+											<a href="wishlist.html" class="arrow-icon"><span class="ti-heart"></span></a>
+										</div>
+									</div>
+									<!-- product content -->
+									<div class="product-content">
+										<!-- product tile -->
+										<h3 class="product-title">
+											<a href="product-detail-2.html">Boys white t shirt</a>
+										</h3>
+										<!-- product price -->
+										<span class="price"><ins>$99.00</ins></span>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+						<!-- slider arrow -->
+						<div class="slider-arrow">
+							<div class="swiper-button-prev"><span class="ti-arrow-left"></span></div>
+							<div class="swiper-button-next"><span class="ti-arrow-right"></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End New arrival section -->
+
+<!-- Testimonial section -->
+<section class="testimonial-section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+
+				<!-- New arrival slider -->
+				<div class="testimonial-slider">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12 col-md-6 order-2 order-md-1">
+							<!-- swiper -->
+							<div class="swiper mySwiper2">
+								<!-- swiper wrapper -->
+								<div class="swiper-wrapper">
+
+									<!-- swiper slide -->
+									{{ home2_setting:customer_reviews }}
+									<div class="swiper-slide">
+										<!-- testimonial content -->
+										<div class="testimonial-content">
+											<h2>{{ customer_review_title }}</h2>
+											<p>{{ customer_review_description }}</p>
+
+											<!-- testimonial user info -->
+											<div class="testimonial-user-info">
+												<div class="testimonial-user-img">
+													{{ customer_review_image }}
+													<img src="{{ url }}" alt="products img">
+													{{ /customer_review_image }}
+												</div>
+												<h6 class="testimonial-user-name">{{ customer_review_name }}</h6>
+											</div>
+										</div>
+									</div>
+									{{ /home2_setting:customer_reviews }}
+
+								</div>
+								<!-- slider pagination -->
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-md-6 order-1 order-md-2 ps-0 pe-0 ps-md-2 pe-md-2">
+							<!-- swiper -->
+							<div class="swiper mySwiper testimonial-thumbnail">
+								<!-- swiper wrapper -->
+								<div class="swiper-wrapper">
+
+									<!-- swiper slide -->
+									{{ home2_setting:customer_review_banners }}
+									<div class="swiper-slide">
+										<!-- testimonial right image -->
+										<div class="testimonial-right-image">
+											<img src="{{ url }}" alt="testimonial img">
+										</div>
+									</div>
+									{{ /home2_setting:customer_review_banners }}
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--/ End Testimonial section -->
+
+<!-- Icon box section -->
+<section class="icon-box-section style-2 section-two">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+
+			<!-- column -->
+			{{ home2_setting:milestones }}
+			<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+				<!-- icon box -->
+				<div class="icon-box">
+					<div class="iconbox-icon">
+						{{ milestone_icon }}
+						<img src="{{ url }}" alt="Free Shipping">
+						{{ /milestone_icon }}
+					</div>
+					<div class="iconbox-detail">
+						<h6>{{ milestone_title }}</h6>
+						<p>{{ milestone_sub_title }}</p>
+					</div>
+				</div>
+			</div>
+			{{ /home2_setting:milestones }}
+
+		</div>
+	</div>
+</section>
+<!--/ End Icon box section -->
+
+<!-- Blogs and news section -->
+<section class="blogs-and-news-section section-two">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12">
+				<!-- module header -->
+				<div class="module-header header-style-2">
+					<h2 class="entry-title">{{ home2_setting:blogs_and_news_heading }}</h2>
+				</div>
+			</div>
+		</div>
+
+		<!-- row -->
+		<div class="row">
+			<!-- column -->
+			<div class="col-12 col-md-4">
+				<!-- blog grid-->
+				<div class="blog-grid">
+					<!-- blog grid image-->
+					<div class="blog-grid-image">
+						<a href="blog-detail.html"><img src="assets/images/blog-img1.jpg" alt="blog img 1"></a>
+					</div>
+					<!-- blog grid content-->
+					<div class="blog-grid-content">
+						<h5 class="entry-title"><a href="blog-detail.html">Fames ac turpis egestas maecenas</a></h5>
+						<h4 class="blog-grid-comments"><span class="comments-count">4</span>Comments  -  20 Jan 2023</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+					</div>
+
+				</div>
+			</div>
+			<!-- column -->
+			<div class="col-12 col-md-4">
+				<!-- blog grid-->
+				<div class="blog-grid">
+					<!-- blog grid image-->
+					<div class="blog-grid-image">
+						<a href="blog-detail.html"><img src="assets/images/blog-img2.jpg" alt="blog img 2"></a>
+					</div>
+					<!-- blog grid content-->
+					<div class="blog-grid-content">
+						<h5 class="entry-title"><a href="blog-detail.html">Sed enim ut sem viverra</a></h5>
+						<h4 class="blog-grid-comments"><span class="comments-count">0</span>Comments  -  3 Feb 2023</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+					</div>
+
+				</div>
+			</div>
+			<!-- column -->
+			<div class="col-12 col-md-4">
+				<!-- blog grid-->
+				<div class="blog-grid">
+					<!-- blog grid image-->
+					<div class="blog-grid-image">
+						<a href="blog-detail.html"><img src="assets/images/blog-img3.jpg" alt="blog img 3"></a>
+					</div>
+					<!-- blog grid content-->
+					<div class="blog-grid-content">
+						<h5 class="entry-title"><a href="blog-detail.html">Lectus mauris ultrices eros</a></h5>
+						<h4 class="blog-grid-comments"><span class="comments-count">4</span>Comments  -  20 Dec 2023</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+					</div>
+
+				</div>
+			</div>
+
+
+			<!-- column -->
+			<div class="col-12">
+				<div class="section-full-btn">
+					<a href="{{ home2_setting:blogs_and_news_url }}" class="btn btn-dark btn-style-2">{{ home2_setting:blogs_and_news_button_text }}</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!--/ End Blogs and news section -->

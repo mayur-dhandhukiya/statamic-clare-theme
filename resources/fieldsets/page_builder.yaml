@@ -1,0 +1,98 @@
+title: 'Page Builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      display: 'Page Builder'
+      collapse: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            hero_section:
+              display: 'Hero Section'
+              fields:
+                -
+                  import: hero_section
+            milestone_section:
+              display: 'Milestone Section'
+              fields:
+                -
+                  import: milestones_section
+            multi_grid_section:
+              display: 'Multi Grid Section'
+              fields:
+                -
+                  import: multi_grid_section
+            full_box_section:
+              display: 'Full Box Section'
+              instructions: 'like a "Popular Categories"'
+              fields:
+                -
+                  import: full_box_section
+            collection_section:
+              display: 'Collection Section'
+              fields:
+                -
+                  import: collection_section
+            offer_section:
+              display: 'Offer Section'
+              fields:
+                -
+                  import: offer_section
+            content_with_image_section:
+              display: 'Content with Image Section'
+              fields:
+                -
+                  import: content_with_image_section
+            blog_section:
+              display: 'Blog Section'
+              fields:
+                -
+                  import: blog_section
+            two_parts_section:
+              display: 'Two Parts Section'
+              fields:
+                -
+                  import: two_parts_section
+            gallery_section:
+              display: 'Gallery Section'
+              fields:
+                -
+                  import: gallery_section
+            breadcrumb_section:
+              display: 'Breadcrumb Section'
+              fields:
+                -
+                  import: breadcrumb_section
+            about_content_section:
+              display: 'About Content Section'
+              fields:
+                -
+                  import: about_content_section
+            video_section:
+              display: 'Video Section'
+              fields:
+                -
+                  import: video_section
+            grid_section:
+              display: 'Grid Section'
+              fields:
+                -
+                  import: grid_section
+            contact_us_section:
+              display: 'Contact us Section'
+              fields:
+                -
+                  import: contact_us_section
+            faq_section:
+              display: 'Faq Section'
+              fields:
+                -
+                  import: faq_section
+            content_section:
+              display: 'Content Section'
+              fields:
+                -
+                  import: content_section

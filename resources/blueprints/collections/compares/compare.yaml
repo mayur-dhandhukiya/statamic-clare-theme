@@ -1,0 +1,58 @@
+title: Compare
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: customer
+            field:
+              type: entries
+              collections:
+                - customers
+              max_items: 1
+              display: Customer
+              mode: select
+          -
+            handle: compare_items
+            field:
+              type: grid
+              display: 'Compare Items'
+              fields:
+                -
+                  handle: product
+                  field:
+                    type: entries
+                    collections:
+                      - products
+                    max_items: 1
+                    display: Product
+                -
+                  handle: product_title
+                  field:
+                    type: text
+                    display: 'Product Title'
+                -
+                  handle: added_at
+                  field:
+                    type: date
+                    display: 'Added At'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

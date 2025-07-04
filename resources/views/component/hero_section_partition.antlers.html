@@ -1,0 +1,32 @@
+
+			<!-- Hero grid banner section -->
+			<section class="hero-grid-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12 col-md-6 order-2 order-md-1">
+							<!-- hero banner content -->
+							<div class="hero-banner-content">
+								<h4 class="entry-subtitle">{{ hero_tag }}</h4>
+								<h1>{{ hero_title }}</h1>
+								<p>{{ hero_description }}</p>
+								{{ hero_button }}
+									<a href="{{ site_url }}{{ hero_button_link }}" class="btn btn-dark btn-style-2">{{ hero_button_name }}</a>
+								{{ /hero_button }}
+							</div>
+						</div>
+						<!-- column -->
+						<div class="col-12 col-md-6  order-1 order-md-2">
+							<!-- Hero banner img -->
+							<div class="hero-banner-img">
+								{{ hero_banner }}
+								<img src="{{ url }}" alt="hero-grid-img">
+								{{ /hero_banner }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Hero slider section -->

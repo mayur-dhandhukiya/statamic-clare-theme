@@ -1,0 +1,98 @@
+title: Transaction
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: order
+            field:
+              type: entries
+              max_items: 1
+              collections:
+                - orders
+              display: Order
+              validate:
+                - required
+              create: false
+          -
+            handle: customer
+            field:
+              type: entries
+              max_items: 1
+              collections:
+                - customers
+              display: Customer
+              validate:
+                - required
+              create: false
+          -
+            handle: payment_method
+            field:
+              type: select
+              options:
+                cod: 'Cash on Delivery'
+                stripe: Stripe
+                razorpay: Razorpay
+              display: 'Payment Method'
+              validate:
+                - required
+          -
+            handle: transaction_id
+            field:
+              type: text
+              display: 'Transaction ID'
+              validate:
+                - required
+          -
+            handle: transaction_status
+            field:
+              type: select
+              options:
+                success: Success
+                pending: Pending
+                failed: Failed
+              display: Transaction Status
+              validate:
+                - required
+          -
+            handle: amount
+            field:
+              type: integer
+              display: Amount
+              validate:
+                - required
+                - numeric
+          -
+            handle: currency
+            field:
+              type: text
+              display: Currency
+              instructions: 'e.g., usd, inr'
+              validate:
+                - required
+          -
+            handle: meta
+            field:
+              type: array
+              display: Meta
+              instructions: 'Optional raw response or logs'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

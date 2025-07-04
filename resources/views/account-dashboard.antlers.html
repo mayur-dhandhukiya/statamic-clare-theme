@@ -1,0 +1,65 @@
+{{ if {session:has key="customer_logged_in"} != true }}
+	{{ redirect to="/sign-in" }}
+{{ /if }}
+			<!-- heading banner section -->
+			<section class="heading-banner-section">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- heading banner wrap-->
+							<div class="heading-banner-wrap">
+								<!-- breadcrumb -->
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="index-one.html">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">My Account</li>
+									</ol>
+								</nav>
+								<!-- page title -->
+								<h1>My Account</h1>
+
+								<!-- heading banner img -->
+								<div class="heading-banner-img">
+									<img src="{{ theme:asset src='assets/images/heading-banner-img.png' }}" alt="heading banner img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+			<!--/ End Hero slider section -->
+
+			<!-- Account dashboard page section -->
+			<section class="account-dashboard-page section-two">
+				<!-- container -->
+				<div class="container">
+
+					{{ partial:customer-info-box }}
+
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12 col-md-4 col-lg-3">
+							
+							{{ partial:account-sidebar }}
+
+						</div>
+						<!-- column -->
+						<div class="col-12 col-md-8 col-lg-9">
+							<!-- My Account right wrap -->
+							<div class="account-right-wrap">
+								<!-- Account Dashboard content-->
+								<div class="account-dashboard-content">
+									<p>Hello {{ customer_session:name ?? '-' }} (not <strong>{{ customer_session:name ?? '-'}}?</strong> <a href="{{ site_url }}/customer/logout">Log Out</a>)</p>
+									<p>{{ account_setting:dashboard_description }}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Account dashboard page section -->

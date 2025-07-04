@@ -1,0 +1,77 @@
+
+			<!-- Trending Collection section -->
+			<section class="trending-collection-section section-all">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- module header -->
+							<div class="module-header">
+								<h2 class="entry-title">{{  section_title  }}</h2>
+								<div class="entry-header-right">
+									<!-- slider arrow -->
+									<div class="slider-arrow">
+										<div class="swiper-button-prev"><span class="ti-arrow-left"></span></div>
+										<div class="swiper-button-next"><span class="ti-arrow-right"></span></div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Trending Collection slider -->
+							<div class="trending-collection-slider">
+
+								<div class="swiper mySwiper">
+									<div class="swiper-wrapper">
+
+										{{ if collection_type == 'products' }}
+										{{ products }}
+										{{ /if }}
+										<div class="swiper-slide">
+											<!-- Product -->
+											<div class="product product-style-1">
+												<!-- product thumbnail -->
+												<div class="product-thumbnail">
+													<a href="{{ site_url }}/products/{{ slug }}" class="thumbnail">
+														{{ thumb_image }}
+														<img src="{{ url }}" alt="products img">
+														{{ /thumb_image }}
+													</a>
+
+													<!-- product hover button -->
+													<div class="product-hover-button">
+														<a href="javascript:;" data-product-id="{{ id }}" class="add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+														<a href="javascript:;" data-product-id="{{ id }}" class="add-to-wishlist-btn"><span class="ti-heart"></span></a>
+													</div>
+												</div>
+												<!-- product content -->
+												<div class="product-content">
+													<!-- product in stock -->
+													{{ if tags }}
+													<h6>{{ tags | pluck:title | implode:",&nbsp;" }}</h6>
+													{{ /if }}
+													<h3 class="product-title">
+														<a href="{{ site_url }}/products/{{ slug }}">{{ title }}</a>
+													</h3>
+													<!-- product price -->
+													<span class="price"><ins>${{ price }}</ins></span>
+													<!-- product-switcher -->
+													<div class="product-switcher">
+
+													</div>
+												</div>
+											</div>
+										</div>
+										{{ if collection_type == 'products' }}
+										{{ /products }}
+										{{ /if }}
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End  Trending Collection section -->

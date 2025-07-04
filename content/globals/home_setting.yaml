@@ -1,0 +1,66 @@
+title: 'Home Setting'
+data:
+  hero_title: 'The Purl Coat Cardigan'
+  hero_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  hero_button_name: 'Shop Now'
+  hero_button_link: /shop
+  hero_banner:
+    - images/hero-banner-img.png
+  hero_milestones:
+    -
+      id: m9b1adi8
+      hero_milestone_icon:
+        - images/free-shipping-icon.svg
+      hero_milestone_title: 'Free Shipping'
+      hero_milestone_sub_title: 'When ordering over $100'
+    -
+      id: m9b1aer4
+      hero_milestone_icon:
+        - images/easy-return-icon.svg
+      hero_milestone_title: 'Easy return'
+      hero_milestone_sub_title: 'Get Return within 30 days'
+    -
+      id: m9b1af7s
+      hero_milestone_icon:
+        - images/secure-payment-icon.svg
+      hero_milestone_title: 'Secure Payment'
+      hero_milestone_sub_title: '100% Secure Online Payment'
+  seasons:
+    -
+      id: m9b591wf
+      season_title: 'Big patterns are back in fashion'
+      season_sub_title: 'New season'
+      season_button_text: 'Shop Now'
+      season_button_url: /shop
+      season_image:
+        - images/banner-img1.jpg
+    -
+      id: m9b592r4
+      season_title: 'The Latest trend'
+      season_sub_title: 'New season'
+      season_button_text: 'Shop Now'
+      season_button_url: /shop
+      season_image:
+        - images/banner-img2.jpg
+    -
+      id: m9b593br
+      season_title: 'Top new collection'
+      season_sub_title: 'New season'
+      season_button_text: 'Shop Now'
+      season_button_url: /shop
+      season_image:
+        - images/banner-img3.jpg
+  offer_back_image:
+    - images/offer-bg-img.png
+  offer_title: 'Offer On Point 3 Shoes'
+  offer_description: 'Buy 2 pairs of Point6 socks and get 1 for free !'
+  actual_price: $199.00
+  offer_price: $99.00
+  offer_button_text: 'GET THIS DEAL'
+  offer_button_url: /product-detail-1
+  subscribe_left_image:
+    - images/discount-img2.png
+  subscribe_right_image:
+    - images/discount-img1.png
+  subscribe_title: 'Get 20% Off Discount Coupon'
+  subscribe_sub_title: 'by Subscribe our Newsletter'

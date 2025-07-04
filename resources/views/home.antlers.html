@@ -1,0 +1,16 @@
+
+{{ if url == '/home-1' }}
+    {{ partial:home1 }}
+{{ elseif url == '/home-2' }}
+    {{ partial:home2 }}
+{{ elseif url == '/home-3' }}
+    {{ partial:home3 }}
+{{ else }}
+    {{ if common_setting:layout == "home_v2" }}
+        {{ partial:home2 }}
+    {{ elseif common_setting:layout == "home_v3" }}
+        {{ partial:home3 }}
+    {{ else }}
+        {{ partial:home1 }}
+    {{ /if }}
+{{ /if }}

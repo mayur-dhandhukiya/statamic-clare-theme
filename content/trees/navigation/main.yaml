@@ -1,0 +1,181 @@
+tree:
+  -
+    id: c8a5b54b-7d9b-4c01-8884-4f196eea579b
+    title: Home
+    url: /
+    children:
+      -
+        id: 06ef414d-231c-462c-bee1-2dd4b7973662
+        title: 'Home V1'
+        url: /home-1
+      -
+        id: 6a20c954-75d2-4028-9ace-b9a97cebbbfd
+        title: 'Home V2'
+        url: /home-2
+      -
+        id: 6ac4c0fc-41dc-4f14-90e2-ba675a47084b
+        title: 'Home V3'
+        url: /home-3
+  -
+    id: 29ad253a-8f33-43c8-923d-d24c61d092e9
+    title: Shop
+    url: /shop
+  -
+    id: 278c7ae5-7fbc-4537-a9e1-b8d520bb5ed5
+    title: Pages
+    url: /mega-menu
+    children:
+      -
+        id: c0fb1439-58db-4cd2-af02-b350acfdf7f2
+        title: 'Pages Mega Left'
+        url: /mega-section
+        children:
+          -
+            id: d33196b1-4183-4dff-bd85-0b7b37bfc268
+            title: 'Pages Mega Left Section 1'
+            url: /mega-sub-section
+            children:
+              -
+                id: 554de48f-44d9-49d0-8fd0-453b5ff8f07b
+                title: 'Shop Pages'
+                url: /mega-title
+                children:
+                  -
+                    id: ac803e92-464d-428c-8ab3-9230a3cbf3ce
+                    title: 'Shop List'
+                    url: '/shop?view_type=list'
+                  -
+                    id: 7ccf877e-7443-4787-81e4-8e4526e88559
+                    title: 'Shop Right Sidebar'
+                    url: '/shop?filter_type=right'
+                  -
+                    id: 56fb4be7-d4af-48ef-9609-18d4a394ab4c
+                    title: Category
+                    url: /category/dresses
+              -
+                id: 123a8c99-46da-4111-bad1-d67aeb987ece
+                title: 'Product Detail Pages'
+                url: /mega-title
+                children:
+                  -
+                    id: 81d9b3df-cffa-4c34-a29b-b1ea83dd8c78
+                    title: 'Product Detail 1'
+                    url: /product-detail-1
+                  -
+                    id: 9766abb9-4900-4b15-a775-ffb40a8cb1d9
+                    title: 'Product Detail 2'
+                    url: /product-detail-2
+                  -
+                    id: 55152e88-b6e2-4620-b88f-52578a39ea40
+                    title: 'Product Detail 3'
+                    url: /product-detail-3
+          -
+            id: 65829134-d8db-41dc-bf94-fff535a7eaf4
+            title: 'Pages Mega Left Section 2'
+            url: /mega-sub-section
+            children:
+              -
+                id: dedd02dd-f442-4ca2-bc70-1c38f8564f43
+                title: 'Account Pages'
+                url: /mega-title
+                children:
+                  -
+                    id: 02bd1b85-b716-41d3-8c64-e865d8a5878d
+                    title: Cart
+                    url: /cart
+                  -
+                    id: d371c668-7f48-4dd1-b650-a2ae36b65b39
+                    title: Checkout
+                    url: /checkout
+                  -
+                    id: dda5d358-adf4-4f1c-9dc6-0d2c835509b1
+                    title: Compare
+                    url: compare
+                  -
+                    id: 85e217ed-983c-487b-a595-10c3bcbeb659
+                    title: Wishlist
+                    url: /wishlist
+                  -
+                    id: 116cd393-75a9-4492-a4f2-326bc7c4c5b6
+                    title: 'Thank You'
+                    url: /thank-you
+                  -
+                    id: 5368a367-fe1b-4252-a2cb-750ee712dc7f
+                    title: 'Contact us'
+                    url: /contact-us
+                  -
+                    id: 6c6882c0-f4c8-474c-b872-2658bc2c5fe5
+                    title: Faq
+                    url: /faq
+                  -
+                    id: a8c17261-f58c-4338-a0a3-3faf702f0269
+                    title: '404'
+                    url: /404
+          -
+            id: 1dd4daec-3ad5-495e-a7af-68d709a1f880
+            title: 'Pages Mega Left Section 3'
+            url: /mega-sub-section
+            children:
+              -
+                id: 1f8a9bbb-da03-42ff-83cb-f31192c78838
+                title: 'Blog Pages'
+                url: /mega-title
+                children:
+                  -
+                    id: fe0c1936-337a-4314-946f-0603d7ed5ce3
+                    title: 'Blog Grid 2'
+                    url: /blog-grid-2
+                  -
+                    id: 25910ede-a7d6-4461-a901-a68e7f2eda1d
+                    title: 'Blog Classic'
+                    url: /blog-classic
+                  -
+                    id: 18e6e589-58db-49c1-8871-cf0aded24524
+                    title: 'Blog Detail'
+                    url: /blog-detail
+                  -
+                    id: 1fb97142-636b-4043-8952-1afbaf55f1c2
+                    title: 'Blog Detail Full'
+                    url: /blog-detail-full
+                  -
+                    id: 933f8da4-0d9f-4b95-8418-12cecc51fdf8
+                    title: 'Blog Detail Left Sidebar'
+                    url: /blog-detail-left-sidebar
+      -
+        id: 6843cf41-389d-4512-b488-5692d1cefe0e
+        title: 'Pages Mega Right'
+        url: /mega-section-right
+        children:
+          -
+            id: f3384d03-47e9-4de0-9163-07dde870ec96
+            title: Featured
+            url: /mega-title
+            children:
+              -
+                id: bc0ca001-f098-46e9-84e5-d178f65c732b
+                title: assets/images/featured-gallery-img1.jpg
+                url: /img
+              -
+                id: b38277ea-98d0-4b27-acd0-6bb9d5ed7a04
+                title: assets/images/featured-gallery-img2.jpg
+                url: /img
+              -
+                id: d0412d4d-f9ee-4bb4-b822-1f44e3d9339d
+                title: assets/images/featured-gallery-img3.jpg
+                url: /img
+              -
+                id: eda78c1f-e82d-42cb-b293-f1cddae966f1
+                title: assets/images/featured-gallery-img4.jpg
+                url: /img
+  -
+    id: a8d70275-37b6-4f96-85c6-8fc41e760eda
+    title: About
+    url: /about
+  -
+    id: 88e0bec4-fba6-4ffb-93fd-145692aef716
+    title: Blogs
+    url: /blogs
+  -
+    id: 5ef1edb9-bc14-460d-b2d1-f896e2ce9f6b
+    title: 'Contact us'
+    url: /contact-us

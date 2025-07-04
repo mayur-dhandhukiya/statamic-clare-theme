@@ -1,0 +1,70 @@
+title: 'Content with Image Section'
+fields:
+  -
+    handle: section_type
+    field:
+      options:
+        -
+          key: content_normal
+          value: 'Content Normal'
+        -
+          key: content_slider
+          value: 'Content Slider'
+      type: select
+      display: 'Section type'
+      validate:
+        - required
+  -
+    handle: content_image_type
+    field:
+      options:
+        -
+          key: left
+          value: Left
+        -
+          key: right
+          value: Right
+      type: select
+      display: 'Content Image Type'
+      validate:
+        - required
+  -
+    handle: content_records
+    field:
+      collapse: true
+      type: replicator
+      display: 'Content Records'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            content_records:
+              display: 'Content Records'
+              fields:
+                -
+                  handle: content_record_title
+                  field:
+                    type: text
+                    display: 'Content Record Title'
+                -
+                  handle: content_record_description
+                  field:
+                    type: textarea
+                    display: 'Content Record Description'
+                -
+                  handle: content_record_section_image
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Content Record Section Image'
+                -
+                  handle: content_record_user_name
+                  field:
+                    type: text
+                    display: 'Content Record User Name'
+                -
+                  handle: content_record_user_image
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Content Record User Image'

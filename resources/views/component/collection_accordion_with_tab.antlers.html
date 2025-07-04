@@ -1,0 +1,92 @@
+
+			<!-- Best Sellers section -->
+			<section class="bestsellers-products-section section-two">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- column -->
+						<div class="col-12">
+							<!-- module header -->
+							<div class="module-header">
+								<h2 class="entry-title">Best Sellers</h2>
+								<div class="entry-header-right">
+									<ul class="menu">
+										<li class="active"><a href="#">Men</a></li>
+										<li><a href="#">Women</a></li>
+										<li><a href="#">Blouses & shirts</a></li>
+										<li><a href="#">Outerwear</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Feature Products grid -->
+							<div class="bestsellers-products-grid">
+								<!-- row -->
+								<div class="row">
+									<!-- column -->
+
+									{{ if collection_type == 'products' }}
+									{{ products }}
+									{{ /if }}
+
+									<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+										<!-- Product -->
+										<div class="product product-style-3">
+											<!-- product thumbnail -->
+											<div class="product-thumbnail">
+												<a href="{{ site_url }}/products/{{ slug }}" class="thumbnail">
+													{{ thumb_image }}
+													<img src="{{ url }}" alt="products img">
+													{{ /thumb_image }}
+												</a>
+
+												<!-- -->
+												<div class="product-badges">
+													<span class="badge  onsale">-15%</span>
+												</div>
+
+												<!-- product hover button -->
+												<div class="product-hover-button">
+													<a href="{{ site_url }}/products/{{ slug }}" class="select-option-btn">Select option</a>
+												</div>
+
+												<!-- product buttons icon-->
+												<div class="product-buttons-icon">
+													<a href="#product-quick-popup" data-get_view_url="{{ site_url }}/products/{{ slug }}" class="arrow-icon quick-view-link"><span class="ti-eye"></span></a>
+													<a href="javascript:;" data-product-id="{{ id }}" class="arrow-icon add-to-cart-btn"><span class="ti-shopping-cart"></span></a>
+													<a href="javascript:;" data-product-id="{{ id }}" class="arrow-icon add-to-wishlist-btn"><span class="ti-heart"></span></a>
+												</div>
+											</div>
+											<!-- product content -->
+											<div class="product-content">
+												<!-- product tile -->
+												<h3 class="product-title">
+													<a href="{{ site_url }}/products/{{ slug }}">{{ title }}</a>
+												</h3>
+												<!-- product price -->
+												<span class="price"><ins>${{ price }}</ins></span>
+											</div>
+										</div>
+									</div>
+
+									{{ if collection_type == 'products' }}
+									{{ /products }}
+									{{ /if }}
+
+									<!-- column -->
+									<div class="col-12">
+										<div class="section-full-btn">
+											{{ section_buttons }}
+											<a href="{{ site_url }}{{ section_button_link }}" class="btn btn-dark btn-style-2">{{ section_button_name }}</a>
+											{{ /section_buttons }}
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/ End Best Sellers section -->

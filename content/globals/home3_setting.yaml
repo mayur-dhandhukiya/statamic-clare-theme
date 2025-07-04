@@ -1,0 +1,59 @@
+title: 'Home3 Setting'
+data:
+  hero_sub_title: 'FLASH SALE'
+  hero_title: 'Essential collections'
+  hero_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
+  hero_button_name: 'View collection'
+  hero_button_link: /shop
+  hero_banner:
+    - images/hero-grid-img.jpg
+  last_chance_sale_title: 'Last Chance Sale'
+  last_chance_sale_description: 'Save on all best selling and exclusive styles'
+  popular_categories_heading: 'Popular Categories'
+  popular_categories_sub_content: 'Save on all best selling and exclusive styles'
+  top_collection:
+    top_collection_title: 'New collection for Woman'
+    top_collection_button_text: 'Shop Now'
+    top_collection_button_url: /shop
+    top_collection_banner_image:
+      - images/top-collection-banner-img.jpg
+  new_collection:
+    new_collection_banner_image:
+      - images/urban-banner-img.png
+    new_collection_sub_title: 'OUR NEW COLLECTION'
+    new_collection_title: 'URBAN SPIRIT COLLECTION 2025'
+    new_collection_button_text: 'Shop now'
+    new_collection_button_url: /shop
+  new_arrivals_heading: 'New Arrivals'
+  new_arrivals_sub_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  new_arrivals_button_text: 'Shop all'
+  new_arrivals_button_url: /shop
+  latest_blogs_heading: 'Latest Blogs & News'
+  latest_blogs_sub_content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+  latest_blogs_button_text: 'View all'
+  latest_blogs_button_url: /blogs
+  social_title: 'Shop Social'
+  social_description: 'Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.'
+  shop_socials:
+    -
+      id: m9ccr4i9
+      shop_social_icon: 'fa-brands fa-facebook'
+      shop_social_url: 'https://www.facebook.com/'
+    -
+      id: m9ccr721
+      shop_social_icon: 'fa-brands fa-instagram'
+      shop_social_url: 'https://www.instagram.com/'
+    -
+      id: m9ccr7e9
+      shop_social_icon: 'fa-brands fa-youtube'
+      shop_social_url: 'https://www.youtube.com/'
+    -
+      id: m9ccr7t6
+      shop_social_icon: 'fa-brands fa-whatsapp'
+      shop_social_url: 'https://www.whatsapp.com/'
+    -
+      id: m9ccr8aa
+      shop_social_icon: 'fa-brands fa-pinterest'
+      shop_social_url: 'https://www.pinterest.com/'
+  deal_title: 'Get the Latest Deals'
+  deal_description: 'and receive $20 coupon for first shopping'

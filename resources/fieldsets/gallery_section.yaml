@@ -1,0 +1,8 @@
+title: 'Gallery Section'
+fields:
+  -
+    handle: galleries
+    field:
+      container: assets
+      type: assets
+      display: Galleries

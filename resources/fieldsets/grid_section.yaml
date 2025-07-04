@@ -1,0 +1,44 @@
+title: 'Grid Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+  -
+    handle: grid_items
+    field:
+      type: replicator
+      display: 'Grid Items'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            grid_items:
+              display: 'Grid Items'
+              fields:
+                -
+                  handle: grid_item_image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: 'Grid Item Image'
+                    width: 33
+                -
+                  handle: grid_item_name
+                  field:
+                    type: text
+                    display: 'Grid Item Name'
+                    width: 33
+                -
+                  handle: grid_item_tag
+                  field:
+                    type: text
+                    display: 'Grid Item Tag'
+                    width: 33
+                -
+                  handle: grid_item_short_description
+                  field:
+                    type: textarea
+                    display: 'Grid Item Short Description'
